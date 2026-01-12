@@ -6,7 +6,7 @@
 
 ## 关于本书
 
-在人工智能飞速发展的时代，大语言模型（Large Language Models, LLMs）已成为推动各行业变革的核心力量。无论是 OpenAI 的 GPT 系列、Anthropic 的 Claude、Google 的 Gemini，还是众多开源模型，这些 AI 系统正在重塑人们的工作方式、创作流程和问题解决思路。
+在人工智能飞速发展的时代，大语言模型（Large Language Models, LLMs）已成为推动各行业变革的核心力量。无论是 [OpenAI 的 GPT 系列](https://chatgpt.com/)、[Anthropic 的 Claude](https://anthropic.com/claude)、[Google 的 Gemini](https://gemini.google.com/)，还是众多开源模型，这些 AI 系统正在重塑人们的工作方式、创作流程和问题解决思路。
 
 然而，仅仅拥有访问权限并不足以释放这些模型的全部潜力。**提示词工程（Prompt Engineering）**——这门新兴学科——正是连接人类意图与 AI 能力的关键桥梁。一个精心设计的提示词可以将模糊的想法转化为精确的输出，将复杂的任务分解为可执行的步骤，将潜在的错误降到最低。
 
@@ -62,7 +62,7 @@
 1. **体系完整**：从零基础到高级应用，构建完整的知识体系
 2. **内容权威**：整合 OpenAI、Anthropic、Google 等官方指南及最新研究成果
 3. **实践导向**：大量真实案例和可运行的代码示例
-4. **与时俱进**：涵盖 2026 年最新的技术趋势和最佳实践
+4. **与时俱进**：涵盖最新的技术趋势和最佳实践
 5. **深入浅出**：复杂概念通过图解和类比使其易于理解
 
 ---
@@ -84,8 +84,8 @@
 
 - **版本**：0.2
 - **更新日期**：2026 年 1 月
-- **反馈与建议**：欢迎通过 GitHub Issues 提交反馈
+- **反馈与建议**：欢迎通过 [GitHub Issues](https://github.com/yeasy/prompt_guide/issues) 提交反馈
 
 ---
 
-*让我们开始这段探索之旅，掌握与 AI 高效对话的艺术！*
+*让我们[开始这段探索之旅](01_introduction/README.md)，掌握与 AI 高效对话的艺术！*
