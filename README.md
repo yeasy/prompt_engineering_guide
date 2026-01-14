@@ -2,6 +2,8 @@
 
 > **从入门到精通：掌握与大语言模型高效对话的艺术**
 
+在线阅读：[https://yeasy.gitbook.io/prompt_engineering_guide/](https://yeasy.gitbook.io/prompt_engineering_guide/)
+
 ---
 
 ## 关于本书
