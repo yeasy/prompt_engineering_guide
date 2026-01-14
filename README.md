@@ -82,7 +82,7 @@
 
 ## 版本信息
 
-- **版本**：0.2
+- **版本**：1.0
 - **更新日期**：2026 年 1 月
 - **反馈与建议**：欢迎通过 [GitHub Issues](https://github.com/yeasy/prompt_guide/issues) 提交反馈
 

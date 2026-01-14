@@ -8,6 +8,7 @@ node_modules/
 # 编辑器和IDE
 .vscode/
 .idea/
+.obsidian/
 *.swp
 *.swo
 *~
