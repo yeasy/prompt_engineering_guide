@@ -111,6 +111,6 @@
 
 ## 附录
 
-* [附录A：提示词模板库](appendix/A_prompt_templates.md)
-* [附录B：常用术语表](appendix/B_glossary.md)
-* [附录C：学习资源与工具推荐](appendix/C_resources.md)
+* [附录A：提示词模板库](appendix/a_templates.md)
+* [附录B：常用术语表](appendix/b_glossary.md)
+* [附录C：学习资源与工具推荐](appendix/c_resources.md)
