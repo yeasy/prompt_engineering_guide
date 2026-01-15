@@ -16,4 +16,5 @@
 - [1.2 提示词工程的发展历程](1.2_history.md)
 - [1.3 为什么提示词工程如此重要](1.3_importance.md)
 - [1.4 提示词工程的核心价值与应用场景](1.4_value_and_scenarios.md)
+- [1.5 提示词技术分类体系](1.5_taxonomy.md)
 - [本章小结](summary.md)
