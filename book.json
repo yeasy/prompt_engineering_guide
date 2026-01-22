@@ -1,0 +1,12 @@
+{
+    "title": "提示词工程指南",
+    "description": "从入门到精通的提示词工程完整指南",
+    "language": "zh-hans",
+    "plugins": [
+        "-highlight",
+        "mermaid-gb3"
+    ],
+    "pluginsConfig": {
+        "mermaid-gb3": {}
+    }
+}

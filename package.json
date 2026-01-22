@@ -1,0 +1,25 @@
+{
+  "name": "prompt_engineering_guide",
+  "version": "1.0.0",
+  "description": "> **从入门到精通：掌握与大语言模型高效对话的艺术**",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yeasy/prompt_engineering_guide.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/yeasy/prompt_engineering_guide/issues"
+  },
+  "homepage": "https://github.com/yeasy/prompt_engineering_guide#readme",
+  "devDependencies": {
+    "gitbook-plugin-mermaid-gb3": "^2.1.0",
+    "honkit": "^6.1.4"
+  }
+}

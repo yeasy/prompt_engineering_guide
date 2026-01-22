@@ -1,10 +1,9 @@
 # 大模型提示词工程指南
 
+[![GitHub stars](https://img.shields.io/github/stars/yeasy/prompt_engineering_guide?style=social)](https://github.com/yeasy/prompt_engineering_guide)
+[![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-blue.svg)](LICENSE)
+
 > **从入门到精通：掌握与大语言模型高效对话的艺术**
-
-在线阅读：[https://yeasy.gitbook.io/prompt_engineering_guide/](https://yeasy.gitbook.io/prompt_engineering_guide/)
-
----
 
 ## 关于本书
 
@@ -79,6 +78,21 @@
 - **第四部分**（第12-14章）展望前沿趋势和行业实践，适合所有读者拓展视野
 
 每章末尾设有"本章小结"，帮助读者巩固关键知识点。
+
+---
+
+## 📖 阅读方式
+
+**在线阅读**：[https://yeasy.gitbook.io/prompt_engineering_guide/](https://yeasy.gitbook.io/prompt_engineering_guide/)
+
+**本地阅读**（使用 [HonKit](https://github.com/honkit/honkit) 构建）：
+
+```bash
+npm install        # 安装依赖
+npx honkit serve
+```
+
+启动本地服务器后，访问 [http://localhost:4000](http://localhost:4000)
 
 ---
 
