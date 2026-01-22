@@ -5,6 +5,8 @@
 
 > **从入门到精通：掌握与大语言模型高效对话的艺术**
 
+![GitBook 在线阅读预览](_images/gitbook_preview.png)
+
 ## 关于本书
 
 在人工智能飞速发展的时代，大语言模型（Large Language Models, LLMs）已成为推动各行业变革的核心力量。无论是 [OpenAI 的 GPT 系列](https://chatgpt.com/)、[Anthropic 的 Claude](https://anthropic.com/claude)、[Google 的 Gemini](https://gemini.google.com/)，还是众多开源模型，这些 AI 系统正在重塑人们的工作方式、创作流程和问题解决思路。
