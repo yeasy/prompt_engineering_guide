@@ -43,36 +43,28 @@ https://www.promptingguide.ai/
 
 ### 论文与研究
 
-**Chain-of-Thought Prompting**  
-https://arxiv.org/abs/2201.11903  
+**[Chain-of-Thought Prompting](https://arxiv.org/abs/2201.11903)**  
 Wei et al., 2022 - 思维链提示的开创性论文。
 
-**ReAct: Synergizing Reasoning and Acting**  
-https://arxiv.org/abs/2210.03629  
+**[ReAct: Synergizing Reasoning and Acting](https://arxiv.org/abs/2210.03629)**  
 Yao et al., 2022 - ReAct框架论文。
 
-**Tree of Thoughts**  
-https://arxiv.org/abs/2305.10601  
+**[Tree of Thoughts](https://arxiv.org/abs/2305.10601)**  
 Yao et al., 2023 - 思维树推理策略。
 
-**Self-Consistency Improves Chain of Thought Reasoning**  
-https://arxiv.org/abs/2203.11171  
+**[Self-Consistency Improves Chain of Thought Reasoning](https://arxiv.org/abs/2203.11171)**  
 Wang et al., 2022 - 自一致性方法论文。
 
-**Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks**  
-https://arxiv.org/abs/2005.11401  
+**[Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/abs/2005.11401)**  
 Lewis et al., 2020 - RAG 原始论文。
 
-**A Systematic Survey of Prompt Engineering in Large Language Models**  
-https://arxiv.org/abs/2402.07927  
+**[A Systematic Survey of Prompt Engineering in Large Language Models](https://arxiv.org/abs/2402.07927)**  
 Mizrahi et al., 2024 - 全面的提示词工程技术综述，涵盖分类体系和应用领域。
 
-**Unleashing the Potential of Prompt Engineering for Large Language Models**  
-https://arxiv.org/abs/2310.14735  
+**[Unleashing the Potential of Prompt Engineering for Large Language Models](https://arxiv.org/abs/2310.14735)**  
 Comprehensive review (2023) covering foundational and advanced techniques, VLM prompting, security, and evaluation.
 
-**The Prompt Report: A Systematic Survey of Prompt Engineering Techniques**  
-https://arxiv.org/abs/2406.06608  
+**[The Prompt Report: A Systematic Survey of Prompt Engineering Techniques](https://arxiv.org/abs/2406.06608)**  
 白等 et al., 2024 - 迄今最全面的提示词工程综述：58种LLM技术、40种多模态技术、33个标准术语。
 
 ### 博客与社区
