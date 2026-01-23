@@ -27,7 +27,7 @@ Transformer架构的核心机制，使模型能够关注输入序列中的不同
 ## C
 
 **Chain-of-Thought（思维链）**  
-通过引导模型展示推理步骤来提升复杂任务表现的提示技术，简称CoT。详见第6章。
+通过引导模型展示推理步骤来提升复杂任务表现的提示技术，简称CoT。详见[第6章](../06_chain_of_thought/README.md)。
 
 **ChatML**  
 一种用于格式化对话的标记语言，某些开源模型使用此格式。
@@ -54,7 +54,7 @@ Chain-of-Thought的缩写，见Chain-of-Thought。
 ## F
 
 **Few-Shot Learning（少样本学习）**  
-在提示词中提供少量示例来引导模型学习任务模式的技术。详见第5章。
+在提示词中提供少量示例来引导模型学习任务模式的技术。详见[第5章](../05_few_shot/README.md)。
 
 **Fine-tuning（微调）**  
 在预训练模型基础上，使用特定数据进行进一步训练以适应特定任务。
@@ -132,10 +132,10 @@ Large Language Model，基于大规模文本数据训练的生成式语言模型
 ## R
 
 **RAG（检索增强生成）**  
-Retrieval-Augmented Generation，结合信息检索和文本生成的技术架构。详见第9章。
+Retrieval-Augmented Generation，结合信息检索和文本生成的技术架构。详见[第9章](../09_rag/README.md)。
 
 **ReAct**  
-Reasoning and Acting，将推理与行动交替进行的Agent框架。详见第8章。
+Reasoning and Acting，将推理与行动交替进行的Agent框架。详见[第8章](../08_react_tools/README.md)。
 
 **RLHF（人类反馈强化学习）**  
 Reinforcement Learning from Human Feedback，使用人类反馈优化模型行为的训练方法。
@@ -185,7 +185,7 @@ Vision-Language Model，能够理解图像和文本的多模态模型。
 ## Z
 
 **Zero-Shot Learning（零样本学习）**  
-不提供示例，仅通过指令描述任务让模型完成的技术。详见第5章。
+不提供示例，仅通过指令描述任务让模型完成的技术。详见[第5章](../05_few_shot/README.md)。
 
 ---
 

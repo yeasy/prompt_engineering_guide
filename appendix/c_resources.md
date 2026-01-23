@@ -4,7 +4,7 @@
 
 ## C.1 官方文档
 
-### OpenAI
+### C.1.1 OpenAI
 
 **Prompt Engineering Guide**  
 https://platform.openai.com/docs/guides/prompt-engineering  
@@ -14,7 +14,7 @@ OpenAI官方提示词工程指南，包含最佳实践和技巧。
 https://platform.openai.com/docs/guides/gpt-best-practices  
 GPT系列模型的使用最佳实践。
 
-### Anthropic
+### C.1.2 Anthropic
 
 **Claude Prompt Engineering**  
 https://docs.anthropic.com/claude/docs/prompt-engineering  
@@ -24,7 +24,7 @@ Claude官方提示词设计指南，特别介绍XML标签和预填充技术。
 https://docs.anthropic.com/claude/page/prompts  
 官方提供的提示词示例库。
 
-### Google
+### C.1.3 Google
 
 **Gemini Prompting Guide**  
 https://ai.google.dev/docs/prompting_intro  
@@ -32,7 +32,7 @@ Gemini模型的提示词设计指南。
 
 ## C.2 学习资源
 
-### 在线课程
+### C.1.4 在线课程
 
 **DeepLearning.AI - ChatGPT Prompt Engineering for Developers**  
 由OpenAI和DeepLearning.AI联合推出的免费课程。
@@ -41,7 +41,7 @@ Gemini模型的提示词设计指南。
 https://www.promptingguide.ai/  
 全面的提示词工程学习指南，涵盖各种技术。
 
-### 论文与研究
+### C.1.5 论文与研究
 
 **[Chain-of-Thought Prompting](https://arxiv.org/abs/2201.11903)**  
 Wei et al., 2022 - 思维链提示的开创性论文。
@@ -67,7 +67,7 @@ Comprehensive review (2023) covering foundational and advanced techniques, VLM p
 **[The Prompt Report: A Systematic Survey of Prompt Engineering Techniques](https://arxiv.org/abs/2406.06608)**  
 白等 et al., 2024 - 迄今最全面的提示词工程综述：58种LLM技术、40种多模态技术、33个标准术语。
 
-### 博客与社区
+### C.1.6 博客与社区
 
 **Lil'Log (Lilian Weng)**  
 https://lilianweng.github.io/  
@@ -81,7 +81,7 @@ LangChain官方Discord，活跃的开发者社区。
 
 ## C.3 开发工具
 
-### 框架与库
+### C.1.7 框架与库
 
 **LangChain**  
 https://github.com/langchain-ai/langchain  
@@ -115,7 +115,7 @@ https://github.com/microsoft/autogen
 https://github.com/joaomdmoura/crewAI  
 轻量级的Agent团队协作框架。
 
-### 提示词管理
+### C.1.8 提示词管理
 
 **PromptLayer**  
 https://promptlayer.com/  
@@ -130,7 +130,7 @@ https://promptlayer.com/
 https://www.langchain.com/langsmith  
 LangChain官方的调试和监控工具。
 
-### 向量数据库
+### C.1.9 向量数据库
 
 **Pinecone**  
 托管的向量数据库服务。
@@ -146,7 +146,7 @@ LangChain官方的调试和监控工具。
 
 ## C.4 实用工具
 
-### 提示词测试
+### C.1.10 提示词测试
 
 **OpenAI Playground**  
 https://platform.openai.com/playground  
@@ -156,7 +156,7 @@ OpenAI官方的交互式测试环境。
 https://console.anthropic.com/  
 Claude的测试控制台。
 
-### Token计算
+### C.1.11 Token计算
 
 **OpenAI Tokenizer**  
 https://platform.openai.com/tokenizer  
@@ -169,7 +169,7 @@ encoding = tiktoken.get_encoding("cl100k_base")
 tokens = encoding.encode("your text")
 ```
 
-### 提示词优化
+### C.1.12 提示词优化
 
 **PromptPerfect**  
 https://promptperfect.jina.ai/  
@@ -194,7 +194,7 @@ AI驱动的提示词优化工具。
 
 ## C.6 持续学习
 
-### 新闻与更新
+### C.1.13 新闻与更新
 
 **AI News Aggregators**
 - https://www.aiweekly.co/
@@ -204,7 +204,7 @@ AI驱动的提示词优化工具。
 - arXiv.org (cs.CL, cs.AI)
 - Papers with Code
 
-### Twitter关注
+### C.1.14 Twitter关注
 
 - @OpenAI
 - @AnthropicAI
@@ -212,7 +212,7 @@ AI驱动的提示词优化工具。
 - @omarsar0 (DAIR.AI创始人)
 - @lilianweng (OpenAI研究员)
 
-### YouTube频道
+### C.1.15 YouTube频道
 
 - Andrej Karpathy
 - Two Minute Papers
@@ -220,7 +220,7 @@ AI驱动的提示词优化工具。
 
 ## C.7 实践项目
 
-### 开源项目学习
+### C.1.16 开源项目学习
 
 **awesome-chatgpt-prompts**  
 https://github.com/f/awesome-chatgpt-prompts  
@@ -230,7 +230,7 @@ https://github.com/f/awesome-chatgpt-prompts
 https://github.com/langchain-ai/langchain/tree/master/templates  
 LangChain官方模板项目。
 
-### 竞赛与挑战
+### C.1.17 竞赛与挑战
 
 **Kaggle - LLM相关竞赛**  
 实践提示词工程技能。
