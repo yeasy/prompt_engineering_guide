@@ -7,6 +7,8 @@
         "mermaid-gb3"
     ],
     "pluginsConfig": {
-        "mermaid-gb3": {}
+        "mermaid-gb3": {
+            "version": "10.6.1"
+        }
     }
 }

@@ -27,6 +27,7 @@
   "homepage": "https://github.com/yeasy/prompt_engineering_guide#readme",
   "devDependencies": {
     "gitbook-plugin-mermaid-gb3": "^2.1.0",
-    "honkit": "^6.1.4"
+    "honkit": "^6.1.4",
+    "honkit-plugin-mermaid": "^0.1.4"
   }
 }
