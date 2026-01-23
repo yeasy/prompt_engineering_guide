@@ -4,16 +4,23 @@
   "description": "> **从入门到精通：掌握与大语言模型高效对话的艺术**",
   "main": "index.js",
   "scripts": {
+    "start": "honkit serve",
+    "serve": "honkit serve",
+    "build": "honkit build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yeasy/prompt_engineering_guide.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
+  "keywords": [
+    "prompt-engineering",
+    "llm",
+    "guide",
+    "tutorial"
+  ],
+  "author": "Yeasy",
+  "license": "CC-BY-NC-SA-4.0",
   "bugs": {
     "url": "https://github.com/yeasy/prompt_engineering_guide/issues"
   },
