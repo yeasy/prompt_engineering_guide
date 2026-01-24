@@ -17,3 +17,7 @@ Thumbs.db
 
 # Project specific
 _images_local_backup/
+
+.agent
+.obsidian
+package-lock.json
