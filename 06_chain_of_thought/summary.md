@@ -69,6 +69,21 @@
 
 3. 对于一个需要创意而非精确答案的任务，思维链是否适用？
 
+### 延伸阅读
+
+#### 6.1 思维链基础
+- [Chain-of-Thought Prompting](https://arxiv.org/abs/2201.11903) - 思维链原始论文
+- [Large Language Models are Zero-Shot Reasoners](https://arxiv.org/abs/2205.11916) - 零样本思维链研究
+- [Towards Understanding Chain-of-Thought Prompting](https://arxiv.org/abs/2212.10001) - 思维链原理深入分析
+
+#### 6.2 零样本与少样本
+- [Chain-of-Thought Prompting](https://arxiv.org/abs/2201.11903) - 思维链原始论文
+- [Prompting Guide CoT](https://www.promptingguide.ai/techniques/cot) - 思维链技术详解
+
+#### 6.3 进阶技术
+- [Self-Consistency Improves Chain of Thought Reasoning](https://arxiv.org/abs/2203.11171) - 自一致性原始论文
+- [Tree of Thoughts: Deliberate Problem Solving with Large Language Models](https://arxiv.org/abs/2305.10601) - 思维树原始论文
+
 ### 下一章预告
 
 第七章将介绍提示词链与任务分解技术——如何将复杂工作流分解为多个相互连接的提示词调用，实现更强大的自动化能力。

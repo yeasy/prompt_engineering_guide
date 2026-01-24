@@ -58,6 +58,24 @@
 - [ ] 是否有必要的错误处理？
 - [ ] 是否有质量检查机制？
 
+### 延伸阅读
+
+#### 7.1 任务分解
+- [LangChain Chains](https://python.langchain.com/docs/concepts/chains/) - LangChain 链式调用
+- [Least-to-Most Prompting](https://arxiv.org/abs/2205.10625) - 任务分解策略论文
+
+#### 7.2 设计模式
+- [LangChain Chains](https://python.langchain.com/docs/concepts/chains/) - LangChain 链式调用
+- [Least-to-Most Prompting](https://arxiv.org/abs/2205.10625) - 任务分解策略论文
+
+#### 7.3 上下文传递
+- [LangChain Chains](https://python.langchain.com/docs/concepts/chains/) - LangChain 链式调用
+- [Least-to-Most Prompting](https://arxiv.org/abs/2205.10625) - 任务分解策略论文
+
+#### 7.4 实战案例
+- [LangChain Chains](https://python.langchain.com/docs/concepts/chains/) - LangChain 链式调用
+- [Least-to-Most Prompting](https://arxiv.org/abs/2205.10625) - 任务分解策略论文
+
 ### 下一章预告
 
 第八章将进入高级应用篇，介绍ReAct框架与工具使用——如何让模型不仅进行推理，还能采取行动与外部世界交互。

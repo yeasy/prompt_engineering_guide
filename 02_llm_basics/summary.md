@@ -70,6 +70,31 @@ Token 机制      → 简洁高效的表达
 
 3. 同样的提示词在不同模型上效果可能不同，这告诉了我们什么？
 
+### 延伸阅读
+
+#### 2.1 原理与架构
+- [Attention Is All You Need](https://arxiv.org/abs/1706.03762) - Transformer 架构的原始论文
+- [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) - Transformer 可视化详解
+- [What Is ChatGPT Doing… and Why Does It Work?](https://writings.stephenwolfram.com/2023/02/what-is-chatgpt-doing-and-why-does-it-work/) - Stephen Wolfram 的深入解析
+- [Emergent Abilities of Large Language Models](https://arxiv.org/abs/2206.07682) - 涌现能力研究论文
+
+#### 2.2 主流模型
+- [OpenAI Models](https://platform.openai.com/docs/models) - OpenAI 模型官方文档
+- [Anthropic Claude Models](https://docs.anthropic.com/en/docs/about-claude/models/all-models) - Claude 模型官方文档
+- [Google Gemini Models](https://ai.google.dev/gemini-api/docs/models/gemini) - Gemini 模型官方文档
+- [Meta Llama](https://llama.meta.com/) - Llama 开源模型官网
+- [Hugging Face Open LLM Leaderboard](https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard) - 开源模型排行榜
+
+#### 2.3 参数与控制
+- [OpenAI API Reference](https://platform.openai.com/docs/api-reference/chat/create) - OpenAI 参数完整说明
+- [Anthropic API Reference](https://docs.anthropic.com/en/api/messages) - Claude 参数完整说明
+- [The Curious Case of Temperature in LLMs](https://www.lesswrong.com/posts/t5LGHMGQ7Gxq6TbJ4/the-curious-case-of-neural-network-test-time-training) - 温度参数深入解析
+
+#### 2.4 上下文窗口
+- [Lost in the Middle](https://arxiv.org/abs/2307.03172) - 长上下文中位置效应的研究论文
+- [Leave No Context Behind](https://arxiv.org/abs/2404.07143) - Gemini 无限上下文技术论文
+- [Anthropic Context Windows](https://docs.anthropic.com/en/docs/build-with-claude/context-windows) - Claude 上下文窗口最佳实践
+
 ### 下一章预告
 
 第三章将进入提示词设计的实践环节，详细介绍提示词的基本结构，包括核心组成要素、指令设计原则、上下文提供策略和输出格式定义，帮助读者掌握构建有效提示词的基本技能。

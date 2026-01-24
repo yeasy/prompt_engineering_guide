@@ -73,6 +73,25 @@
 
 3. 对于一个需要在多个模型上运行的提示词，如何设计分隔符以确保兼容性？
 
+### 延伸阅读
+
+#### 4.1 清晰与具体
+- [Write Clear Instructions](https://platform.openai.com/docs/guides/prompt-engineering#write-clear-instructions) - OpenAI 清晰指令指南
+- [Be Specific and Direct](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/be-clear-and-direct) - Anthropic 清晰直接原则
+- [Prompt Engineering Best Practices](https://ai.google.dev/gemini-api/docs/prompting-intro#best-practices) - Google 最佳实践
+
+#### 4.2 分隔符
+- [Use Delimiters](https://platform.openai.com/docs/guides/prompt-engineering#tactic-use-delimiters-to-clearly-indicate-distinct-parts-of-the-input) - OpenAI 分隔符使用技巧
+- [Use XML Tags](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/use-xml-tags) - Anthropic XML 标签指南
+
+#### 4.3 角色设定
+- [System Prompt Examples](https://platform.openai.com/docs/guides/prompt-engineering#tactic-ask-the-model-to-adopt-a-persona) - OpenAI 角色设定示例
+- [Give Claude a Role](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/give-claude-a-role) - Anthropic 角色设定指南
+
+#### 4.4 迭代优化
+- [Test Changes Systematically](https://platform.openai.com/docs/guides/prompt-engineering#strategy-test-changes-systematically) - OpenAI 系统化测试策略
+- [Iterate on Prompts](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/iterate-prompts) - Anthropic 提示词迭代指南
+
 ### 下一章预告
 
 第五章将进入核心技术篇，首先介绍少样本学习与示例驱动技术。这是最有效的提示词技术之一，通过在提示词中提供少量示例，可以显著提升模型在各种任务上的表现。

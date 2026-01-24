@@ -70,6 +70,16 @@
 
 3. 少样本学习在哪些情况下可能不如零样本或其他技术有效？
 
+### 延伸阅读
+
+#### 5.1 基础概念
+- [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165) - GPT-3 论文，少样本学习的基础
+- [Rethinking the Role of Demonstrations](https://arxiv.org/abs/2202.12837) - 示例作用的深入研究
+- [What Makes In-Context Learning Work](https://arxiv.org/abs/2202.12083) - 上下文学习机制研究
+
+#### 5.2 示例设计与应用
+- [Few-Shot Prompting Guide](https://www.promptingguide.ai/techniques/fewshot) - 少样本提示技术详解
+
 ### 下一章预告
 
 第六章将介绍另一项核心技术——思维链（Chain-of-Thought）与推理增强。这项技术通过引导模型展示推理过程，显著提升在复杂推理任务上的表现。我们将学习思维链的原理、变体和应用方法。

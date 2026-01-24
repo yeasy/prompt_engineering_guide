@@ -89,6 +89,27 @@
 
 3. 在没有示例的情况下，如何通过指令设计确保输出质量？
 
+### 延伸阅读
+
+#### 3.1 核心要素
+- [OpenAI Prompt Engineering Guide](https://platform.openai.com/docs/guides/prompt-engineering) - OpenAI 官方提示词指南
+- [Anthropic Prompt Design](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/prompt-structure) - Claude 提示词结构指南
+- [Google Prompt Design Strategies](https://ai.google.dev/gemini-api/docs/prompting-strategies) - Gemini 提示词策略
+
+#### 3.2 指令设计
+- [Tactic: Include Details](https://platform.openai.com/docs/guides/prompt-engineering#tactic-include-details-in-your-query-to-get-more-relevant-answers) - OpenAI 具体化指令技巧
+- [Give Claude a Role](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/give-claude-a-role) - Anthropic 角色设定指南
+
+#### 3.3 上下文
+- [Provide Reference Text](https://platform.openai.com/docs/guides/prompt-engineering#tactic-provide-reference-text) - OpenAI 提供参考文本技巧
+- [Use XML Tags](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/use-xml-tags) - Anthropic XML标签使用指南
+- [Long Context Best Practices](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/long-context-tips) - Claude 长上下文技巧
+
+#### 3.4 输出格式
+- [Control Output Format](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/control-output-format) - Anthropic 输出格式控制
+- [Structured Outputs](https://platform.openai.com/docs/guides/structured-outputs) - OpenAI 结构化输出指南
+- [JSON Mode](https://platform.openai.com/docs/guides/json-mode) - OpenAI JSON 模式
+
 ### 下一章预告
 
 第四章将介绍提示词设计的最佳实践，包括清晰性与具体性原则、分隔符的使用、角色设定技巧以及迭代优化方法。这些实践技巧将帮助读者在实际应用中设计出更高效的提示词。
