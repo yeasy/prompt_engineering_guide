@@ -59,6 +59,7 @@
 - [A Systematic Survey of Prompt Engineering](https://arxiv.org/abs/2402.07927) - 2024年发布的全面提示词工程综述
 - [The Prompt Report](https://arxiv.org/abs/2406.06608) - 最全面的提示词技术综述（58种技术+33个术语）
 - [Prompting Guide](https://www.promptingguide.ai/) - DAIR.AI 提供的提示词学习指南
+- [Pre-train, Prompt, and Predict](https://arxiv.org/abs/2107.13586) - 提示词范式的综述论文
 
 #### 1.2 发展历史
 - [BERT: Pre-training of Deep Bidirectional Transformers](https://arxiv.org/abs/1810.04805) - BERT 原始论文
@@ -84,3 +85,6 @@
 ---
 
 [下一章：大语言模型基础 →](../02_llm_basics/README.md)
+
+
+
