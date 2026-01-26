@@ -5,7 +5,7 @@
 
 > **从入门到精通：掌握与大语言模型高效对话的艺术**
 
-![GitBook 在线阅读预览](_images/gitbook_preview.png)
+![大模型提示词工程指南](_images/cover.png)
 
 ## 关于本书
 
