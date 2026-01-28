@@ -100,6 +100,7 @@
   * [13.2 Anthropic Claude 提示技巧](13_platform_specific/13.2_anthropic_claude.md)
   * [13.3 Google Gemini 提示策略](13_platform_specific/13.3_google_gemini.md)
   * [13.4 开源模型的提示词适配](13_platform_specific/13.4_open_source.md)
+  * [13.5 跨模型提示词策略](13_platform_specific/13.5_cross_platform_strategy.md)
   * [本章小结](13_platform_specific/summary.md)
 
 * [第十四章：未来趋势与展望](14_future/README.md)
