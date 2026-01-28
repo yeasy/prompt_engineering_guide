@@ -3,9 +3,9 @@
 [![GitHub stars](https://img.shields.io/github/stars/yeasy/prompt_engineering_guide?style=social)](https://github.com/yeasy/prompt_engineering_guide)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-blue.svg)](LICENSE)
 
-> **从入门到精通：掌握与大语言模型高效对话的艺术**
+> **与人工智能对话的艺术**
 
-![大模型提示词工程指南](_images/cover.png)
+![大模型提示词工程指南](_images/cover.jpg)
 
 ## 关于本书
 
