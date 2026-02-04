@@ -40,6 +40,7 @@
   * [5.2 示例的选择与设计策略](05_few_shot/5.2_example_design.md)
   * [5.3 少样本学习的应用场景](05_few_shot/5.3_applications.md)
   * [5.4 常见问题与解决方案](05_few_shot/5.4_troubleshooting.md)
+  * [5.5 本章实战练习](05_few_shot/5.5_practice.md)
   * [本章小结](05_few_shot/summary.md)
 
 * [第六章：思维链与推理增强](06_chain_of_thought/README.md)
@@ -47,6 +48,7 @@
   * [6.2 零样本与少样本思维链](06_chain_of_thought/6.2_zero_few_shot_cot.md)
   * [6.3 自一致性与多路径推理](06_chain_of_thought/6.3_self_consistency.md)
   * [6.4 思维树与高级推理策略](06_chain_of_thought/6.4_tree_of_thought.md)
+  * [6.5 本章实战练习](06_chain_of_thought/6.5_practice.md)
   * [本章小结](06_chain_of_thought/summary.md)
 
 * [第七章：提示词链与任务分解](07_prompt_chaining/README.md)
@@ -84,6 +86,7 @@
   * [11.2 幻觉问题与事实性保障](11_safety_reliability/11.2_hallucination.md)
   * [11.3 偏见识别与公平性考量](11_safety_reliability/11.3_bias_fairness.md)
   * [11.4 企业级安全架构设计](11_safety_reliability/11.4_enterprise_security.md)
+  * [11.5 本章实战练习](11_safety_reliability/11.5_practice.md)
   * [本章小结](11_safety_reliability/summary.md)
 
 ## 第四部分：进阶与展望
