@@ -10,4 +10,6 @@
 - [13.2 Anthropic Claude提示技巧](13.2_anthropic_claude.md)
 - [13.3 Google Gemini提示策略](13.3_google_gemini.md)
 - [13.4 开源模型的提示词适配](13.4_open_source.md)
+- [13.5 跨平台提示词策略](13.5_cross_platform_strategy.md)
+- [13.6 本章实战练习](13.6_practice.md)
 - [本章小结](summary.md)

@@ -10,4 +10,5 @@
 - [12.2 提示词优化与调优工具](12.2_optimization_tools.md)
 - [12.3 评估体系与质量度量](12.3_evaluation.md)
 - [12.4 PromptOps：提示词运维实践](12.4_promptops.md)
+- [12.5 本章实战练习](12.5_practice.md)
 - [本章小结](summary.md)

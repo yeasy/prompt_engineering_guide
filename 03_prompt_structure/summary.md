@@ -43,6 +43,12 @@
    - 控制方法：模板示例、长度限制、取值范围
    - 高级技巧：预填充、格式验证
 
+5. **结构化输出**
+   - 格式对比：JSON、XML、YAML 的适用场景
+   - JSON 模式：清晰指令、提供 Schema、设计逃生通道
+   - 平台特性：OpenAI Structured Outputs、Claude XML、Gemini JSON
+   - 容错策略：自动清理、多重重试、反射纠错
+
 ### 提示词结构模板
 
 ```markdown

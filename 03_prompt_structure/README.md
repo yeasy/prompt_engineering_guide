@@ -14,4 +14,5 @@
 - [3.2 指令设计的基本原则](3.2_instruction_principles.md)
 - [3.3 上下文与背景信息的提供](3.3_context.md)
 - [3.4 输出格式的定义与约束](3.4_output_format.md)
+- [3.5 结构化输出](3.5_structured_output.md)
 - [本章小结](summary.md)

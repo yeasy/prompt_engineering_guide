@@ -14,4 +14,5 @@
 - [8.2 函数调用与工具集成](8.2_function_calling.md)
 - [8.3 外部知识源的接入](8.3_external_knowledge.md)
 - [8.4 Agent系统的提示词设计](8.4_agent_prompts.md)
+- [8.5 本章实战练习](8.5_practice.md)
 - [本章小结](summary.md)

@@ -14,4 +14,6 @@
 - [6.2 零样本与少样本思维链](6.2_zero_few_shot_cot.md)
 - [6.3 自一致性与多路径推理](6.3_self_consistency.md)
 - [6.4 思维树与高级推理策略](6.4_tree_of_thought.md)
+- [6.5 Reasoning 模型专题：内置推理范式](6.5_reasoning_models.md)
+- [6.6 本章实战练习](6.6_practice.md)
 - [本章小结](summary.md)

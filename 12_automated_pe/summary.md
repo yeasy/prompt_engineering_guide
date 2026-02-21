@@ -17,6 +17,11 @@
 - 建立系统化评估流程
 - 实施持续监控和优化
 
+5. **实战练习核心**
+   - 体验 DSPy 自动提取与优化逻辑
+   - 构建防幻觉的 LLM-as-a-Judge 评估器
+   - 设计基础级的 PromptOps CI/CD 流程
+
 ---
 
 [下一章：平台特定策略 →](../13_platform_specific/README.md)

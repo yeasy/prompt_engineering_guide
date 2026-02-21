@@ -6,9 +6,9 @@
 
 ### 关键概念
 
-- **提示词（Prompt）**：输入给大语言模型的任何文本内容，是人类意图与 AI 能力之间的桥梁。
+- **提示词**：输入给大语言模型的任何文本内容，是人类意图与 AI 能力之间的桥梁。
 
-- **提示词工程（Prompt Engineering）**：系统性地设计、构建、测试和优化提示词的过程与方法论，旨在引导模型生成高质量、准确且符合需求的输出。
+- **提示词工程**：系统性地设计、构建、测试和优化提示词的过程与方法论，旨在引导模型生成高质量、准确且符合需求的输出。
 
 ### 核心要点
 
@@ -59,12 +59,10 @@
 - [Chain-of-Thought Prompting](https://arxiv.org/abs/2201.11903) - 思维链提示的里程碑论文
 - [ReAct: Synergizing Reasoning and Acting](https://arxiv.org/abs/2210.03629) - 推理与行动结合的创新框架
 
-#### 1.3 价值与意义
+#### 1.3 重要性与应用场景
 - [OpenAI Prompt Engineering Guide](https://platform.openai.com/docs/guides/prompt-engineering) - OpenAI 官方提示词工程指南
 - [Anthropic Prompt Engineering](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview) - Anthropic Claude 提示词最佳实践
 - [Google AI Prompt Design](https://ai.google.dev/gemini-api/docs/prompting-intro) - Google Gemini 提示词设计指南
-
-#### 1.4 应用场景
 - [OpenAI Cookbook](https://cookbook.openai.com/) - OpenAI 官方示例和最佳实践集合
 - [Anthropic Prompt Library](https://docs.anthropic.com/en/prompt-library/library) - Claude 提示词模板库
 - [LangChain](https://langchain.com/) - 流行的 LLM 应用开发框架

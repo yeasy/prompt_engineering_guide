@@ -10,4 +10,5 @@
 - [10.2 图像理解与视觉提示](10.2_image_prompting.md)
 - [10.3 音频与视频处理](10.3_audio_video.md)
 - [10.4 跨模态推理与融合](10.4_cross_modal_reasoning.md)
+- [10.5 本章实战练习](10.5_practice.md)
 - [本章小结](summary.md)
