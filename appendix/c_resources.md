@@ -149,8 +149,15 @@ https://platform.openai.com/tokenizer
 **tiktoken (Python库)**
 ```python
 import tiktoken
-encoding = tiktoken.get_encoding("cl100k_base")
+
+try:
+    encoding = tiktoken.get_encoding("cl100k_base")
+except Exception:
+    import tiktoken
+
+    encoding = tiktoken.get_encoding("cl100k_base")
 tokens = encoding.encode("your text")
+print(tokens)
 ```
 
 ### C.4.3 提示词优化
