@@ -1,4 +1,4 @@
-# 附录C：资源、工具与参考文献
+# 附录 C：资源、工具与参考文献
 
 本附录汇总了全书中引用的重要论文、官方文档及业界优秀的开源实践库，同时推荐学习提示词工程的优质资源和实用工具，供读者进行更深入的拓展学习。
 
@@ -59,7 +59,7 @@ Wang et al., 2022 - 提出多路径采样和多数投票的自一致性机制。
 **[Tree of Thoughts: Deliberate Problem Solving with Large Language Models](https://arxiv.org/abs/2305.10601)**
 Yao et al., 2023 - 将 CoT 推进到树状结构搜索，适用于极高复杂度任务。
 
-### C.2.3 工具调用与 Agent (ReAct & Agents)
+### C.2.3 工具调用与 智能体（agent） (ReAct & Agents)
 **[ReAct: Synergizing Reasoning and Acting in Language Models](https://arxiv.org/abs/2210.03629)**
 Yao et al., 2022 - 提出了 Thought-Action-Observation 范式。
 

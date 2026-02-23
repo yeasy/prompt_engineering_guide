@@ -281,9 +281,9 @@
     - 实践建议
 
 ## 04_best_practices/4.5_system_prompt_design.md
-  - 4.5 System Prompt 系统设计
-    - 4.5.1 System Prompt 的核心定位
-    - 4.5.2 结构化 System Prompt 设计范式
+  - 4.5 系统提示词（system prompt） 系统设计
+    - 4.5.1 系统提示词（system prompt） 的核心定位
+    - 4.5.2 结构化 系统提示词（system prompt） 设计范式
 - 身份与使命
 - 行为准则
 - 审查规则清单
@@ -291,8 +291,8 @@
   - 代码总评
   - 改进建议
   - 重构示例
-    - 4.5.3 长 System Prompt 的组织与管理
-    - 4.5.4 User Prompt 与 System Prompt 的协同
+    - 4.5.3 长 系统提示词（system prompt） 的组织与管理
+    - 4.5.4 用户提示词（user prompt） 与 系统提示词（system prompt） 的协同
 - 良性协同的代码示例
     - 思考
 
@@ -564,7 +564,7 @@
     - 下一章预告
 
 ## 08_react_tools/README.md
-- 第八章：ReAct与工具使用
+- 第八章：ReAct 与工具使用
   - 本章内容
 
 ## 08_react_tools/8.1_react_framework.md
@@ -595,28 +595,28 @@
     - 讨论
 
 ## 08_react_tools/8.4_agent_prompts.md
-  - 8.4 Agent 系统的提示词设计
+  - 8.4 智能体（agent） 系统的提示词设计
     - 8.4.1 核心设计原则
-    - 8.4.2 模板一：通用 ReAct Agent
+    - 8.4.2 模板一：通用 ReAct 智能体（agent）
 - Role
 - Tools
 - Protocol
 - Constraints
 - Example
-    - 8.4.3 模板二：数据分析 SQL Agent
+    - 8.4.3 模板二：数据分析 SQL 智能体（agent）
 - Role
 - Database Schema
 - Instructions
 - Security Rules
 - Output Format
-    - 8.4.4 模板三：规划型 Agent (Planner)
+    - 8.4.4 模板三：规划型 智能体（agent） (Planner)
 - Role
 - Workflow
 - Output Format
-    - 8.4.5 模板四：分层行动空间 Agent (OS-World)
-- Agent 通过 shell 发现可用工具
-- Agent 调用工具
-- Agent 生成的脚本：分析一整年股票数据
+    - 8.4.5 模板四：分层行动空间 智能体（agent） (OS-World)
+- 智能体（agent） 通过 shell 发现可用工具
+- 智能体（agent） 调用工具
+- 智能体（agent） 生成的脚本：分析一整年股票数据
 - Role
 - Environment Layers
 - Decision Protocol
@@ -631,7 +631,7 @@
   - 练习三：防范"工具级联故障" (Tool Cascading Failure)
 
 ## 08_react_tools/summary.md
-- 第八章：ReAct与工具使用
+- 第八章：ReAct 与工具使用
   - 本章小结
     - 关键概念
     - 核心要点
@@ -1045,25 +1045,25 @@
     - 思考
 
 ## 14_future/14.2_multi_agent.md
-  - 14.2 多 Agent 协作与编排
-    - 14.2.1 为什么需要多 Agent
-    - 14.2.2 多 Agent 架构模式
-    - 14.2.3 主流多 Agent 框架
+  - 14.2 多 智能体（agent） 协作与编排
+    - 14.2.1 为什么需要多 智能体（agent）
+    - 14.2.2 多 智能体（agent） 架构模式
+    - 14.2.3 主流多 智能体（agent） 框架
 - 定义状态
 - 构建图
 - 添加节点
 - 定义边（流转逻辑）
 - 编译运行
-- 定义 Agent
+- 定义 智能体（agent）
 - 定义任务
 - 组建团队执行
-- 创建 Agent
+- 创建 智能体（agent）
 - 发起群聊
-    - 14.2.4 Agent 间通信设计
+    - 14.2.4 智能体（agent） 间通信设计
     - 14.2.5 实战协作模式
 - 定义输出 Schema
-- 子 Agent 必须按此格式提交结果
-    - 14.2.6 多 Agent 提示词设计原则
+- 子 智能体（agent） 必须按此格式提交结果
+    - 14.2.6 多 智能体（agent） 提示词设计原则
   - 任务完成报告
     - 延伸思考
 
@@ -1159,7 +1159,7 @@
   - C.2 核心参考文献与研究论文 (Foundational Papers & Research)
     - C.2.1 基础与综述类
     - C.2.2 推理与思维链 (Reasoning & CoT)
-    - C.2.3 工具调用与 Agent (ReAct & Agents)
+    - C.2.3 工具调用与 智能体（agent） (ReAct & Agents)
     - C.2.4 自动化与评测 (Automated PE)
     - C.2.5 检索增强生成 (RAG)
   - C.3 开源框架与开发工具 (Frameworks & Tools)
@@ -1198,7 +1198,7 @@
   - E.3 单次调用的超载 (God Prompt)
   - E.4 强制格式的硬换行与缩进敏感
   - E.5 缺乏退路 (No Escape Hatch)
-  - E.6 在 System Prompt 中附带用户请求
+  - E.6 在 系统提示词（system prompt） 中附带用户请求
   - E.7 盲目依赖 Few-Shot (Blind Few-Shot)
   - E.8 上下文污染与无差别检索 (Context Pollution)
   - 小结

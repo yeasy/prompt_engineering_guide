@@ -1,10 +1,10 @@
-# 附录B：术语表
+# 附录 B：术语表
 
 本附录收录了提示词工程和大语言模型领域的常用术语及其解释。
 
 ## A
 
-**Agent（智能体）**  
+**智能体（agent）（智能体）**  
 能够自主感知环境、做出决策并采取行动的AI系统，通常具备规划、执行和反思能力。
 
 **API（应用程序接口）**  
@@ -33,7 +33,7 @@ Transformer架构的核心机制，使模型能够关注输入序列中的不同
 一种用于格式化对话的标记语言，某些开源模型使用此格式。
 
 **Chunk（文档块）**  
-RAG系统中，将长文档分割成的较小片段，便于检索和处理。
+RAG 系统中，将长文档分割成的较小片段，便于检索和处理。
 
 **Context Window（上下文窗口）**  
 模型一次能处理的最大Token数量，决定了输入和输出的总长度限制。
@@ -148,7 +148,7 @@ Reinforcement Learning from Human Feedback，使用人类反馈优化模型行�
 **Self-Consistency（自一致性）**  
 通过多路径采样和投票提升推理准确性的技术。
 
-**System Prompt（系统提示词）**  
+**系统提示词（system prompt）（系统提示词）**  
 设定模型整体行为和规则的提示词，通常在对话开始时提供。
 
 ## T
@@ -156,7 +156,7 @@ Reinforcement Learning from Human Feedback，使用人类反馈优化模型行�
 **Temperature（温度）**  
 控制生成随机性的参数，值越高输出越随机，越低越确定。
 
-**Token**  
+**Token（词元）**  
 模型处理文本的基本单位，可以是一个词、词的一部分或标点符号。
 
 **Token Limit（Token限制）**  
@@ -177,7 +177,7 @@ Tree of Thoughts，将推理过程组织为树形结构的高级推理策略。
 ## V
 
 **Vector Database（向量数据库）**  
-专门用于存储和检索向量嵌入的数据库，RAG系统的核心组件。
+专门用于存储和检索向量嵌入的数据库，RAG 系统的核心组件。
 
 **VLM（视觉语言模型）**  
 Vision-Language Model，能够理解图像和文本的多模态模型。
@@ -191,8 +191,8 @@ Vision-Language Model，能够理解图像和文本的多模态模型。
 
 ## 新增术语（2025年更新）
 
-**A2A Protocol（Agent-to-Agent协议）**  
-Google提出的Agent间通信标准化协议，定义了多Agent系统中的消息格式和交互模式。
+**A2A Protocol（智能体（agent）-to-Agent协议）**  
+Google提出的Agent间通信标准化协议，定义了多智能体系统中的消息格式和交互模式。
 
 **Context Engineering（上下文工程）**  
 关注整个上下文窗口的系统性管理，包括系统指令、检索内容、记忆状态等的动态组装与优化。
@@ -201,7 +201,7 @@ Google提出的Agent间通信标准化协议，定义了多Agent系统中的消�
 Claude等模型支持的功能，允许模型在回答前进行更深入的内部推理，可通过预算参数控制思考深度。
 
 **MCP（模型上下文协议）**  
-Model Context Protocol，Anthropic发布的开放协议，标准化AI应用与各类数据源、工具之间的连接方式。
+Model Context Protocol，Anthropic发布的开放协议，标准化AI 应用与各类数据源、工具之间的连接方式。
 
 **MoE（混合专家模型）**  
 Mixture of Experts，一种模型架构，通过路由机制动态激活部分参数，实现大规模模型的高效推理。
