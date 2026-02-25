@@ -67,7 +67,7 @@
   * [8.1 ReAct 框架：推理与行动的结合](08_react_tools/8.1_react_framework.md)
   * [8.2 函数调用与工具集成](08_react_tools/8.2_function_calling.md)
   * [8.3 外部知识源的接入](08_react_tools/8.3_external_knowledge.md)
-  * [8.4 智能体（agent） 系统的提示词设计](08_react_tools/8.4_agent_prompts.md)
+  * [8.4 智能体（Agent） 系统的提示词设计](08_react_tools/8.4_agent_prompts.md)
   * [8.5 本章实战练习](08_react_tools/8.5_practice.md)
   * [本章小结](08_react_tools/summary.md)
 
@@ -116,7 +116,7 @@
 
 * [第十四章 未来趋势与展望](14_future/README.md)
   * [14.1 从提示词工程到上下文工程](14_future/14.1_context_engineering.md)
-  * [14.2 多 智能体（agent） 协作与编排](14_future/14.2_multi_agent.md)
+  * [14.2 多 智能体（Agent） 协作与编排](14_future/14.2_multi_agent.md)
   * [14.3 提示词工程的职业发展](14_future/14.3_career.md)
   * [14.4 行业应用案例与最佳实践](14_future/14.4_industry_cases.md)
   * [本章小结](14_future/summary.md)
