@@ -1,4 +1,4 @@
-# 第十三章：平台特定策略
+# 第十三章 平台特定策略
 
 不同的AI模型平台有各自的特点和最佳实践。本章将介绍针对OpenAI GPT、Anthropic Claude、Google Gemini以及开源模型的平台特定提示词策略。
 
