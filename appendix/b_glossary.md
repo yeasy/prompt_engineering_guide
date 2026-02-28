@@ -78,7 +78,7 @@ Chain-of-Thought的缩写，见Chain-of-Thought。
 ## I
 
 **In-Context Learning（上下文学习）**  
-模型通过提示词中的示例"学习"任务，而不改变模型参数。
+模型通过提示词中的示例“学习”任务，而不改变模型参数。
 
 **Instruction Tuning（指令调优）**  
 通过大量指令-回复对训练模型，提升其遵循指令的能力。

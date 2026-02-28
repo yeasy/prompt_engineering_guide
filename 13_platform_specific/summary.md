@@ -40,22 +40,26 @@
 ### 延伸阅读
 
 #### 13.1 OpenAI 与结构化输出
+
 - [OpenAI Prompt Engineering Guide](https://platform.openai.com/docs/guides/prompt-engineering) - OpenAI 官方最佳实践
 - [OpenAI Structured Outputs](https://platform.openai.com/docs/guides/structured-outputs) - 结构化输出技术文档
 
 #### 13.2 Claude 与长文本/XML技巧
+
 - [Claude Prompt Engineering Interactive Tutorial](https://github.com/anthropics/prompt-eng-interactive-tutorial) - 强烈推荐，Claude 官方互动式提示词教程
 - [Claude Long Context Window Tips](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/long-context-window) - 处理超长文档的使用技巧
 
 #### 13.3 Gemini 原生混合技巧
+
 - [Google Gemini API Cookbook](https://github.com/google-gemini/cookbook) - 涵盖各种多模态提示词的配方与范例
 
 #### 13.4 开源模型提示词范例
+
 - [HuggingFace Chat Templates Guide](https://huggingface.co/docs/transformers/main/chat_templating) - 开源模型对话模板深入解析
 
 ### 下一章预告
 
-经过对各大平台特性的细致拆解，我们的提示词工程体系已趋于完备。最后一章第十四章，我们将跳出眼前的技术细节，探讨未来一两年内提示词工程将走向何方（基于 Agent 系统的 Context Engineering 将逐渐替代单点 Prompt Engineering），并讨论在这个快速变迁的赛道上工程师的职业发展路径。
+经过对各大平台特性的细致拆解，我们的提示词工程体系已趋于完备。最后一章[第十四章](../14_future/README.md)，我们将跳出眼前的技术细节，探讨未来一两年内提示词工程将走向何方（基于 Agent 系统的 Context Engineering 将逐渐替代单点 Prompt Engineering），并讨论在这个快速变迁的赛道上工程师的职业发展路径。
 
 ---
 

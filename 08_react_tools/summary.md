@@ -2,7 +2,7 @@
 
 ## 本章小结
 
-本章系统性地介绍了大语言模型如何通过调用外部工具拓展能力边界。涵盖了 ReAct 框架、函数调用机制（Function Calling）、外部知识接入以及构建自主智能体（Agent）系统的核心方法。这些技术使大语言模型从一个单纯的"文本生成器"转变为"行动执行者"。
+本章系统性地介绍了大语言模型如何通过调用外部工具拓展能力边界。涵盖了 ReAct 框架、函数调用机制（Function Calling）、外部知识接入以及构建自主智能体（Agent）系统的核心方法。这些技术使大语言模型从一个单纯的“文本生成器”转变为“行动执行者”。
 
 ### 关键概念
 
@@ -44,14 +44,17 @@
 ### 延伸阅读
 
 #### 8.1 ReAct 框架
+
 - [ReAct: Synergizing Reasoning and Acting in Language Models](https://arxiv.org/abs/2210.03629) - ReAct 原始论文
 - [Prompting Guide: ReAct Prompting](https://www.promptingguide.ai/techniques/react) - ReAct 提示词指南
 
-#### 8.2 函数调用 (Function Calling)
+#### 8.2 函数调用 （Function Calling）
+
 - [OpenAI Function Calling Guide](https://platform.openai.com/docs/guides/function-calling) - OpenAI 官方函数调用实战指南
 - [Anthropic Tool Use](https://docs.anthropic.com/en/docs/build-with-claude/tool-use) - Claude 工具使用指南
 
 #### 8.3 Agent 架构设计
+
 - [LLM Powered Autonomous Agents](https://lilianweng.github.io/posts/2023-06-23-agent/) - Lilian Weng 关于 Agent 的权威综述
 
 ### 下一章预告

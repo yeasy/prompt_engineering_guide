@@ -48,18 +48,21 @@
 ### 延伸阅读
 
 #### 1.1 概念基础
+
 - [A Systematic Survey of Prompt Engineering](https://arxiv.org/abs/2402.07927) - 2024年发布的全面提示词工程综述
 - [The Prompt Report](https://arxiv.org/abs/2406.06608) - 最全面的提示词技术综述（58种技术+33个术语）
 - [Prompting Guide](https://www.promptingguide.ai/) - DAIR.AI 提供的提示词学习指南
 - [Pre-train, Prompt, and Predict](https://arxiv.org/abs/2107.13586) - 提示词范式的综述论文
 
 #### 1.2 发展历史
+
 - [BERT: Pre-training of Deep Bidirectional Transformers](https://arxiv.org/abs/1810.04805) - BERT 原始论文
 - [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165) - GPT-3 论文，开启少样本学习时代
 - [Chain-of-Thought Prompting](https://arxiv.org/abs/2201.11903) - 思维链提示的里程碑论文
 - [ReAct: Synergizing Reasoning and Acting](https://arxiv.org/abs/2210.03629) - 推理与行动结合的创新框架
 
 #### 1.3 重要性与应用场景
+
 - [OpenAI Prompt Engineering Guide](https://platform.openai.com/docs/guides/prompt-engineering) - OpenAI 官方提示词工程指南
 - [Anthropic Prompt Engineering](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview) - Anthropic Claude 提示词最佳实践
 - [Google AI Prompt Design](https://ai.google.dev/gemini-api/docs/prompting-intro) - Google Gemini 提示词设计指南

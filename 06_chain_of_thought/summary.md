@@ -18,6 +18,7 @@
    - 分解复杂问题为简单子步骤
    - 利用中间结果进行后续推理
    - 激活模型训练中的推理模式
+   - 以生成长度换取计算深度，将单次压缩推理分散为多步
    - 大模型上效果更显著
 
 2. **零样本与少样本CoT对比**
@@ -62,23 +63,26 @@
 
 ### 实践技巧
 
-1. **触发语选择**："让我们一步一步思考"简单有效；在对外输出时可要求“只列关键步骤/核对点”，避免冗长推理
+1. **触发语选择**：“让我们一步一步思考”简单有效；在对外输出时可要求“只列关键步骤/核对点”，避免冗长推理
 2. **Temperature设置**：自一致性用0.7左右，普通CoT可用0.3-0.5
-3. **步骤控制**：可要求"用3-5个步骤"避免过于冗长
+3. **步骤控制**：可要求“用3-5个步骤”避免过于冗长
 4. **答案提取**：确保能从推理输出中准确提取答案
 
 ### 延伸阅读
 
 #### 6.1 思维链基础
+
 - [Chain-of-Thought Prompting](https://arxiv.org/abs/2201.11903) - 思维链原始论文
 - [Large Language Models are Zero-Shot Reasoners](https://arxiv.org/abs/2205.11916) - 零样本思维链研究
 - [Towards Understanding Chain-of-Thought Prompting](https://arxiv.org/abs/2212.10001) - 思维链原理深入分析
 
 #### 6.2 零样本与少样本
+
 - [Chain-of-Thought Prompting](https://arxiv.org/abs/2201.11903) - 思维链原始论文
 - [Prompting Guide CoT](https://www.promptingguide.ai/techniques/cot) - 思维链技术详解
 
 #### 6.3 进阶技术
+
 - [Self-Consistency Improves Chain of Thought Reasoning](https://arxiv.org/abs/2203.11171) - 自一致性原始论文
 - [Tree of Thoughts: Deliberate Problem Solving with Large Language Models](https://arxiv.org/abs/2305.10601) - 思维树原始论文
 

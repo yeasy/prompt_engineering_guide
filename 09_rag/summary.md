@@ -9,7 +9,7 @@
 - **RAG (检索增强生成)**：结合信息检索和文本生成，利用检索到的实时、私有数据作为上下文增强生成的技术。
 - **上下文拼接**：将检索结果（Chunks）与用户原问题融合成一个完整的提示词的过程。
 - **引用出处 (Citation)**：生成最终回答时，附带原文来源标记，增强可信度和追溯性。
-- **闭卷测试限制**：一种提示词技术，严令模型"仅使用给定的资料回答问题"，禁止利用先天预训练知识。
+- **闭卷测试限制**：一种提示词技术，严令模型“仅使用给定的资料回答问题”，禁止利用先天预训练知识。
 
 ### 核心要点
 
@@ -19,9 +19,9 @@
    - **生成 (Generation)**：拼接检索块和问题，编写防御性提示词进行加工生成。
 
 2. **RAG 提示词设计四大法则**
-   - **来源隔离**：使用 XML 或特定分隔符清晰划定"资料区"与"指令区"。
+   - **来源隔离**：使用 XML 或特定分隔符清晰划定“资料区”与“指令区”。
    - **严格引用**：指令要求不仅回答问题，而且每句话必须附带对应 Chunk 的引用 ID。
-   - **应对信息不足**：提供标准逃生通道，声明"如果提供的资料不足以回答，说你不知道，禁止脑补"。
+   - **应对信息不足**：提供标准逃生通道，声明“如果提供的资料不足以回答，说你不知道，禁止脑补”。
    - **处理冲突**：指导模型在不同资料存在矛盾时，指出矛盾点而非简单盲从最新或最长的资料。
 
 3. **检索增强的高级架构 (Advanced RAG)**
@@ -37,20 +37,23 @@
 
 - [ ] 上下文中提供的检索结果是否使用了清晰的分隔符加以隔离？
 - [ ] 提示词中是否明确限定了模型仅能使用所提供的资料？
-- [ ] 测试过"故意不提供相关资料"时，模型是否能诚实拒绝回答？
+- [ ] 测试过“故意不提供相关资料”时，模型是否能诚实拒绝回答？
 - [ ] 是否指导模型在答案中加入文档索引标号以便追溯？
 
 ### 延伸阅读
 
 #### 9.1 RAG 原理与架构
+
 - [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/abs/2005.11401) - RAG 的重要开山之作
 - [LangChain RAG Documentation](https://python.langchain.com/docs/use_cases/question_answering/) - 标准 RAG 实现指南
 
 #### 9.2 提示词与重排高级技巧
+
 - [Advanced RAG Techniques](https://docs.llamaindex.ai/en/stable/optimizing/production_rag/) - LlamaIndex 提供的高阶 RAG 策略
 - [Anthropic Embeddings and RAG](https://docs.anthropic.com/en/docs/build-with-claude/embeddings) - Claude 相关的 RAG 参考资料
 
 #### 9.3 评测框架
+
 - [RAGAS: Automated Evaluation of RAG](https://github.com/explodinggradients/ragas) - RAG 自动化评分框架
 
 ### 下一章预告

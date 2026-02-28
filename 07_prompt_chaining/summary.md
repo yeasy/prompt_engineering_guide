@@ -66,16 +66,20 @@
 ### 延伸阅读
 
 #### 7.1 任务分解
+
 - [Least-to-Most Prompting](https://arxiv.org/abs/2205.10625) - 任务分解策略论文
 
 #### 7.2 设计模式
+
 - [LangChain Chains](https://python.langchain.com/docs/concepts/chains/) - LangChain 链式调用核心概念
 - [Prompt Chaining Guide](https://www.promptingguide.ai/techniques/prompt_chaining) - 提示词链模式指南
 
 #### 7.3 上下文传递与状态管理
+
 - [Mem0 (Memory for AI)](https://github.com/mem0ai/mem0) - 大模型记忆与状态管理框架
 
 #### 7.4 多轮对话管理
+
 - [Managing LLM Conversation History](https://platform.openai.com/docs/guides/text-generation/managing-conversation-history) - OpenAI 对话历史管理指南
 
 ### 下一章预告

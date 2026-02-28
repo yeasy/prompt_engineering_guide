@@ -29,7 +29,7 @@
    - 具体细致：指定数量、质量标准
    - 行动导向：使用明确的动词
    - 逻辑顺序：按合理结构组织
-   - 正向表达：告诉模型"做什么"
+   - 正向表达：告诉模型“做什么”
    - 边界考虑：处理异常情况
    - 迭代优化：持续测试改进
 
@@ -90,20 +90,24 @@
 ### 延伸阅读
 
 #### 3.1 核心要素
+
 - [OpenAI Prompt Engineering Guide](https://platform.openai.com/docs/guides/prompt-engineering) - OpenAI 官方提示词指南
 - [Anthropic Prompt Design](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/prompt-structure) - Claude 提示词结构指南
 - [Google Prompt Design Strategies](https://ai.google.dev/gemini-api/docs/prompting-strategies) - Gemini 提示词策略
 
 #### 3.2 指令设计
+
 - [Tactic: Include Details](https://platform.openai.com/docs/guides/prompt-engineering#tactic-include-details-in-your-query-to-get-more-relevant-answers) - OpenAI 具体化指令技巧
 - [Give Claude a Role](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/give-claude-a-role) - Anthropic 角色设定指南
 
 #### 3.3 上下文
+
 - [Provide Reference Text](https://platform.openai.com/docs/guides/prompt-engineering#tactic-provide-reference-text) - OpenAI 提供参考文本技巧
 - [Use XML Tags](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/use-xml-tags) - Anthropic XML标签使用指南
 - [Long Context Best Practices](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/long-context-tips) - Claude 长上下文技巧
 
 #### 3.4 输出格式
+
 - [Control Output Format](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/control-output-format) - Anthropic 输出格式控制
 - [Structured Outputs](https://platform.openai.com/docs/guides/structured-outputs) - OpenAI 结构化输出指南
 - [JSON Mode](https://platform.openai.com/docs/guides/json-mode) - OpenAI JSON 模式

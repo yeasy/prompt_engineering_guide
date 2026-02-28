@@ -8,7 +8,7 @@
 
 - **零样本提示**：不提供示例，仅通过指令描述任务
 - **少样本提示**：提供2-6个示例来展示任务模式
-- **上下文学习**：模型在推理时通过示例"临时学习"任务规则
+- **上下文学习**：模型在推理时通过示例激活已有能力回路（而非学习新知识），即使标签错误也不会大幅影响表现
 
 ### 核心要点
 
@@ -65,11 +65,13 @@
 ### 延伸阅读
 
 #### 5.1 基础概念
+
 - [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165) - GPT-3 论文，少样本学习的基础
 - [Rethinking the Role of Demonstrations](https://arxiv.org/abs/2202.12837) - 示例作用的深入研究
 - [What Makes In-Context Learning Work](https://arxiv.org/abs/2202.12083) - 上下文学习机制研究
 
 #### 5.2 示例设计与应用
+
 - [Few-Shot Prompting Guide](https://www.promptingguide.ai/techniques/fewshot) - 少样本提示技术详解
 
 ### 下一章预告
