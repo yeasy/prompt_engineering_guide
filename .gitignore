@@ -15,6 +15,10 @@ Thumbs.db
 *.swp
 *.swo
 
+# Python
+__pycache__/
+*.pyc
+
 # Project specific
 _images_local_backup/
 
