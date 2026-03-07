@@ -1,11 +1,16 @@
+<div align="center">
+
 # 大模型提示词工程指南
 
 [![GitHub stars](https://img.shields.io/github/stars/yeasy/prompt_engineering_guide?style=social)](https://github.com/yeasy/prompt_engineering_guide)
-[![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-blue.svg)](LICENSE)
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+[![Online Reading](https://img.shields.io/badge/在线阅读-GitBook-brightgreen)](https://yeasy.gitbook.io/prompt_engineering_guide)
 
 > **与人工智能对话的艺术**
 
-![大模型提示词工程指南](_images/cover.jpg)
+<img src="_images/cover.jpg" width="300" alt="大模型提示词工程指南封面">
+
+</div>
 
 ## 关于本书
 
@@ -87,7 +92,7 @@
 
 ---
 
-## 📖 阅读方式
+## 阅读方式
 
 **在线阅读**：[https://yeasy.gitbook.io/prompt_engineering_guide/](https://yeasy.gitbook.io/prompt_engineering_guide/)
 
@@ -120,11 +125,13 @@ npx honkit serve
 
 ---
 
-## 版本信息
+## 贡献与反馈
 
-- **版本**：1.2
-- **更新日期**：2026 年 2 月
-- **反馈与建议**：欢迎通过 [GitHub Issues](https://github.com/yeasy/prompt_engineering_guide/issues) 提交反馈
+欢迎提交 [Issue](https://github.com/yeasy/prompt_engineering_guide/issues) 或 [PR](https://github.com/yeasy/prompt_engineering_guide/pulls)，尤其欢迎：错别字修正、失效链接修复、实践案例补充与可复用模板。
+
+## 许可证
+
+本书采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 授权。
 
 ---
 
