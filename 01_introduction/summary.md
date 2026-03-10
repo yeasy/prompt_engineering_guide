@@ -78,3 +78,6 @@
 ---
 
 [下一章：大语言模型基础 →](../02_llm_basics/README.md)
+---
+
+> 📝 **发现错误或有改进建议？** 欢迎提交 [Issue](https://github.com/yeasy/prompt_engineering_guide/issues) 或 [PR](https://github.com/yeasy/prompt_engineering_guide/pulls)。

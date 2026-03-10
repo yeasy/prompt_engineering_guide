@@ -81,3 +81,6 @@
 ---
 
 [下一章：思维链与推理增强 →](../06_chain_of_thought/README.md)
+---
+
+> 📝 **发现错误或有改进建议？** 欢迎提交 [Issue](https://github.com/yeasy/prompt_engineering_guide/issues) 或 [PR](https://github.com/yeasy/prompt_engineering_guide/pulls)。

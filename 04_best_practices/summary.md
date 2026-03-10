@@ -102,3 +102,6 @@
 ---
 
 [下一章：少样本学习与示例驱动 →](../05_few_shot/README.md)
+---
+
+> 📝 **发现错误或有改进建议？** 欢迎提交 [Issue](https://github.com/yeasy/prompt_engineering_guide/issues) 或 [PR](https://github.com/yeasy/prompt_engineering_guide/pulls)。

@@ -99,3 +99,6 @@ Token 机制      → 简洁高效的表达
 ---
 
 [下一章：提示词的基本结构 →](../03_prompt_structure/README.md)
+---
+
+> 📝 **发现错误或有改进建议？** 欢迎提交 [Issue](https://github.com/yeasy/prompt_engineering_guide/issues) 或 [PR](https://github.com/yeasy/prompt_engineering_guide/pulls)。

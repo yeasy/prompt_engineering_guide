@@ -93,3 +93,6 @@
 ---
 
 [下一章：提示词链与任务分解 →](../07_prompt_chaining/README.md)
+---
+
+> 📝 **发现错误或有改进建议？** 欢迎提交 [Issue](https://github.com/yeasy/prompt_engineering_guide/issues) 或 [PR](https://github.com/yeasy/prompt_engineering_guide/pulls)。
