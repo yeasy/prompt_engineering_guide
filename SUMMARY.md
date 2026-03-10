@@ -135,6 +135,6 @@
 * [附录 C：资源、工具与参考文献](appendix/c_resources.md)
 * [附录 D：提示词技术分类索引](appendix/d_taxonomy_index.md)
 * [附录 E：常见反模式与错误](appendix/e_anti_patterns.md)
-  * [附录 E（扩展）：反模式的深度分析与自查清单](appendix/e_anti_patterns_extended.md)
+  * [附录 E（扩展）：反模式的深度分析与自查清单](appendix/e2_anti_patterns_deep_dive.md)
 * [附录 F：提示词技术决策树](appendix/f_decision_tree.md)
 * [附录 G：MCP（Model Context Protocol）与提示词工程的融合](appendix/g_mcp_and_prompt_engineering.md)
