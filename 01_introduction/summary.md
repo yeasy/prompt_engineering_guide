@@ -36,7 +36,7 @@
 
 ### 核心技能图谱
 
-```
+```text
 提示词工程师技能图谱
 ├── 语言表达能力：清晰、准确、结构化地表达意图
 ├── 模型理解能力：了解不同模型的特性和局限
@@ -78,6 +78,7 @@
 ---
 
 [下一章：大语言模型基础 →](../02_llm_basics/README.md)
+
 ---
 
 > 📝 **发现错误或有改进建议？** 欢迎提交 [Issue](https://github.com/yeasy/prompt_engineering_guide/issues) 或 [PR](https://github.com/yeasy/prompt_engineering_guide/pulls)。

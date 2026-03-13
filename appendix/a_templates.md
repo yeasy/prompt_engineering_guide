@@ -144,9 +144,9 @@
 ```markdown
 请解释以下代码的功能：
 
-```{language}
-{code}
 ```
+{code}
+```text
 
 解释要求：
 1. 整体功能说明
@@ -174,9 +174,9 @@
 ```markdown
 以下代码存在问题，请帮助诊断：
 
-```{language}
-{code}
 ```
+{code}
+```text
 
 错误信息：
 {error_message}

@@ -6,7 +6,7 @@
 
 ---
 
-## E.1 冗余与过度限定 (Over-prompting)
+## E.1 冗余与过度限定：Over-prompting
 
 **反模式**：在提示词中堆砌大量毫无必要的背景故事、同义词重复、或冗长的礼貌用语。
 
@@ -26,7 +26,7 @@
 
 ---
 
-## E.2 负向指令优先 (Negative-first Instructing)
+## E.2 负向指令优先：Negative-first Instructing
 
 **反模式**：花费大量篇幅告诉模型“不要做什么”，而不是“你该做什么”。
 ```text
@@ -102,7 +102,7 @@
 
 ---
 
-## E.7 盲目依赖 Few-Shot (Blind Few-Shot)
+## E.7 盲目依赖 Few-Shot：Blind Few-Shot
 
 **反模式**：未经筛选，随便找几条历史数据作为 Few-Shot 塞进提示词中。
 

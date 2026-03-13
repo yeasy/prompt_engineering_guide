@@ -51,7 +51,7 @@
 
 ### 最佳实践速查表
 
-```
+```text
 ✓ 首句点题：开头直接点明任务
 ✓ 量化要求：数量、长度、范围都要具体
 ✓ 正向表达：告诉模型"做什么"而非"不做什么"
@@ -102,6 +102,7 @@
 ---
 
 [下一章：少样本学习与示例驱动 →](../05_few_shot/README.md)
+
 ---
 
 > 📝 **发现错误或有改进建议？** 欢迎提交 [Issue](https://github.com/yeasy/prompt_engineering_guide/issues) 或 [PR](https://github.com/yeasy/prompt_engineering_guide/pulls)。

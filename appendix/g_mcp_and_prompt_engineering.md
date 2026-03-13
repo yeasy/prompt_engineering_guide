@@ -6,7 +6,7 @@
 
 #### 传统提示词工程 vs MCP时代的上下文工程
 
-```
+```text
 传统方式（2023年及之前）:
   手动拼接 → 静态提示词文本 → 发送给模型
   问题：
@@ -35,7 +35,7 @@ MCP定义了三个核心概念，直接影响现代提示词设计：
 **对提示词工程的影响**：
 
 传统方式：
-```
+```text
 系统: "你可以访问以下数据库...
 数据库结构是...
 表包含的字段有...
@@ -63,7 +63,7 @@ MCP方式：
 ```
 
 提示词只需简洁地说：
-```
+```text
 你可以访问以下资源：
 - Customer Database (file:///customer_db)
 - Product Catalog (file:///product_catalog)
@@ -83,7 +83,7 @@ MCP方式：
 **对提示词工程的影响**：
 
 传统方式（ReAct）：
-```
+```text
 你可以使用以下工具：
 1. send_email(recipient, subject, body)
 2. query_database(sql)
@@ -114,7 +114,7 @@ MCP方式：
 ```
 
 提示词可以更简洁：
-```
+```text
 当需要发送电子邮件时，使用send_email工具。
 格式和参数由MCP协议定义。
 ```
@@ -131,7 +131,7 @@ MCP方式：
 **对提示词工程的影响**：
 
 传统方式：
-```
+```text
 每个应用都维护自己的提示词：
 - 代码审查应用有一套提示词
 - 文档生成应用有另一套
@@ -140,7 +140,7 @@ MCP方式：
 ```
 
 MCP方式：
-```
+```text
 MCP服务器提供标准化的提示词模板：
 
 {
@@ -163,7 +163,7 @@ MCP服务器提供标准化的提示词模板：
 ```
 
 应用调用：
-```
+```text
 // 而不是手动构建提示词
 const prompt = await mcp.getPrompt("code_review", {
   language: "python",
@@ -181,7 +181,7 @@ const prompt = await mcp.getPrompt("code_review", {
 #### 原则1：从“包含所有信息”到“按需获取”
 
 **传统方式**：
-```
+```text
 系统提示词 =
   角色定义 +
   完整的背景信息 +
@@ -193,7 +193,7 @@ const prompt = await mcp.getPrompt("code_review", {
 ```
 
 **MCP方式**：
-```
+```text
 系统提示词 =
   核心角色定义 +
   对可用资源和工具的引用（简洁的声明）
@@ -208,7 +208,7 @@ const prompt = await mcp.getPrompt("code_review", {
 #### 原则2：从“静态管理”到“动态协商”
 
 **传统方式**：
-```
+```text
 提示词是静态的：
 - 写好后就不变了
 - 或者需要手动重新构建
@@ -217,7 +217,7 @@ const prompt = await mcp.getPrompt("code_review", {
 ```
 
 **MCP方式**：
-```
+```text
 提示词组件由协议动态提供：
 - 资源列表可以实时更新
 - 工具定义服务器端维护
@@ -228,7 +228,7 @@ const prompt = await mcp.getPrompt("code_review", {
 #### 原则3：从“模型中心”到“上下文中心”
 
 **提示词工程的演进**：
-```
+```text
 阶段1：模型中心 (2020-2022)
   "我需要写一个很好的提示词来指导模型"
   重点：优化文本本身
@@ -248,7 +248,7 @@ const prompt = await mcp.getPrompt("code_review", {
 
 **示例**：
 
-```
+```text
 # 旧方式（包含所有细节，超过5000 tokens）
 你是一个专业的数据分析师...
 你可以访问以下数据库...
@@ -276,7 +276,7 @@ const prompt = await mcp.getPrompt("code_review", {
 
 **组织中的提示词管理**：
 
-```
+```text
 企业级MCP服务器上的提示词库：
 
 prompts/
@@ -344,7 +344,7 @@ class SmartContextBuilder:
 
 **新的Agent架构**：
 
-```
+```text
 用户输入
   ↓
 [感知阶段]
@@ -369,7 +369,7 @@ class SmartContextBuilder:
 
 #### Token消耗的改善
 
-```
+```text
 传统提示词工程：
   系统提示词: 2000 tokens
   工具定义: 1500 tokens
@@ -390,7 +390,7 @@ MCP方式：
 
 #### Prompt Caching与MCP的协同
 
-```
+```text
 MCP + Prompt Caching的最佳实践：
 
 1. 缓存基础系统提示词（300 tokens）
@@ -480,7 +480,7 @@ class EnterpriseMCPServer:
 
 #### 权限管理通过MCP实现
 
-```
+```text
 传统方式：
   在提示词中说明权限 → 容易被注入攻击绕过
 
@@ -496,7 +496,7 @@ MCP方式：
 
 ### G.8 小结：MCP带来的范式转变
 
-```
+```text
 维度           传统方式              MCP方式
 ────────────────────────────────────────────────
 上下文来源     手动拼接文本          协议化声明
