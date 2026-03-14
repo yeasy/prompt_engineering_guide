@@ -2,7 +2,7 @@
 
 ## 本章小结
 
-本章系统探讨了涉及视觉和听觉内容的多模态大模型（如 GPT-4V, Gemini 1.5 Pro, Claude 3.5 Sonnet）的提示词技术。相比纯文本，多模态提示工程不仅需要传递文字指令，还需要精准引导模型将视觉特征与文本逻辑锚定和对齐。
+本章系统探讨了涉及视觉和听觉内容的多模态大模型（如 GPT-5, Gemini 3 Pro, Claude Sonnet 4.6）的提示词技术。相比纯文本，多模态提示工程不仅需要传递文字指令，还需要精准引导模型将视觉特征与文本逻辑锚定和对齐。
 
 ### 关键概念
 
@@ -41,7 +41,7 @@
 #### 10.1 多模态大模型进展
 
 - [GPT-4V(ision) System Card](https://cdn.openai.com/papers/GPTV_System_Card.pdf) - OpenAI 视觉大模型的官方技术报告
-- [Gemini 1.5 Pro Technical Report](https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf) - Gemini 官方技术报告
+- [Gemini 3 Pro Technical Report](https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf) - Gemini 官方技术报告
 
 #### 10.2 多模态提示词指南
 
