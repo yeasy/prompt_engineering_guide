@@ -58,7 +58,7 @@
 
 ## E.2 十大反模式的深度剖析
 
-### 反模式1：冗余与过度限定（Over-prompting）
+### 反模式1：冗余与过度限定
 
 #### 原理分析
 
@@ -153,7 +153,7 @@ print(f"建议: {result['suggestion']}")
 
 ---
 
-### 反模式2：负向指令优先（Negative-first Instructing）
+### 反模式2：负向指令优先
 
 #### 原理分析
 
@@ -282,7 +282,7 @@ print(after)
 
 ---
 
-### 反模式3：单次调用的超载（God Prompt）
+### 反模式3：单次调用的超载
 
 #### 问题分析
 
@@ -508,7 +508,7 @@ def check_rigid_formatting(prompt: str) -> bool:
     return any(re.search(p, prompt) for p in rigid_patterns)
 ```
 
-#### 反模式5：缺乏退路（No Escape Hatch）
+#### 反模式5：缺乏退路
 
 **自查清单**：
 - [ ] 是否为“不确定”或“无法处理”提供了选项？

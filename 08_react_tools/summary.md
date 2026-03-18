@@ -48,7 +48,7 @@
 - [ReAct: Synergizing Reasoning and Acting in Language Models](https://arxiv.org/abs/2210.03629) - ReAct 原始论文
 - [Prompting Guide: ReAct Prompting](https://www.promptingguide.ai/techniques/react) - ReAct 提示词指南
 
-#### 8.2 函数调用 （Function Calling）
+#### 8.2 函数调用
 
 - [OpenAI Function Calling Guide](https://platform.openai.com/docs/guides/function-calling) - OpenAI 官方函数调用实战指南
 - [Anthropic Tool Use](https://docs.anthropic.com/en/docs/build-with-claude/tool-use) - Claude 工具使用指南

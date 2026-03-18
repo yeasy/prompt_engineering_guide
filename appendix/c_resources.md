@@ -2,7 +2,7 @@
 
 本附录汇总了全书中引用的重要论文、官方文档及业界优秀的开源实践库，同时推荐学习提示词工程的优质资源和实用工具，供读者进行更深入的拓展学习。
 
-## C.1 官方指南与文档 （Official Guidelines）
+## C.1 官方指南与文档
 
 ### C.1.1 OpenAI
 
@@ -34,7 +34,7 @@ https://docs.anthropic.com/en/prompt-library/library
 https://ai.google.dev/gemini-api/docs/prompting-intro
 Gemini模型的提示词设计指南，关注于长上下文和多模态输入的技巧。
 
-## C.2 核心参考文献与研究论文：Foundational Papers 与 Research
+## C.2 核心参考文献与研究论文
 
 ### C.2.1 基础与综述类
 
@@ -53,7 +53,7 @@ Bang et al., 2023 - 一篇全面的提示词工程综述，涵盖基础和高级
 **[The Prompt Report: A Systematic Survey of Prompt Engineering Techniques](https://arxiv.org/abs/2406.06608)**
 Schulhoff et al., 2024 - 迄今最全面的提示词工程综述：58种LLM技术、40种多模态技术、33个标准术语。
 
-### C.2.2 推理与思维链：Reasoning 与 CoT
+### C.2.2 推理与思维链
 
 **[Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903)**
 Wei et al., 2022 - 谷歌大脑提出的 CoT，提示词工程领域最重要的里程碑之一。
@@ -64,22 +64,22 @@ Wang et al., 2022 - 提出多路径采样和多数投票的自一致性机制。
 **[Tree of Thoughts: Deliberate Problem Solving with Large Language Models](https://arxiv.org/abs/2305.10601)**
 Yao et al., 2023 - 将 CoT 推进到树状结构搜索，适用于极高复杂度任务。
 
-### C.2.3 工具调用与 智能体（agent）：ReAct 与 Agents
+### C.2.3 工具调用与智能体
 
 **[ReAct: Synergizing Reasoning and Acting in Language Models](https://arxiv.org/abs/2210.03629)**
 Yao et al., 2022 - 提出了 Thought-Action-Observation 范式。
 
-### C.2.4 自动化与评测 （Automated PE）
+### C.2.4 自动化与评测
 
 **[Large Language Models Are Human-Level Prompt Engineers](https://arxiv.org/abs/2211.01910)**
 Zhou et al., 2022 - APE (Automatic Prompt Engineer) 论文。
 
-### C.2.5 检索增强生成：RAG
+### C.2.5 检索增强生成
 
 **[Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/abs/2005.11401)**
 Lewis et al., 2020 - RAG 原始论文。
 
-## C.3 开源框架与开发工具：Frameworks 与 Tools
+## C.3 开源框架与开发工具
 
 ### C.3.1 开发框架
 
@@ -138,7 +138,7 @@ https://github.com/promptslab/Awesome-Prompt-Engineering
 https://github.com/f/awesome-chatgpt-prompts
 精选的ChatGPT提示词集合。
 
-## C.4 实用平台与测试工具 （Practical Toolings）
+## C.4 实用平台与测试工具
 
 ### C.4.1 提示词测试
 
@@ -183,7 +183,7 @@ AI驱动的提示词优化工具。
 **Prompt Generator**
 各种在线的提示词生成器工具。
 
-## C.5 扩展学习资源 （Extended Learning）
+## C.5 扩展学习资源
 
 ### C.5.1 在线课程
 

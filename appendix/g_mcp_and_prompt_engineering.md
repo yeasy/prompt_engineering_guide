@@ -1,4 +1,4 @@
-## 附录G：MCP（Model Context Protocol）与提示词工程的融合
+## 附录G：MCP 与提示词工程的融合
 
 ### G.1 MCP时代的提示词工程范式转变
 
