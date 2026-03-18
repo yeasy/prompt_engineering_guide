@@ -143,7 +143,7 @@ npm install        # 安装依赖
 npx honkit serve
 ```
 
-启动本地服务器后，访问 [http://localhost:4000](http://localhost:4000)
+启动本地服务器后，访问 [本地阅读地址](http://localhost:4000)
 
 ---
 
