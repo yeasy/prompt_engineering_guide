@@ -99,6 +99,7 @@
 ```python
 
 # 反模式检测脚本
+
 def detect_over_prompting(prompt: str) -> dict:
     """检测过度限定问题"""
 
@@ -136,6 +137,7 @@ def detect_over_prompting(prompt: str) -> dict:
 
 
 # 使用示例
+
 bad_prompt = """尊敬的 AI 助手，我今天遇到了一个问题，
 希望你能帮我。请务必、一定、千万记住...写一个 Python 函数..."""
 
@@ -219,8 +221,11 @@ def test_formatting_compliance(prompt, llm):
     }
 
 # 结果通常显示：
+
 # negative_instruction: has_markdown = True (40% 概率)
+
 # positive_instruction: has_markdown = False (5% 概率)
+
 ```
 
 #### 修复方案
@@ -269,6 +274,7 @@ class InstructionFormatter:
         return restriction
 
 # 修复前后对比
+
 before = """不要用第一人称，不要用长句子，
 不要带有感情色彩，不要输出任何 markdown"""
 
@@ -389,6 +395,7 @@ class TaskComplexityAnalyzer:
 
 
 # 使用示例
+
 analyzer = TaskComplexityAnalyzer()
 
 god_prompt = """请阅读这 10 份财报。
@@ -480,6 +487,7 @@ class FinancialReportProcessor:
 
 
 # 使用
+
 processor = FinancialReportProcessor(llm_client)
 all_results = processor.batch_process(reports)
 ```

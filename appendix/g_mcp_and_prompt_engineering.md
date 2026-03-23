@@ -251,6 +251,7 @@ const prompt = await mcp.getPrompt("code_review", {
 ```text
 
 # 旧方式（包含所有细节，超过5000 tokens）
+
 你是一个专业的数据分析师...
 你可以访问以下数据库...
 数据库模式包括...
@@ -259,6 +260,7 @@ const prompt = await mcp.getPrompt("code_review", {
 [等等冗长内容]
 
 # MCP方式（核心提示词，仅500 tokens）
+
 你是一个数据分析助手。
 
 可用资源：
@@ -299,6 +301,7 @@ prompts/
 ```python
 
 # 而不是在每个应用中重复提示词
+
 class AnalysisAgent:
     async def analyze_competitor(self, company_name):
         # 从MCP服务器获取最新的提示模板
@@ -415,6 +418,7 @@ MCP + Prompt Caching的最佳实践：
 ```python
 
 # 企业的MCP服务器配置示例
+
 class EnterpriseMCPServer:
     def __init__(self):
         self.resources = []
