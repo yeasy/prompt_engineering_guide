@@ -4,9 +4,10 @@
   "description": "> **从入门到精通：掌握与大语言模型高效对话的艺术**",
   "main": "index.js",
   "scripts": {
-    "start": "honkit serve",
-    "serve": "honkit serve",
-    "build": "honkit build",
+    "start": "mdpress serve",
+    "serve": "mdpress serve",
+    "build": "rm -rf _site _site_site && mdpress build --format site --output _site && rm -rf _site && mv _site_site _site",
+    "pdf": "mdpress build --format pdf",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -27,7 +28,6 @@
   "homepage": "https://github.com/yeasy/prompt_engineering_guide#readme",
   "devDependencies": {
     "gitbook-plugin-mermaid-gb3": "^2.1.0",
-    "honkit": "^6.1.6",
     "honkit-plugin-mermaid": "^0.1.4"
   }
 }
