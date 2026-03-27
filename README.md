@@ -6,7 +6,7 @@
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 [![Release](https://img.shields.io/github/release/yeasy/prompt_engineering_guide.svg)](https://github.com/yeasy/prompt_engineering_guide/releases)
 [![Online Reading](https://img.shields.io/badge/在线阅读-GitBook-brightgreen)](https://yeasy.gitbook.io/prompt_engineering_guide)
-[![PDF](https://img.shields.io/badge/PDF-下载-orange)](https://github.com/yeasy/prompt_engineering_guide/releases/latest/download/prompt_engineering_guide.pdf)
+[![PDF](https://img.shields.io/badge/PDF-下载-orange)](https://github.com/yeasy/prompt_engineering_guide/releases/latest)
 
 > **与人工智能对话的艺术**
 
