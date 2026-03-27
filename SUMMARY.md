@@ -22,7 +22,7 @@
   * [3.2 指令设计的基本原则](03_prompt_structure/3.2_instruction_principles.md)
   * [3.3 上下文与背景信息的提供](03_prompt_structure/3.3_context.md)
   * [3.4 输出格式的定义与约束](03_prompt_structure/3.4_output_format.md)
-  * [3.5 结构化输出](03_prompt_structure/3.5_structured_output.md)
+  * [3.5 结构化输出的定义与约束](03_prompt_structure/3.5_structured_output.md)
   * [本章小结](03_prompt_structure/summary.md)
 
 * [第四章 提示词设计最佳实践](04_best_practices/README.md)
@@ -75,11 +75,11 @@
 
 * [第九章 检索增强生成](09_rag/README.md)
   * [9.1 RAG 系统的核心原理](09_rag/9.1_rag_principles.md)
-  * [9.2 检索策略与上下文组装](09_rag/9.2_retrieval_strategies.md)
+  * [9.2 高级检索策略与上下文组装](09_rag/9.2_retrieval_strategies.md)
   * [9.3 RAG 系统的提示词优化](09_rag/9.3_rag_prompt_optimization.md)
-  * [9.4 高级 RAG 架构与实践](09_rag/9.4_advanced_rag.md)
+  * [9.4 高级 RAG 架构与前沿趋势](09_rag/9.4_advanced_rag.md)
   * [9.5 本章实战练习](09_rag/9.5_practice.md)
-  * [本章小结](09_rag/summary.md)
+  * [第九章：检索增强生成 RAG](09_rag/summary.md)
 
 * [第十章 多模态提示工程](10_multimodal/README.md)
   * [10.1 多模态模型概述](10_multimodal/10.1_multimodal_overview.md)
@@ -130,11 +130,11 @@
 
 ## 附录
 
-* [附录 A：提示词模板库](appendix/a_templates.md)
-* [附录 B：常用术语表](appendix/b_glossary.md)
+* [附录 A：常用提示词模板库](appendix/a_templates.md)
+* [附录 B：术语表](appendix/b_glossary.md)
 * [附录 C：资源、工具与参考文献](appendix/c_resources.md)
 * [附录 D：提示词技术分类索引](appendix/d_taxonomy_index.md)
-* [附录 E：常见反模式与错误](appendix/e_anti_patterns.md)
-  * [附录 E（扩展）：反模式的深度分析与自查清单](appendix/e2_anti_patterns_deep_dive.md)
+* [附录 E：提示词常见反模式与排错指南](appendix/e_anti_patterns.md)
+  * [附录 E（扩展）：提示词反模式的深度分析](appendix/e2_anti_patterns_deep_dive.md)
 * [附录 F：提示词技术决策树](appendix/f_decision_tree.md)
-* [附录 G：MCP 与提示词工程的融合](appendix/g_mcp_and_prompt_engineering.md)
+* [附录G：MCP 与提示词工程的融合](appendix/g_mcp_and_prompt_engineering.md)
