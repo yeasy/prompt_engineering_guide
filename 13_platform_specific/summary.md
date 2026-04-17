@@ -15,9 +15,9 @@
    - **JSON Schema 与结构化输出**：拥有最成熟和严格的 Structured Outputs (结构化输出) 机制。
    - **系统提示词服从度极高**：对 `system` 角色的指令具有最高的服从性，适合放置极其严厉的行为约束。
 
-2. **Anthropic Claude 系列 (Claude Sonnet 4.6)**
+2. **Anthropic Claude 系列 (Claude Opus 4.7 / 4.6, Claude Sonnet 4.6)**
    - **XML 标签狂热者**：官方极度推荐使用 `<document>` 等 XML 标签来区分数据源和划定指令范围。
-   - **长文本寻觅者**：其超大上下文表现优异，但在极长文本中，经常需要配合在最后一段重复其核心任务。
+   - **长文本寻觅者**：其超大上下文表现优异，但在极长文本中，经常需要配合在最后一段重复其核心任务。Opus 4.7 新 tokenizer 可能影响 token 消耗（1.00-1.35 倍），成本评估需考虑此因素。
    - **预填充的胜利**：在长 JSON 生成任务中，利用预填充技巧（提供大括号 `{` 作为 Assistant Response 开头）能有效阻止其生成寒暄废话。
 
 3. **Google Gemini 系列 (Gemini 2.5 Pro / Gemini 3.1 Pro Preview)**
