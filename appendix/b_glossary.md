@@ -4,8 +4,14 @@
 
 ## A
 
+**自适应思考（Adaptive Thinking）**
+Claude 4.6+ 推荐的推理模式，取代 Extended Thinking，能动态调整思维深度以适应不同复杂度任务。
+
 **智能体（Agent）**
 能够自主感知环境、做出决策并采取行动的AI系统，通常具备规划、执行和反思能力。
+
+**智能体驱动的检索增强生成（Agentic RAG）**
+智能体驱动的检索增强生成，支持多轮自适应检索与推理，实现更灵活的知识检索与推理循环。
 
 **API（应用程序接口）**
 Application Programming Interface，允许应用程序之间相互通信的接口，大语言模型通常通过API提供服务。
@@ -34,6 +40,9 @@ Transformer架构的核心机制，使模型能够关注输入序列中的不同
 
 **Chunk（文档块）**
 RAG 系统中，将长文档分割成的较小片段，便于检索和处理。
+
+**上下文工程（Context Engineering）**
+超越提示词工程的范式，关注动态组装和管理 LLM 的完整输入上下文，包括系统指令、检索内容、记忆状态等。
 
 **Context Window（上下文窗口）**
 模型一次能处理的最大Token数量，决定了输入和输出的总长度限制。
@@ -72,6 +81,9 @@ Chain-of-Thought的缩写，见Chain-of-Thought。
 
 ## H
 
+**驭具工程（Harness Engineering）**
+围绕 LLM 构建的执行控制层工程，包括工具管理、安全防护、可观测性等，是应用系统的基础设施层。
+
 **Hallucination（幻觉）**
 模型生成看似合理但实际错误或虚构的信息。
 
@@ -97,6 +109,9 @@ Large Language Model，基于大规模文本数据训练的生成式语言模型
 用于构建LLM应用的开发框架，提供提示词管理、链式调用等功能。
 
 ## M
+
+**MCP（模型上下文协议）**
+Model Context Protocol，Anthropic 提出的模型上下文协议，标准化 LLM 与外部工具、数据源的连接方式。
 
 **Meta-Prompting（元提示）**
 使用提示词来生成或优化其他提示词的技术。
@@ -189,19 +204,13 @@ Vision-Language Model，能够理解图像和文本的多模态模型。
 
 ---
 
-## 新增术语（2025年更新）
+## 新增术语（2025-2026年更新）
 
 **A2A Protocol（智能体（agent）-to-Agent协议）**
 Google提出的Agent间通信标准化协议，定义了多智能体系统中的消息格式和交互模式。
 
-**Context Engineering（上下文工程）**
-关注整个上下文窗口的系统性管理，包括系统指令、检索内容、记忆状态等的动态组装与优化。
-
 **Extended Thinking（扩展思考）**
 Claude等模型支持的功能，允许模型在回答前进行更深入的内部推理，可通过预算参数控制思考深度。
-
-**MCP（模型上下文协议）**
-Model Context Protocol，Anthropic发布的开放协议，标准化AI 应用与各类数据源、工具之间的连接方式。
 
 **MoE（混合专家模型）**
 Mixture of Experts，一种模型架构，通过路由机制动态激活部分参数，实现大规模模型的高效推理。
