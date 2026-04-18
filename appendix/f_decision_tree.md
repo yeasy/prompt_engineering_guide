@@ -454,7 +454,7 @@ def bubble_sort(arr):
 - 简化提示词措辞
 - 减少上下文信息（检索相关信息，舍弃无关部分）
 - 使用 prompt caching 缓存系统提示词
-- 对小任务考虑使用 GPT-3.5 而非 GPT-4
+- 对小任务考虑使用轻量模型（如 Claude Haiku、GPT-5.4 mini）而非旗舰模型
 ```
 
 ### 当延迟过高时
