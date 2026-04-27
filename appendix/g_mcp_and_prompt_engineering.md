@@ -20,7 +20,7 @@ MCP方式（2024年及之后）:
   优势：
   - 通过协议标准化上下文的提供方式
   - 支持实时、动态的信息注入
-  - 模型可以主动查询和获取所需信息
+  - 模型可以请求访问所需信息，宿主应用按权限和用户策略决定是否提供
   - 清晰的权限和隔离机制
 ```
 
@@ -198,9 +198,9 @@ const prompt = await mcp.getPrompt("code_review", {
   核心角色定义 +
   对可用资源和工具的引用（简洁的声明）
 
-当模型需要数据时 → 通过MCP查询
-当模型需要执行操作时 → 通过MCP调用工具
-当模型需要特定的指导时 → 检索特定的Prompt模板
+当应用暴露资源时 → 模型可请求读取，宿主按权限决定是否提供
+当应用暴露工具时 → 模型可请求调用，宿主/用户按策略授权执行
+当需要特定指导时 → 应用可检索特定的 Prompt 模板
 
 → 精简且高效的核心提示词
 ```
@@ -523,7 +523,7 @@ Token消耗      5000-8000/请求        800-1200/请求
 ### G.9 学习资源
 
 - [官方 MCP 规范](https://modelcontextprotocol.io)
-- [MCP SDK 文档](https://github.com/anthropics/mcp-sdk-python)
+- [MCP Python SDK](https://github.com/modelcontextprotocol/python-sdk)
 - Anthropic的MCP最佳实践指南
 - 社区驱动的MCP服务器集合
 
