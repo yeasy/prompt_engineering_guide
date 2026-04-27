@@ -30,7 +30,7 @@
 - [LangGraph Documentation](https://langchain-ai.github.io/langgraph/) - LangGraph 官方文档
 - [CrewAI Documentation](https://docs.crewai.com/) - CrewAI 使用指南
 - [AutoGen](https://microsoft.github.io/autogen/) - Microsoft AutoGen 框架
-- [A2A Protocol](https://google-a2a.github.io/A2A/latest/) - 智能体-to-智能体 协议
+- [A2A Protocol](https://google.github.io/A2A/) - Google 智能体-to-智能体 协议
 
 #### 14.3 职业发展
 
