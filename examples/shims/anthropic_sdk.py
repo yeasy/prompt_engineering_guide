@@ -35,3 +35,14 @@ class Anthropic:
     def __init__(self, *args: Any, **kwargs: Any) -> None:
         self.messages = _Messages()
 
+
+def create_message(prompt: str, model: str = "claude-sonnet-4-6", max_tokens: int = 1024) -> str:
+    response = Anthropic().messages.create(
+        model=model,
+        max_tokens=max_tokens,
+        messages=[{"role": "user", "content": prompt}],
+    )
+    for block in response.content:
+        if block.type == "text" and block.text:
+            return block.text
+    return ""
