@@ -5,7 +5,7 @@
 ## A
 
 **自适应思考（Adaptive Thinking）**
-Claude 4.6+ 推荐的推理模式，取代 Extended Thinking，能动态调整思维深度以适应不同复杂度任务。
+Claude Opus 4.7 与 Sonnet 4.6 支持的推理模式（`type: "adaptive"`），由模型根据任务复杂度自动决定思考深度；Opus 4.7 不再支持 Extended Thinking，Opus 4.6 与 Haiku 4.5 仍仅支持 Extended Thinking。
 
 **智能体（Agent）**
 能够自主感知环境、做出决策并采取行动的AI系统，通常具备规划、执行和反思能力。
