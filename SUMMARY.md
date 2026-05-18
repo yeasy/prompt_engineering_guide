@@ -138,3 +138,4 @@
   * [附录 E（扩展）：提示词反模式的深度分析](appendix/e2_anti_patterns_deep_dive.md)
 * [附录 F：提示词技术决策树](appendix/f_decision_tree.md)
 * [附录G：MCP 与提示词工程的融合](appendix/g_mcp_and_prompt_engineering.md)
+* [附录 H：快变事实核验表](appendix/h_volatile_facts.md)
