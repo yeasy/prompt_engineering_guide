@@ -10,19 +10,19 @@
 
 ### 核心要点
 
-1. **OpenAI GPT 系列 (GPT-4o / o3-mini / GPT-5)**
+1. **OpenAI GPT 系列 (GPT-5.5 / GPT-5.4 / o 系列 / GPT-4o)**
    - **Markdown 亲和**：对 Markdown 的层级结构理解最佳，极其适合使用带有 `##` 和代码块的结构化提示词。
    - **JSON Schema 与结构化输出**：拥有最成熟和严格的 Structured Outputs (结构化输出) 机制。
    - **系统提示词服从度极高**：对 `system` 角色的指令具有最高的服从性，适合放置极其严厉的行为约束。
 
-2. **Anthropic Claude 系列 (Claude Opus 4.7 / 4.6, Claude Sonnet 4.6)**
+2. **Anthropic Claude 系列 (Claude Opus 4.7, Claude Sonnet 4.6, Claude Haiku 4.5)**
    - **XML 标签狂热者**：官方极度推荐使用 `<document>` 等 XML 标签来区分数据源和划定指令范围。
-   - **长文本寻觅者**：其超大上下文表现优异，但在极长文本中，经常需要配合在最后一段重复其核心任务。Opus 4.7 新 tokenizer 可能影响 token 消耗（1.00-1.35 倍），成本评估需考虑此因素。
+   - **长文本寻觅者**：Opus 4.7 与 Sonnet 4.6 支持 1M 上下文，但在极长文本中，经常需要配合在最后一段重复其核心任务。成本评估需按目标模型的官方价格页和 token counting 结果测算。
    - **预填充的胜利**：在长 JSON 生成任务中，利用预填充技巧（提供大括号 `{` 作为 Assistant Response 开头）能有效阻止其生成寒暄废话。
 
 3. **Google Gemini 系列 (Gemini 2.5 Pro / Gemini 3.1 Pro Preview)**
    - **稳定与预览要分开**：`Gemini 2.5 Pro` 适合生产使用，`Gemini 3.1 Pro Preview` 更适合前沿验证和能力评估。
-   - **绝对的超长上下文王者**：原生支持百万级 Token 窗口，在提示词设计中可以将厚厚的参考文档直接扔入而无需拆分。
+   - **超长上下文强项**：Gemini 2.5 Pro / Flash / Flash-Lite 官方模型页列出 1,048,576 输入 token；Preview 模型的限制应以最新模型页为准。
    - **原生多模态混合交织**：非常擅长交错排列的处理，如 `[文本指令] -> [视频帧] -> [表格文本] -> [音频轨]` 的穿插式推理。
 
 4. **开源模型策略 (Llama / Qwen 等)**

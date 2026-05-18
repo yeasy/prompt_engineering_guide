@@ -1,6 +1,6 @@
 # 目录
 
-* [前言](README.md)
+* [大模型提示词工程指南](README.md)
 
 ## 第一部分：基础篇
 
@@ -79,7 +79,7 @@
   * [9.3 RAG 系统的提示词优化](09_rag/9.3_rag_prompt_optimization.md)
   * [9.4 高级 RAG 架构与前沿趋势](09_rag/9.4_advanced_rag.md)
   * [9.5 本章实战练习](09_rag/9.5_practice.md)
-  * [本章小结](09_rag/summary.md)
+  * [第九章：检索增强生成 RAG](09_rag/summary.md)
 
 * [第十章 多模态提示工程](10_multimodal/README.md)
   * [10.1 多模态模型概述](10_multimodal/10.1_multimodal_overview.md)
@@ -91,7 +91,7 @@
   * [本章小结](10_multimodal/summary.md)
 
 * [第十一章 安全性与可靠性](11_safety_reliability/README.md)
-  * [11.1 提示词注入与防护策略](11_safety_reliability/11.1_prompt_injection.md)
+  * [11.1 提示词安全设计](11_safety_reliability/11.1_prompt_injection.md)
     * [11.1.1 提示词注入防护的实战操作指南](11_safety_reliability/11.1_1_practical_defense_guide.md)
   * [11.2 幻觉问题与事实性保障](11_safety_reliability/11.2_hallucination.md)
   * [11.3 偏见识别与公平性考量](11_safety_reliability/11.3_bias_fairness.md)
