@@ -5,7 +5,7 @@
 ### 关键概念
 
 - **平台方言 (Platform Dialects)**：不同平台对于高亮、隔离、推理引导等指令的特殊格式偏好（如 Claude 的 XML 与 GPT 的 Markdown）。
-- **预填充 (Prefilling)**：在支持的 API 中，预先写入 `Assistant` 角色的开头内容以强制模型按某种特定格式继续回答。
+- **预填充 (Prefilling)**：在支持的 API 中，预先写入 `Assistant` 角色的开头内容以强制模型按某种特定格式继续回答。**注：Claude Opus 4.7 / 4.6 / Sonnet 4.6 / 4.5 已停止支持 prefill 并返回 400；仅 Claude Sonnet 4 / 3.5 等更早模型可用。详见 [13.2 节](13.2_anthropic_claude.md)。**
 - **聊天模板 (Chat Template)**：开源模型中用于区分系统指令、用户提问和助手回复的特定词元结构（如 Llama 3 的 `<|start_header_id|>`）。
 
 ### 核心要点
@@ -18,7 +18,7 @@
 2. **Anthropic Claude 系列 (Claude Opus 4.7, Claude Sonnet 4.6, Claude Haiku 4.5)**
    - **XML 标签狂热者**：官方极度推荐使用 `<document>` 等 XML 标签来区分数据源和划定指令范围。
    - **长文本寻觅者**：Opus 4.7 与 Sonnet 4.6 支持 1M 上下文，但在极长文本中，经常需要配合在最后一段重复其核心任务。成本评估需按目标模型的官方价格页和 token counting 结果测算。
-   - **预填充的胜利**：在长 JSON 生成任务中，利用预填充技巧（提供大括号 `{` 作为 Assistant Response 开头）能有效阻止其生成寒暄废话。
+   - **预填充已被弃用（4.6+）**：早期 Claude（Sonnet 4 / 3.5 及更早）可用预填充技巧（提供大括号 `{` 作为 Assistant Response 开头）控制 JSON 输出，但 Opus 4.7、Opus 4.6、Sonnet 4.6、Sonnet 4.5 已停止支持 prefill 并返回 400。新模型请改用 Structured Outputs、System Prompt 或 `output_config.format`（详见 13.2 节）。
 
 3. **Google Gemini 系列 (Gemini 2.5 Pro / Gemini 3.1 Pro Preview)**
    - **稳定与预览要分开**：`Gemini 2.5 Pro` 适合生产使用，`Gemini 3.1 Pro Preview` 更适合前沿验证和能力评估。
