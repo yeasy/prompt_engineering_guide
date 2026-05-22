@@ -110,7 +110,7 @@
 graph LR
     A["<b>提示词入门区</b><br/>第1-3章<br/>基础与结构化"] -->|快速提升| B["<b>AI 初学者</b><br/>第1-5章<br/>基础技能与应用"]
     A -->|深入开发| C["<b>开发者</b><br/>第1-3,6-10章<br/>高级技巧与系统设计"]
-    A -->|内容创作| D["<b>内容创作者</b><br/>第1-3,11-12章<br/>创意应用与行业实践"]
+    A -->|内容创作| D["<b>内容创作者</b><br/>第1-3,10,14章<br/>创意应用与行业实践"]
     A -->|企业部署| E["<b>企业应用者</b><br/>第1-3,13-14章<br/>组织管理与最佳实践"]
     B -->|进阶深造| C
     C -->|创意实践| D
@@ -166,7 +166,7 @@ mdpress serve
 | [《Claude 技术指南》](https://yeasy.gitbook.io/claude_guide) | 在 Claude 平台上深入实践提示词技术 |
 | [《智能体 AI 权威指南》](https://yeasy.gitbook.io/agentic_ai_guide) | 将提示词技术应用于智能体系统设计 |
 | [《大模型安全权威指南》](https://yeasy.gitbook.io/ai_security_guide) | 提示词注入防御与安全提示词设计 |
-| [《OpenClaw 从入门到精通》](https://yeasy.gitbook.io/openclaw_guide) | 在开源智能体框架中实践提示词工程 |
+| [《OpenClaw 入门到精通》](https://yeasy.gitbook.io/openclaw_guide) | 在开源智能体框架中实践提示词工程 |
 | [《大模型原理与架构》](https://yeasy.gitbook.io/llm_internals) | 深入理解大语言模型底层逻辑与架构 |
 | [《智能体 Harness 工程指南》](https://yeasy.gitbook.io/harness_engineering_guide) | 在 Harness 系统中实践提示词工程与输出治理 |
 

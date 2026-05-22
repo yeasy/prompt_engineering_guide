@@ -6,11 +6,11 @@
 
 ### C.1.1 OpenAI
 
-**[Prompt Engineering Guide](https://platform.openai.com/docs/guides/prompt-engineering)**
+**[Prompt Engineering Guide](https://developers.openai.com/api/docs/guides/prompt-engineering)**
 OpenAI官方提示词工程指南，包含最佳实践和技巧，非常务实。
 
-**[GPT Best Practices](https://platform.openai.com/docs/guides/gpt-best-practices)**
-GPT系列模型的使用最佳实践。
+**[Prompting Best Practices](https://developers.openai.com/api/docs/guides/prompt-engineering)**
+GPT 系列模型的提示词使用最佳实践。
 
 **[OpenAI Cookbook](https://cookbook.openai.com/)**
 官方开源代码示例库。

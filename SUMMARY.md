@@ -79,7 +79,7 @@
   * [9.3 RAG 系统的提示词优化](09_rag/9.3_rag_prompt_optimization.md)
   * [9.4 高级 RAG 架构与前沿趋势](09_rag/9.4_advanced_rag.md)
   * [9.5 本章实战练习](09_rag/9.5_practice.md)
-  * [第九章：检索增强生成 RAG](09_rag/summary.md)
+  * [本章小结](09_rag/summary.md)
 
 * [第十章 多模态提示工程](10_multimodal/README.md)
   * [10.1 多模态模型概述](10_multimodal/10.1_multimodal_overview.md)
