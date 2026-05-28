@@ -1,10 +1,10 @@
 # 附录 G：MCP 与提示词工程的融合
 
-### G.1 MCP时代的提示词工程范式转变
+## G.1 MCP时代的提示词工程范式转变
 
 从2024年起，MCP（Model Context Protocol，模型上下文协议）正在改变我们设计和使用提示词的方式。MCP 官方定义它是连接 AI 应用与外部系统的开放标准，让应用可以接入数据源、工具和工作流（包括专门的提示模板）。
 
-#### 传统提示词工程 vs MCP时代的上下文工程
+### 传统提示词工程 vs MCP时代的上下文工程
 
 ```text
 传统方式（2023年及之前）:
@@ -24,11 +24,11 @@ MCP方式（2024年及之后）:
   - 清晰的权限和隔离机制
 ```
 
-### G.2 MCP的三大核心原语与提示词工程
+## G.2 MCP的三大核心原语与提示词工程
 
 MCP 服务器提供多类能力。本附录聚焦与提示词工程关系最直接的三个能力：Resources、Tools 和 Prompts。
 
-#### 1. Resources（资源）- 数据的声明式描述
+### 1. Resources（资源）- 数据的声明式描述
 
 **原语定义**：Resources 是应用驱动的上下文来源，服务器暴露资源，客户端应用决定如何检索、筛选并提供给模型。
 
@@ -76,7 +76,7 @@ MCP方式：
 - 资源描述在服务器端管理，易于更新
 - 应用可以根据任务选择、检索或筛选相关资源
 
-#### 2. Tools（工具）- 可执行操作的标准化
+### 2. Tools（工具）- 可执行操作的标准化
 
 **原语定义**：Tools 是模型可请求调用的、带 JSON Schema 输入约束的操作接口；宿主应用仍应负责权限、审批和审计。
 
@@ -124,7 +124,7 @@ MCP方式：
 - 模型自动理解工具的签名和约束
 - 减少提示词中关于“如何使用工具”的冗余文本
 
-#### 3. Prompts（提示模板）- 可复用的提示词模板库
+### 3. Prompts（提示模板）- 可复用的提示词模板库
 
 **原语定义**：Prompts 是服务器暴露的可复用、可参数化提示模板，通常由用户显式选择或通过应用界面触发。
 
@@ -176,9 +176,9 @@ const prompt = await mcp.getPrompt("code_review", {
 - 版本控制和最佳实践积累
 - 跨组织、跨项目的一致性
 
-### G.3 MCP改变的提示词设计原则
+## G.3 MCP改变的提示词设计原则
 
-#### 原则1：从“包含所有信息”到“按需获取”
+### 原则1：从“包含所有信息”到“按需获取”
 
 **传统方式**：
 ```text
@@ -205,7 +205,7 @@ const prompt = await mcp.getPrompt("code_review", {
 → 精简且高效的核心提示词
 ```
 
-#### 原则2：从“静态管理”到“动态协商”
+### 原则2：从“静态管理”到“动态协商”
 
 **传统方式**：
 ```text
@@ -225,7 +225,7 @@ const prompt = await mcp.getPrompt("code_review", {
 - 支持条件化的信息注入
 ```
 
-#### 原则3：从“模型中心”到“上下文中心”
+### 原则3：从“模型中心”到“上下文中心”
 
 **提示词工程的演进**：
 ```text
@@ -242,9 +242,9 @@ const prompt = await mcp.getPrompt("code_review", {
   重点：上下文来源和动态组装
 ```
 
-### G.4 MCP时代的最佳实践
+## G.4 MCP时代的最佳实践
 
-#### 实践1：最小化系统提示词
+### 实践1：最小化系统提示词
 
 **示例**：
 
@@ -275,7 +275,7 @@ const prompt = await mcp.getPrompt("code_review", {
 需要任何数据或执行特定操作时，使用上述资源和工具。
 ```
 
-#### 实践2：利用Prompts模板库
+### 实践2：利用Prompts模板库
 
 **组织中的提示词管理**：
 
@@ -313,7 +313,7 @@ class AnalysisAgent:
         return result
 ```
 
-#### 实践3：条件化的上下文注入
+### 实践3：条件化的上下文注入
 
 **根据用户查询动态选择资源**：
 
@@ -345,7 +345,7 @@ class SmartContextBuilder:
         return "\n\n".join(context_parts)
 ```
 
-#### 实践4：MCP驱动的Agent设计
+### 实践4：MCP驱动的Agent设计
 
 **新的Agent架构**：
 
@@ -370,9 +370,9 @@ class SmartContextBuilder:
   └─ 通过MCP的Prompt模板格式化输出
 ```
 
-### G.5 MCP与成本优化
+## G.5 MCP与成本优化
 
-#### Token消耗的改善
+### Token消耗的改善
 
 ```text
 传统提示词工程：
@@ -393,7 +393,7 @@ MCP方式：
 示例节省: 82%（用于说明量级，不代表通用保证）
 ```
 
-#### Prompt Caching与MCP的协同
+### Prompt Caching与MCP的协同
 
 ```text
 MCP + Prompt Caching的最佳实践：
@@ -413,7 +413,7 @@ MCP + Prompt Caching的最佳实践：
    - 组合优化效果显著
 ```
 
-### G.6 企业级MCP部署示例
+## G.6 企业级MCP部署示例
 
 ```python
 
@@ -483,9 +483,9 @@ class EnterpriseMCPServer:
         ])
 ```
 
-### G.7 MCP时代的安全性考量
+## G.7 MCP时代的安全性考量
 
-#### 权限管理不能只靠提示词
+### 权限管理不能只靠提示词
 
 ```text
 传统方式：
@@ -501,7 +501,7 @@ MCP方式：
 → 安全性由架构保证，而非提示词技巧
 ```
 
-### G.8 小结：MCP带来的范式转变
+## G.8 小结：MCP带来的范式转变
 
 ```text
 维度           传统方式              MCP方式
@@ -520,14 +520,14 @@ Token消耗      5000-8000/请求        800-1200/请求
 到 "设计最优的上下文环境"
 ```
 
-### G.9 学习资源
+## G.9 学习资源
 
 - [官方 MCP 文档](https://modelcontextprotocol.io/docs)
 - [MCP 服务器概念：Tools / Resources / Prompts](https://modelcontextprotocol.io/docs/learn/server-concepts)
 - [MCP Python SDK](https://github.com/modelcontextprotocol/python-sdk)
 - 社区驱动的MCP服务器集合
 
-### 思考题
+## 思考题
 
 1. 在你的当前项目中，如果采用MCP方式，提示词能减少多少token？
 2. 你如何设计一个企业级MCP服务器来统一管理提示词模板？
