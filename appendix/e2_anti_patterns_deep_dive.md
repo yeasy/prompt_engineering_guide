@@ -209,7 +209,7 @@ def test_formatting_compliance(prompt, llm):
 
     has_markdown = any([
         "# " in response,
-        "** " in response,
+        "**" in response,
         "- " in response.split("\n")[0],
         "[" in response and "](" in response
     ])
