@@ -39,7 +39,7 @@ Vaswani et al., 2017 - Transformer 架构奠基之作。
 Brown et al., 2020 - GPT-3 的发布论文，确立了大模型在不调参的情况下仅靠 Few-Shot 即可完成多种任务的范式。
 
 **[A Systematic Survey of Prompt Engineering in Large Language Models](https://arxiv.org/abs/2402.07927)**
-Mizrahi et al., 2024 - 全面的提示词工程技术综述，涵盖分类体系和应用领域。
+Sahoo et al., 2024 - 全面的提示词工程技术综述，涵盖分类体系和应用领域。
 
 **[Unleashing the Potential of Prompt Engineering for Large Language Models](https://arxiv.org/abs/2310.14735)**
 Bang et al., 2023 - 一篇全面的提示词工程综述，涵盖基础和高级提示技术、多模态提示、安全性与评估机制。
