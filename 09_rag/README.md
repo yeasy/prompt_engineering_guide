@@ -18,8 +18,8 @@
 ## 本章内容
 
 - [9.1 RAG 系统的核心原理](9.1_rag_principles.md)
-- [9.2 检索策略与上下文组装](9.2_retrieval_strategies.md)
+- [9.2 高级检索策略与上下文组装](9.2_retrieval_strategies.md)
 - [9.3 RAG 系统的提示词优化](9.3_rag_prompt_optimization.md)
-- [9.4 高级 RAG 架构与实践](9.4_advanced_rag.md)
+- [9.4 高级 RAG 架构与前沿趋势](9.4_advanced_rag.md)
 - [9.5 本章实战练习](9.5_practice.md)
 - [本章小结](summary.md)
