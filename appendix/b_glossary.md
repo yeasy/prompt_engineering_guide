@@ -5,7 +5,7 @@
 ## A
 
 **自适应思考（Adaptive Thinking）**
-Claude Opus 4.7、Opus 4.6 与 Sonnet 4.6 支持的推理模式（`type: "adaptive"`），由模型根据任务复杂度自动决定思考深度；Opus 4.7 只支持 adaptive，Opus 4.6 与 Sonnet 4.6 上的手动 Extended Thinking 已被标为 deprecated。
+ Claude Opus 4.8、Opus 4.7、Opus 4.6 与 Sonnet 4.6 支持的推理模式（`type: "adaptive"`），由模型根据任务复杂度自动决定思考深度；Opus 4.8 / 4.7 只支持 adaptive，Opus 4.6 与 Sonnet 4.6 上的手动 Extended Thinking 已被标为 deprecated。
 
 **智能体（Agent）**
 能够自主感知环境、做出决策并采取行动的AI系统，通常具备规划、执行和反思能力。
