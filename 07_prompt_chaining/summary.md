@@ -78,7 +78,7 @@
 
 #### 7.4 多轮对话管理
 
-- [Managing LLM Conversation History](https://platform.openai.com/docs/guides/text-generation/managing-conversation-history) - OpenAI 对话历史管理指南
+- [Conversation state](https://developers.openai.com/api/docs/guides/conversation-state) - OpenAI 对话状态管理指南
 
 ### 下一章预告
 
