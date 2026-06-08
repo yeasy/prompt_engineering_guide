@@ -20,9 +20,9 @@
    - **长文本寻觅者**：Opus 4.8、Opus 4.7 与 Sonnet 4.6 支持 1M 上下文，但在极长文本中，经常需要配合在最后一段重复其核心任务。成本评估需按目标模型的官方价格页和 token counting 结果测算。
    - **预填充兼容性收窄**：早期 Claude（Sonnet 4.5 / Sonnet 4 / 3.5 及更早）可用预填充技巧（提供大括号 `{` 作为 Assistant Response 开头）控制 JSON 输出，但 Claude Mythos Preview、Opus 4.8、Opus 4.7、Opus 4.6、Sonnet 4.6 已停止支持 prefill 并返回 400。新项目请优先评估 Structured Outputs、System Prompt 或 `output_config.format`（详见 13.2 节）。
 
-3. **Google Gemini 系列 (Gemini 2.5 Pro / Gemini 3.1 Pro Preview)**
-   - **稳定与预览要分开**：`Gemini 2.5 Pro` 适合生产使用，`Gemini 3.1 Pro Preview` 更适合前沿验证和能力评估。
-   - **超长上下文强项**：Gemini 2.5 Pro / Flash / Flash-Lite 官方模型页列出 1,048,576 输入 token；Preview 模型的限制应以最新模型页为准。
+3. **Google Gemini 系列 (Gemini 2.5 Pro / Gemini 3.1 Pro Preview / Gemini 3.5 Flash)**
+   - **稳定与预览要分开**：Google 模型页将 `Gemini 3.5 Flash` 标为 Stable，将 `Gemini 3.1 Pro Preview` 标为 Preview；生产默认优先使用稳定型号，预览型号更适合前沿验证和能力评估。
+   - **超长上下文强项**：Gemini 2.5 Pro / Flash / Flash-Lite 官方模型页列出 1,048,576 输入 token；Gemini 3.x 预览或最新别名的限制应以最新模型页为准。
    - **原生多模态混合交织**：非常擅长交错排列的处理，如 `[文本指令] -> [视频帧] -> [表格文本] -> [音频轨]` 的穿插式推理。
 
 4. **开源模型策略 (Llama / Qwen 等)**
