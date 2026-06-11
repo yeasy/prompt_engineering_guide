@@ -5,7 +5,7 @@
 ### 关键概念
 
 - **平台方言 (Platform Dialects)**：不同平台对于高亮、隔离、推理引导等指令的特殊格式偏好（如 Claude 的 XML 与 GPT 的 Markdown）。
-- **预填充 (Prefilling)**：在支持的 API 中，预先写入 `Assistant` 角色的开头内容以强制模型按某种特定格式继续回答。**注：Claude Mythos Preview / Opus 4.8 / Opus 4.7 / Opus 4.6 / Sonnet 4.6 已停止支持 prefill 并返回 400；Sonnet 4.5 仍是官方 Messages 文档中的 prefill 示例模型。详见 [13.2 节](13.2_anthropic_claude.md)。**
+- **预填充 (Prefilling)**：在支持的 API 中，预先写入 `Assistant` 角色的开头内容以强制模型按某种特定格式继续回答。**注：Claude Fable 5 / Mythos 5 / Mythos Preview / Opus 4.8 / Opus 4.7 / Opus 4.6 / Sonnet 4.6 已停止支持 prefill 并返回 400；Sonnet 4.5 仍是官方 Messages 文档中的 prefill 示例模型。详见 [13.2 节](13.2_anthropic_claude.md)。**
 - **聊天模板 (Chat Template)**：开源模型中用于区分系统指令、用户提问和助手回复的特定词元结构（如 Llama 3 的 `<|start_header_id|>`）。
 
 ### 核心要点
@@ -15,10 +15,10 @@
    - **JSON Schema 与结构化输出**：拥有最成熟和严格的 Structured Outputs (结构化输出) 机制。
    - **系统提示词服从度极高**：对 `system` 角色的指令具有最高的服从性，适合放置极其严厉的行为约束。
 
-2. **Anthropic Claude 系列 (Claude Opus 4.8, Claude Sonnet 4.6, Claude Haiku 4.5)**
+2. **Anthropic Claude 系列 (Claude Fable 5, Claude Opus 4.8, Claude Sonnet 4.6, Claude Haiku 4.5)**
    - **XML 标签狂热者**：官方极度推荐使用 `<document>` 等 XML 标签来区分数据源和划定指令范围。
-   - **长文本寻觅者**：Opus 4.8、Opus 4.7 与 Sonnet 4.6 支持 1M 上下文，但在极长文本中，经常需要配合在最后一段重复其核心任务。成本评估需按目标模型的官方价格页和 token counting 结果测算。
-   - **预填充兼容性收窄**：早期 Claude（Sonnet 4.5 / Sonnet 4 / 3.5 及更早）可用预填充技巧（提供大括号 `{` 作为 Assistant Response 开头）控制 JSON 输出，但 Claude Mythos Preview、Opus 4.8、Opus 4.7、Opus 4.6、Sonnet 4.6 已停止支持 prefill 并返回 400。新项目请优先评估 Structured Outputs、System Prompt 或 `output_config.format`（详见 13.2 节）。
+   - **长文本寻觅者**：Fable 5、Opus 4.8、Opus 4.7 与 Sonnet 4.6 支持 1M 上下文，但在极长文本中，经常需要配合在最后一段重复其核心任务。成本评估需按目标模型的官方价格页和 token counting 结果测算。
+   - **预填充兼容性收窄**：早期 Claude（Sonnet 4.5 / Sonnet 4 / 3.5 及更早）可用预填充技巧（提供大括号 `{` 作为 Assistant Response 开头）控制 JSON 输出，但 Claude Fable 5、Mythos 5、Mythos Preview、Opus 4.8、Opus 4.7、Opus 4.6、Sonnet 4.6 已停止支持 prefill 并返回 400。新项目请优先评估 Structured Outputs、System Prompt 或 `output_config.format`（详见 13.2 节）。
 
 3. **Google Gemini 系列 (Gemini 2.5 Pro / Gemini 3.1 Pro Preview / Gemini 3.5 Flash)**
    - **稳定与预览要分开**：Google 模型页将 `Gemini 3.5 Flash` 标为 Stable，将 `Gemini 3.1 Pro Preview` 标为 Preview；生产默认优先使用稳定型号，预览型号更适合前沿验证和能力评估。
