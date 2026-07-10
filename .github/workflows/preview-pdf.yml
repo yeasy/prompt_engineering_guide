@@ -97,15 +97,18 @@ jobs:
       - name: Recheck checksums
         run: (cd dist && sha256sum -c SHA256SUMS)
       - name: Write release notes
+        shell: bash
         run: |
-          cat > dist/release-notes.md <<EOF
-          Auto-updated preview PDF and HTML reader from `${GITHUB_SHA::7}`.
-
-          - Commit: https://github.com/${GH_REPO}/commit/${GITHUB_SHA}
-          - Run: https://github.com/${GH_REPO}/actions/runs/${GITHUB_RUN_ID}
-
-          This mutable preview has no formal release provenance. Use a tagged release for attested artifacts.
-          EOF
+          set -euo pipefail
+          short_sha="${GITHUB_SHA:0:7}"
+          printf 'Auto-updated preview PDF and HTML reader from `%s` on branch `%s`.\n\n' \
+            "$short_sha" "$GITHUB_REF_NAME" > dist/release-notes.md
+          printf '%s\n' \
+            "- Commit: https://github.com/${GH_REPO}/commit/${GITHUB_SHA}" \
+            "- Run: https://github.com/${GH_REPO}/actions/runs/${GITHUB_RUN_ID}" \
+            '' \
+            'This mutable preview has no formal release provenance. Use a tagged release for attested artifacts.' \
+            >> dist/release-notes.md
       - name: Synchronize mutable preview tag
         shell: bash
         run: |

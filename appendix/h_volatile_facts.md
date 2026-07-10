@@ -9,7 +9,7 @@
 - `current`：核验日已经生效且官方来源一致。
 - `future`：官方已公布、但尚未到生效日；必须记录 `effective_at`，不能写成已生效事实。
 - `conflict`：官方一手来源暂时矛盾；必须记录 `next_review_at`，正文不得自行选边。
-- `resolved-conflict`：先前冲突已被新公告解决；必须保留 `previous=conflict` 与 `resolved_at`，避免旧结论复活。
+- `resolved-conflict`：先前冲突已被新公告解决；必须保留 `previous=conflict` 与 `resolved_at`，避免旧结论复活。`resolved_at` 记录本账本完成状态迁移核验的日期，厂商事件的实际发生日期仍写在事实行中。
 
 ## 当前事实
 
@@ -20,7 +20,7 @@
 | OpenAI | 2026-07-09 发布 GPT-5.6 系列：`gpt-5.6-sol` 面向前沿能力，`gpt-5.6-terra` 平衡能力与成本，`gpt-5.6-luna` 面向高吞吐；`gpt-5.6` 别名路由到 Sol。Responses API 支持该系列，并新增 Programmatic Tool Calling、显式 prompt caching、持久化 reasoning，以及 beta 的 multi-agent orchestration。 | [API changelog](https://developers.openai.com/api/docs/changelog), [GPT-5.6 model guidance](https://developers.openai.com/api/docs/guides/latest-model) | 新工作流以 Responses API 为主；multi-agent 必须标 beta。模型别名会隐藏具体路由，生产记录必须保存实际 model snapshot。 |
 
 <!-- volatile-status: id=anthropic-sonnet-5 status=current -->
-<!-- volatile-status: id=anthropic-fable-access status=resolved-conflict previous=conflict resolved_at=2026-07-01 -->
+<!-- volatile-status: id=anthropic-fable-access status=resolved-conflict previous=conflict resolved_at=2026-07-10 -->
 
 | 提供方 | 当前维护口径 | 权威入口 | 编辑要求 |
 | --- | --- | --- | --- |

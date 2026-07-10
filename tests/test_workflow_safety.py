@@ -163,6 +163,36 @@ class WorkflowSafetyTests(unittest.TestCase):
         self.assertNotEqual(unavailable.returncode, 0)
         self.assertEqual(len(commands), 1)
 
+    def test_preview_release_notes_preserve_short_sha_and_branch_as_markdown(self):
+        script = step_script(self.text("preview-pdf.yml"), "Write release notes")
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "dist").mkdir()
+            env = os.environ.copy()
+            env.update(
+                {
+                    "GITHUB_SHA": "8279d934da2a49afa9f331c895f1ace5cf1b954f",
+                    "GITHUB_REF_NAME": "feature/release-notes",
+                    "GITHUB_RUN_ID": "12345",
+                    "GH_REPO": "owner/repo",
+                }
+            )
+            result = subprocess.run(
+                ["/bin/bash", "-euo", "pipefail", "-c", script],
+                cwd=root,
+                env=env,
+                text=True,
+                capture_output=True,
+                check=False,
+            )
+            notes = (root / "dist/release-notes.md").read_text(encoding="utf-8")
+
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertNotIn("command not found", result.stderr)
+        self.assertIn("`8279d93`", notes)
+        self.assertIn("`feature/release-notes`", notes)
+        self.assertIn("https://github.com/owner/repo/commit/8279d934", notes)
+
     def test_dependabot_checks_before_approve_and_merge(self):
         text = self.text("dependabot-automerge.yml")
         check = text.index("Confirm required checks are configured")

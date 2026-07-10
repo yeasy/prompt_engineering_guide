@@ -12,6 +12,28 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class VolatileFactsContractTests(unittest.TestCase):
+    def check_status(
+        self,
+        status: str,
+        *,
+        as_of: date,
+        verified_at: str = "2026-07-10",
+        expires_at: str = "2026-08-09",
+    ) -> list[str]:
+        check = getattr(rules, "check_volatile_facts", lambda **_: ["missing checker"])
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            appendix = root / "appendix"
+            appendix.mkdir()
+            (appendix / "h_volatile_facts.md").write_text(
+                "# Facts\n\n"
+                f"<!-- volatile-meta: verified_at={verified_at} "
+                f"expires_at={expires_at} ttl_days=30 -->\n"
+                f"<!-- volatile-status: id=boundary-fact {status} -->\n",
+                encoding="utf-8",
+            )
+            return check(root=root, as_of=as_of, required_fact_ids=set())
+
     def test_repository_volatile_facts_are_current_and_consistent(self):
         check = getattr(rules, "check_volatile_facts", lambda **_: ["missing checker"])
         self.assertEqual(check(root=ROOT, as_of=date(2026, 7, 10)), [])
@@ -30,6 +52,129 @@ class VolatileFactsContractTests(unittest.TestCase):
             )
             issues = check(root=root, as_of=date(2026, 8, 10), required_fact_ids=set())
         self.assertTrue(any("expired" in issue for issue in issues), issues)
+
+    def test_verification_date_cannot_be_future_and_expiry_is_inclusive(self):
+        invalid_verified = self.check_status(
+            "status=current",
+            as_of=date(2026, 7, 10),
+            verified_at="2026-02-30",
+            expires_at="2026-04-01",
+        )
+        self.assertTrue(
+            any("verified_at" in issue and "invalid" in issue for issue in invalid_verified),
+            invalid_verified,
+        )
+        invalid_expiry = self.check_status(
+            "status=current",
+            as_of=date(2026, 7, 10),
+            expires_at="2026-02-30",
+        )
+        self.assertTrue(
+            any("expires_at" in issue and "invalid" in issue for issue in invalid_expiry),
+            invalid_expiry,
+        )
+        future = self.check_status(
+            "status=current",
+            as_of=date(2026, 7, 10),
+            verified_at="2026-07-11",
+            expires_at="2026-08-10",
+        )
+        self.assertTrue(
+            any("verified_at" in issue and "future" in issue for issue in future),
+            future,
+        )
+
+        valid_on_expiry = self.check_status(
+            "status=current",
+            as_of=date(2026, 8, 9),
+        )
+        self.assertEqual(valid_on_expiry, [])
+        expired_next_day = self.check_status(
+            "status=current",
+            as_of=date(2026, 8, 10),
+        )
+        self.assertTrue(any("expired" in issue for issue in expired_next_day))
+
+        wrong_expiry = self.check_status(
+            "status=current",
+            as_of=date(2026, 7, 10),
+            expires_at="2026-08-08",
+        )
+        self.assertTrue(any("expires_at must equal" in issue for issue in wrong_expiry))
+
+    def test_future_status_requires_valid_date_and_transition_at_boundary(self):
+        invalid = self.check_status(
+            "status=future effective_at=not-a-date",
+            as_of=date(2026, 7, 10),
+        )
+        self.assertTrue(any("effective_at" in issue and "invalid" in issue for issue in invalid), invalid)
+
+        before = self.check_status(
+            "status=future effective_at=2026-07-11",
+            as_of=date(2026, 7, 10),
+        )
+        self.assertEqual(before, [])
+        at_boundary = self.check_status(
+            "status=future effective_at=2026-07-11",
+            as_of=date(2026, 7, 11),
+        )
+        self.assertTrue(
+            any("status=future" in issue and "transition" in issue for issue in at_boundary),
+            at_boundary,
+        )
+
+    def test_conflict_review_date_is_valid_and_only_overdue_after_boundary(self):
+        invalid = self.check_status(
+            "status=conflict next_review_at=not-a-date",
+            as_of=date(2026, 7, 10),
+        )
+        self.assertTrue(
+            any("next_review_at" in issue and "invalid" in issue for issue in invalid),
+            invalid,
+        )
+
+        on_review_date = self.check_status(
+            "status=conflict next_review_at=2026-07-11",
+            as_of=date(2026, 7, 11),
+        )
+        self.assertEqual(on_review_date, [])
+        overdue = self.check_status(
+            "status=conflict next_review_at=2026-07-11",
+            as_of=date(2026, 7, 12),
+        )
+        self.assertTrue(
+            any("status=conflict" in issue and "overdue" in issue for issue in overdue),
+            overdue,
+        )
+
+    def test_resolved_conflict_date_is_valid_and_within_verification_window(self):
+        valid_boundary = self.check_status(
+            "status=resolved-conflict previous=conflict resolved_at=2026-07-10",
+            as_of=date(2026, 7, 10),
+        )
+        self.assertEqual(valid_boundary, [])
+
+        invalid = self.check_status(
+            "status=resolved-conflict previous=conflict resolved_at=not-a-date",
+            as_of=date(2026, 7, 10),
+        )
+        self.assertTrue(any("resolved_at" in issue and "invalid" in issue for issue in invalid), invalid)
+        before_verification = self.check_status(
+            "status=resolved-conflict previous=conflict resolved_at=2026-07-09",
+            as_of=date(2026, 7, 10),
+        )
+        self.assertTrue(
+            any("status=resolved-conflict" in issue and "verified_at" in issue for issue in before_verification),
+            before_verification,
+        )
+        after_today = self.check_status(
+            "status=resolved-conflict previous=conflict resolved_at=2026-07-11",
+            as_of=date(2026, 7, 10),
+        )
+        self.assertTrue(
+            any("status=resolved-conflict" in issue and "as_of" in issue for issue in after_today),
+            after_today,
+        )
 
     def test_future_conflict_and_resolved_transition_require_dates(self):
         check = getattr(rules, "check_volatile_facts", lambda **_: ["missing checker"])

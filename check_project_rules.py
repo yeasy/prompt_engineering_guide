@@ -204,6 +204,11 @@ def check_volatile_facts(
     if verified and expires and expires != verified + timedelta(days=ttl_days):
         issues.append("appendix/h_volatile_facts.md: expires_at must equal verified_at + ttl_days")
     today = as_of or date.today()
+    if verified and verified > today:
+        issues.append(
+            "appendix/h_volatile_facts.md: "
+            f"verified_at is in the future ({verified.isoformat()})"
+        )
     if expires and today > expires:
         issues.append(f"appendix/h_volatile_facts.md: volatile facts expired on {expires.isoformat()}")
 
@@ -222,18 +227,51 @@ def check_volatile_facts(
             effective = attrs.get("effective_at")
             if not effective:
                 issues.append(f"appendix/h_volatile_facts.md: {fact_id} future status requires effective_at")
-            elif verified:
+            else:
                 parsed = _parse_iso(effective, f"{fact_id}.effective_at", issues)
-                if parsed and parsed <= verified:
+                if parsed and verified and parsed <= verified:
                     issues.append(f"appendix/h_volatile_facts.md: {fact_id} effective_at must be after verified_at")
+                if parsed and today >= parsed:
+                    issues.append(
+                        "appendix/h_volatile_facts.md: "
+                        f"{fact_id} status=future reached effective_at={effective}; "
+                        "transition to the current official status"
+                    )
         elif status == "conflict":
-            if not attrs.get("next_review_at"):
+            next_review = attrs.get("next_review_at")
+            if not next_review:
                 issues.append(f"appendix/h_volatile_facts.md: {fact_id} conflict status requires next_review_at")
+            else:
+                parsed = _parse_iso(next_review, f"{fact_id}.next_review_at", issues)
+                if parsed and verified and parsed < verified:
+                    issues.append(
+                        "appendix/h_volatile_facts.md: "
+                        f"{fact_id} status=conflict next_review_at must be on or after verified_at"
+                    )
+                if parsed and today > parsed:
+                    issues.append(
+                        "appendix/h_volatile_facts.md: "
+                        f"{fact_id} status=conflict review is overdue "
+                        f"(next_review_at={next_review})"
+                    )
         elif status == "resolved-conflict":
             if attrs.get("previous") != "conflict":
                 issues.append(f"appendix/h_volatile_facts.md: {fact_id} requires previous=conflict")
-            if not attrs.get("resolved_at"):
+            resolved = attrs.get("resolved_at")
+            if not resolved:
                 issues.append(f"appendix/h_volatile_facts.md: {fact_id} resolved status requires resolved_at")
+            else:
+                parsed = _parse_iso(resolved, f"{fact_id}.resolved_at", issues)
+                if parsed and verified and parsed < verified:
+                    issues.append(
+                        "appendix/h_volatile_facts.md: "
+                        f"{fact_id} status=resolved-conflict resolved_at must be on or after verified_at"
+                    )
+                if parsed and parsed > today:
+                    issues.append(
+                        "appendix/h_volatile_facts.md: "
+                        f"{fact_id} status=resolved-conflict resolved_at must be on or before as_of"
+                    )
 
     required = REQUIRED_VOLATILE_FACT_IDS if required_fact_ids is None else required_fact_ids
     for missing in sorted(required - observed):
