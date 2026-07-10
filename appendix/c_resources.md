@@ -142,14 +142,10 @@ Google提供的多模态提示词开发与API测试平台。
 
 **tiktoken (Python库)**
 ```python
+# 若未安装，先执行：pip install tiktoken
 import tiktoken
 
-try:
-    encoding = tiktoken.get_encoding("cl100k_base")
-except Exception:
-    import tiktoken
-
-    encoding = tiktoken.get_encoding("cl100k_base")
+encoding = tiktoken.get_encoding("cl100k_base")
 tokens = encoding.encode("your text")
 print(tokens)
 ```
@@ -175,7 +171,7 @@ AI驱动的提示词优化工具。
 ### C.5.2 博客与社区
 
 **[Lil'Log (Lilian Weng)](https://lilianweng.github.io/)**
-OpenAI研究员的技术博客，深入浅出。
+前 OpenAI 研究员（2024 年 11 月离职，后联合创立 Thinking Machines Lab）的技术博客，深入浅出。
 
 **Reddit - r/PromptEngineering**
 提示词工程社区，经验分享和讨论。
@@ -203,7 +199,7 @@ LangChain官方Discord，活跃的开发者社区。
 **知名人物:**
 - @OpenAI, @AnthropicAI, @GoogleAI
 - @omarsar0 (DAIR.AI创始人)
-- @lilianweng (OpenAI研究员)
+- @lilianweng (前 OpenAI 研究员，Thinking Machines Lab 联合创始人)
 
 **YouTube频道:**
 - Andrej Karpathy
@@ -222,4 +218,4 @@ LangChain官方Discord，活跃的开发者社区。
 
 ---
 
-*注：链接和推荐基于2026年1月的信息，请访问时验证最新版本。*
+*注：链接和推荐随全书维护滚动更新（最近核验日期见附录 H），请访问时验证最新版本。*

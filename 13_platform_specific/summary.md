@@ -17,7 +17,7 @@
 
 2. **Anthropic Claude 系列 (Claude Fable 5, Claude Opus 4.8, Claude Sonnet 4.6, Claude Haiku 4.5)**
    - **XML 标签狂热者**：官方极度推荐使用 `<document>` 等 XML 标签来区分数据源和划定指令范围。
-   - **长文本寻觅者**：Fable 5、Opus 4.8、Opus 4.7 与 Sonnet 4.6 支持 1M 上下文，但 Fable 5 自 2026-06-12 起访问暂停；在极长文本中，经常需要配合在最后一段重复其核心任务。成本评估需按目标模型的官方价格页和 token counting 结果测算。
+   - **长文本寻觅者**：Fable 5、Opus 4.8、Opus 4.7 与 Sonnet 4.6 支持 1M 上下文（Fable 5 曾于 2026-06-12 暂停访问，截至 2026-07-09 已恢复）；在极长文本中，经常需要配合在最后一段重复其核心任务。成本评估需按目标模型的官方价格页和 token counting 结果测算。
    - **预填充兼容性收窄**：早期 Claude（Sonnet 4.5 / Sonnet 4 / 3.5 及更早）可用预填充技巧（提供大括号 `{` 作为 Assistant Response 开头）控制 JSON 输出，但 Claude Fable 5、Mythos 5、Mythos Preview、Opus 4.8、Opus 4.7、Opus 4.6、Sonnet 4.6 已停止支持 prefill 并返回 400。新项目请优先评估 Structured Outputs、System Prompt 或 `output_config.format`（详见 13.2 节）。
 
 3. **Google Gemini 系列 (Gemini 2.5 Pro / Gemini 3.1 Pro Preview / Gemini 3.5 Flash)**
