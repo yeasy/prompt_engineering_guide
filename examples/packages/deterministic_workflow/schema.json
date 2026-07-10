@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "status": {"type": "string", "enum": ["ready", "blocked"]},
+    "steps": {"type": "array", "items": {"type": "string", "enum": ["validate", "normalize", "route", "publish", "reject"]}}
+  },
+  "required": ["status", "steps"],
+  "additionalProperties": false
+}

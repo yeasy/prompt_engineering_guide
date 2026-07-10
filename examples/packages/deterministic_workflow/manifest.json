@@ -1,0 +1,16 @@
+{
+  "name": "deterministic_workflow",
+  "version": "1.0.0",
+  "stage": "deterministic-workflow",
+  "execution": "offline_deterministic",
+  "minimum_cases": 3,
+  "artifacts": {"prompt": "prompt.md", "cases": "cases.jsonl", "schema": "schema.json", "grader": "grader.py"},
+  "trial_contract": {
+    "minimum_trials": 5,
+    "model_snapshot": "required",
+    "max_cost_usd_per_trial": 0.05,
+    "max_latency_ms": 12000,
+    "paid_run_triggers": ["workflow_dispatch", "schedule"],
+    "required_record_fields": ["trial_id", "model_snapshot", "cost_usd", "latency_ms", "passed"]
+  }
+}

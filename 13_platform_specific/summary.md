@@ -1,5 +1,10 @@
 ## 本章小结
 
+<!-- volatile-ref: openai-gpt-5.6 -->
+<!-- volatile-ref: anthropic-sonnet-5 -->
+<!-- volatile-ref: anthropic-fable-access -->
+<!-- volatile-ref: google-gemini-models -->
+
 虽然提示词工程的基本原则（清晰、具体、提供示例等）在所有模型中通用，但各大主流模型因其后训练策略（RLHF 机制、数据集差异、安全对齐强度）的不同，在提示词的细微偏好上存在显著差异。本章深入剖析了 OpenAI GPT、Anthropic Claude、Google Gemini 以及典型开源模型的脾气秉性，并提供了平台针对性的优化策略。
 
 ### 关键概念
@@ -10,14 +15,14 @@
 
 ### 核心要点
 
-1. **OpenAI GPT 系列 (GPT-5.5 / GPT-5.4 / o 系列 / GPT-4o)**
+1. **OpenAI GPT 系列 (GPT-5.6 Sol / Terra / Luna，以及兼容期模型)**
    - **Markdown 亲和**：对 Markdown 的层级结构理解最佳，极其适合使用带有 `##` 和代码块的结构化提示词。
    - **JSON Schema 与结构化输出**：拥有最成熟和严格的 Structured Outputs (结构化输出) 机制。
    - **系统提示词服从度极高**：对 `system` 角色的指令具有最高的服从性，适合放置极其严厉的行为约束。
 
-2. **Anthropic Claude 系列 (Claude Fable 5, Claude Opus 4.8, Claude Sonnet 4.6, Claude Haiku 4.5)**
+2. **Anthropic Claude 系列 (Claude Fable 5, Claude Sonnet 5, Claude Opus 4.8, Claude Haiku 4.5)**
    - **XML 标签狂热者**：官方极度推荐使用 `<document>` 等 XML 标签来区分数据源和划定指令范围。
-   - **长文本寻觅者**：Fable 5、Opus 4.8、Opus 4.7 与 Sonnet 4.6 支持 1M 上下文（Fable 5 曾于 2026-06-12 暂停访问，截至 2026-07-09 已恢复）；在极长文本中，经常需要配合在最后一段重复其核心任务。成本评估需按目标模型的官方价格页和 token counting 结果测算。
+   - **长文本寻觅者**：Fable 5、Sonnet 5、Opus 4.8 与部分兼容期模型支持 1M 上下文；Fable 5 已于 2026-07-01 恢复访问。在极长文本中仍要明确任务、证据边界和截断策略，成本评估需按目标模型的官方价格页和 token counting 结果测算。
    - **预填充兼容性收窄**：早期 Claude（Sonnet 4.5 / Sonnet 4 / 3.5 及更早）可用预填充技巧（提供大括号 `{` 作为 Assistant Response 开头）控制 JSON 输出，但 Claude Fable 5、Mythos 5、Mythos Preview、Opus 4.8、Opus 4.7、Opus 4.6、Sonnet 4.6 已停止支持 prefill 并返回 400。新项目请优先评估 Structured Outputs、System Prompt 或 `output_config.format`（详见 13.2 节）。
 
 3. **Google Gemini 系列 (Gemini 2.5 Pro / Gemini 3.1 Pro Preview / Gemini 3.5 Flash)**

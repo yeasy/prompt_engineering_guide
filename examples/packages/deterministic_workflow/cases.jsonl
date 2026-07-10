@@ -1,0 +1,3 @@
+{"id":"publish-record","input":"已提供合法记录，请规范化后发布","expected":{"status":"ready","steps":["validate","normalize","publish"]}}
+{"id":"route-record","input":"已提供合法记录，请规范化并路由到人工队列","expected":{"status":"ready","steps":["validate","normalize","route"]}}
+{"id":"reject-missing-id","input":"记录缺少必填 id，停止处理","expected":{"status":"blocked","steps":["validate","reject"]}}

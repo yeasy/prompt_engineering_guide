@@ -1,0 +1,3 @@
+{"id":"invoice-cny","input":"供应商：星河科技；发票号：CN-1042；币种：CNY；总额：1280.50","expected":{"vendor":"星河科技","invoice_id":"CN-1042","currency":"CNY","total":1280.5}}
+{"id":"invoice-usd","input":"Vendor: Northwind; Invoice: US-7; Currency: USD; Total: 42.00","expected":{"vendor":"Northwind","invoice_id":"US-7","currency":"USD","total":42.0}}
+{"id":"invoice-eur","input":"Vendor Acme GmbH, invoice EU-9, EUR 19.95","expected":{"vendor":"Acme GmbH","invoice_id":"EU-9","currency":"EUR","total":19.95}}

@@ -1,0 +1,3 @@
+{"id":"single-source","input":"<sources><doc id='doc-1'>发布窗口为周二 09:00 UTC。</doc></sources>问：何时发布？","expected":{"answer":"周二 09:00 UTC","citations":["doc-1"],"abstained":false}}
+{"id":"two-source","input":"<sources><doc id='doc-a'>计划包含 PDF。</doc><doc id='doc-b'>计划包含 HTML。</doc></sources>问：交付哪些格式？","expected":{"answer":"PDF 和 HTML","citations":["doc-a","doc-b"],"abstained":false}}
+{"id":"abstain","input":"<sources><doc id='doc-2'>只记录了项目名称。</doc></sources>问：预算是多少？","expected":{"answer":"给定来源无法确定预算。","citations":[],"abstained":true}}

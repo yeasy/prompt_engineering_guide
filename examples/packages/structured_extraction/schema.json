@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "vendor": {"type": "string"},
+    "invoice_id": {"type": "string"},
+    "currency": {"type": "string", "enum": ["CNY", "USD", "EUR"]},
+    "total": {"type": "number"}
+  },
+  "required": ["vendor", "invoice_id", "currency", "total"],
+  "additionalProperties": false
+}

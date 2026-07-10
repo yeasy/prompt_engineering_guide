@@ -5,7 +5,7 @@
 ## A
 
 **自适应思考（Adaptive Thinking）**
-Claude Fable 5 / Mythos 5（常开，不可关闭；曾于 2026-06-12 暂停访问，截至 2026-07-09 已恢复）与 Opus 4.8、Opus 4.7、Opus 4.6、Sonnet 4.6 支持的推理模式（`type: "adaptive"`），由模型根据任务复杂度自动决定思考深度；Opus 4.8 / 4.7 只支持 adaptive，Opus 4.6 与 Sonnet 4.6 上的手动 Extended Thinking 已被标为 deprecated。
+Claude Fable 5 / Mythos 5（常开且不可关闭）、Claude Sonnet 5（默认开启）与 Opus 4.8、Opus 4.7、Opus 4.6、Sonnet 4.6 支持的推理模式（`type: "adaptive"`），由模型根据任务复杂度自动决定思考深度。Fable 5 / Mythos 5 已于 2026-07-01 恢复访问，Mythos 5 仍限获批客户；Sonnet 5 与 Opus 4.8 / 4.7 不支持手动 Extended Thinking，Opus 4.6 与 Sonnet 4.6 上的手动 Extended Thinking 已被标为 deprecated。
 
 **智能体（Agent）**
 能够自主感知环境、做出决策并采取行动的AI系统，通常具备规划、执行和反思能力。
@@ -210,7 +210,7 @@ Vision-Language Model，能够理解图像和文本的多模态模型。
 Google提出的Agent间通信标准化协议，定义了多智能体系统中的消息格式和交互模式。
 
 **Extended Thinking（扩展思考）**
-Claude 等模型的深度推理功能，允许模型在回答前进行更深入的内部推理。预算参数（`budget_tokens`）控制方式在 Opus 4.6 / Sonnet 4.6 上已弃用、在 Opus 4.8 / 4.7 上已移除；Fable 5 / Mythos 5 不提供手动 Extended Thinking（仅 Adaptive Thinking 常开；曾于 2026-06-12 暂停访问，截至 2026-07-09 已恢复）。
+Claude 等模型的深度推理功能，允许模型在回答前进行更深入的内部推理。预算参数（`budget_tokens`）控制方式在 Opus 4.6 / Sonnet 4.6 上已弃用、在 Opus 4.8 / 4.7 与 Sonnet 5 上已移除；Fable 5 / Mythos 5 只提供常开的 Adaptive Thinking，二者已于 2026-07-01 恢复访问。
 
 **MoE（混合专家模型）**
 Mixture of Experts，一种模型架构，通过路由机制动态激活部分参数，实现大规模模型的高效推理。

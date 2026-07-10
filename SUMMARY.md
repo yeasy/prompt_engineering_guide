@@ -139,3 +139,7 @@
 * [附录 F：提示词技术决策树](appendix/f_decision_tree.md)
 * [附录 G：MCP 与提示词工程的融合](appendix/g_mcp_and_prompt_engineering.md)
 * [附录 H：快变事实核验表](appendix/h_volatile_facts.md)
+* [附录 I：生产落地脊柱](appendix/i_production_spine.md)
+  * [结构化提取提示词合同](examples/packages/structured_extraction/prompt.md)
+  * [确定性工作流提示词合同](examples/packages/deterministic_workflow/prompt.md)
+  * [有据问答提示词合同](examples/packages/grounded_qa/prompt.md)

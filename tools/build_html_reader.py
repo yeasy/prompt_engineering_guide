@@ -8,23 +8,30 @@ scroll by default; JS (Safari, Documents app, etc.) upgrades to one-page-at-a-ti
 - TOC drawer: CSS checkbox hack (opens without JS); prev/next are static anchors
 - Images/CSS embedded (--embed-resources) -> one offline file
 """
-import argparse, os, re, subprocess, sys, posixpath
+import argparse, os, re, subprocess, sys, posixpath, tempfile
+from pathlib import Path
 
 def esc(s):  return s.replace("&","&amp;").replace("<","&lt;").replace(">","&gt;")
 def escattr(s): return s.replace("&","&amp;").replace('"',"&quot;").replace("<","&lt;")
 
 def parse_summary(book_dir):
+    book = Path(book_dir).resolve()
     items, seen = [], set()
-    with open(os.path.join(book_dir, "SUMMARY.md"), encoding="utf-8") as f:
+    with (book / "SUMMARY.md").open(encoding="utf-8") as f:
         for line in f:
             m = re.match(r'^##\s+(.+?)\s*$', line)
             if m: items.append(("part", m.group(1))); continue
             m = re.match(r'^(\s*)[-*]\s+\[(.*?)\]\(([^)]+?)\)', line)
             if m:
                 indent, title, path = m.group(1), m.group(2).strip(), m.group(3).strip()
-                if path.endswith(".md") and path not in seen and os.path.isfile(os.path.join(book_dir, path)):
-                    seen.add(path)
-                    items.append(("file", path, title, min(len(indent.replace("\t","  "))//2, 2)))
+                target = (book / path.split("#", 1)[0]).resolve()
+                if path.endswith(".md"):
+                    if book != target and book not in target.parents:
+                        raise ValueError(f"SUMMARY entry escapes book directory: {path}")
+                    relative = target.relative_to(book).as_posix()
+                    if relative not in seen and target.is_file():
+                        seen.add(relative)
+                        items.append(("file", relative, title, min(len(indent.replace("\t","  "))//2, 2)))
     return items
 
 def fix_inline_dollar(text):
@@ -214,20 +221,21 @@ def main():
             sb.append(f'<li class="toc-link lvl{lvl}"><a data-target="{pidi}" href="#{pidi}">{esc(title)}</a></li>')
     sb.append('</ul>'); sidebar_html = "".join(sb)
 
-    tmp_md = os.path.join(book_dir, "_combined_tmp.md")
-    tpl = "/tmp/_book_template.html"; out_tmp = "/tmp/_book_out.html"
-    with open(tmp_md, "w", encoding="utf-8") as f: f.write(combined)
-    with open(tpl, "w", encoding="utf-8") as f: f.write(TEMPLATE)
-    cmd = ["pandoc", "_combined_tmp.md", "-f", "markdown", "-t", "html5",
-           "--standalone", "--embed-resources", "--mathml",
-           "--template", tpl, "--metadata", f"title={a.title}", "-o", out_tmp]
-    print("  running pandoc ...")
-    r = subprocess.run(cmd, cwd=book_dir, capture_output=True, text=True)
-    if os.path.exists(tmp_md): os.remove(tmp_md)
-    if r.returncode != 0:
-        print("PANDOC FAILED:\n", r.stderr[:4000]); sys.exit(1)
-
-    with open(out_tmp, encoding="utf-8") as f: html = f.read()
+    with tempfile.TemporaryDirectory(prefix="prompt-guide-html-") as directory:
+        temporary = Path(directory)
+        tmp_md = temporary / "combined.md"
+        tpl = temporary / "template.html"
+        out_tmp = temporary / "reader.html"
+        tmp_md.write_text(combined, encoding="utf-8")
+        tpl.write_text(TEMPLATE, encoding="utf-8")
+        cmd = ["pandoc", str(tmp_md), "-f", "markdown", "-t", "html5",
+               "--standalone", "--embed-resources", "--mathml",
+               "--template", str(tpl), "--metadata", f"title={a.title}", "-o", str(out_tmp)]
+        print("  running pandoc ...")
+        r = subprocess.run(cmd, cwd=book_dir, capture_output=True, text=True)
+        if r.returncode != 0:
+            print("PANDOC FAILED:\n", r.stderr[:4000]); sys.exit(1)
+        html = out_tmp.read_text(encoding="utf-8")
     # swap mermaid placeholders -> pre-rendered inline SVG (2nd pass catches any not in <p>)
     def mrepl(m): return f'<figure class="diagram">{svgs[int(m.group(1))]}</figure>'
     html = re.sub(r'<p>\s*MERMAIDZZ(\d+)ZZ\s*</p>', mrepl, html)
