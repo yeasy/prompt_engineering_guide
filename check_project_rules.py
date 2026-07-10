@@ -262,10 +262,10 @@ def check_volatile_facts(
                 issues.append(f"appendix/h_volatile_facts.md: {fact_id} resolved status requires resolved_at")
             else:
                 parsed = _parse_iso(resolved, f"{fact_id}.resolved_at", issues)
-                if parsed and verified and parsed < verified:
+                if parsed and verified and parsed > verified:
                     issues.append(
                         "appendix/h_volatile_facts.md: "
-                        f"{fact_id} status=resolved-conflict resolved_at must be on or after verified_at"
+                        f"{fact_id} status=resolved-conflict resolved_at must be on or before verified_at"
                     )
                 if parsed and parsed > today:
                     issues.append(

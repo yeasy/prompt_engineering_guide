@@ -147,7 +147,7 @@ class VolatileFactsContractTests(unittest.TestCase):
             overdue,
         )
 
-    def test_resolved_conflict_date_is_valid_and_within_verification_window(self):
+    def test_resolved_conflict_date_is_valid_and_not_after_verification_or_as_of(self):
         valid_boundary = self.check_status(
             "status=resolved-conflict previous=conflict resolved_at=2026-07-10",
             as_of=date(2026, 7, 10),
@@ -159,13 +159,19 @@ class VolatileFactsContractTests(unittest.TestCase):
             as_of=date(2026, 7, 10),
         )
         self.assertTrue(any("resolved_at" in issue and "invalid" in issue for issue in invalid), invalid)
-        before_verification = self.check_status(
+        historical_resolution = self.check_status(
             "status=resolved-conflict previous=conflict resolved_at=2026-07-09",
             as_of=date(2026, 7, 10),
         )
+        self.assertEqual(historical_resolution, [])
+
+        after_verification = self.check_status(
+            "status=resolved-conflict previous=conflict resolved_at=2026-07-11",
+            as_of=date(2026, 7, 12),
+        )
         self.assertTrue(
-            any("status=resolved-conflict" in issue and "verified_at" in issue for issue in before_verification),
-            before_verification,
+            any("status=resolved-conflict" in issue and "verified_at" in issue for issue in after_verification),
+            after_verification,
         )
         after_today = self.check_status(
             "status=resolved-conflict previous=conflict resolved_at=2026-07-11",
@@ -175,6 +181,15 @@ class VolatileFactsContractTests(unittest.TestCase):
             any("status=resolved-conflict" in issue and "as_of" in issue for issue in after_today),
             after_today,
         )
+
+    def test_resolved_conflict_history_survives_the_next_ttl_verification(self):
+        issues = self.check_status(
+            "status=resolved-conflict previous=conflict resolved_at=2026-07-10",
+            as_of=date(2026, 8, 1),
+            verified_at="2026-08-01",
+            expires_at="2026-08-31",
+        )
+        self.assertEqual(issues, [])
 
     def test_future_conflict_and_resolved_transition_require_dates(self):
         check = getattr(rules, "check_volatile_facts", lambda **_: ["missing checker"])
