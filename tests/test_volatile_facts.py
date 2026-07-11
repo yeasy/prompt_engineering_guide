@@ -253,6 +253,130 @@ class VolatileFactsContractTests(unittest.TestCase):
                     offenders.append(f"{path.relative_to(ROOT)}: {stale}")
         self.assertEqual(offenders, [])
 
+    def test_retired_model_recommendation_contract_catches_semantic_variants(self):
+        check = getattr(
+            rules,
+            "check_retired_model_recommendations",
+            lambda **_: ["missing checker"],
+        )
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "chapter.md").write_text(
+                "# Model routing\n\n"
+                "- 将 GPT-5.5 作为默认候选。\n"
+                "- 对高风险任务优先评估 GPT 5.5。\n"
+                "- GPT-5.5：高复杂度任务首选。\n"
+                "- GPT-5.5 是当前前沿模型。\n",
+                encoding="utf-8",
+            )
+            issues = check(root=root)
+        joined = "\n".join(issues)
+        for marker in ("默认候选", "优先评估", "首选", "当前前沿"):
+            with self.subTest(marker=marker):
+                self.assertIn(marker, joined)
+
+    def test_retired_model_name_requires_explicit_historical_or_migration_context(self):
+        check = getattr(
+            rules,
+            "check_retired_model_recommendations",
+            lambda **_: ["missing checker"],
+        )
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "chapter.md").write_text(
+                "# Migration notes\n\n"
+                "- GPT-5.5 是迁移来源，仅用于存量兼容基线。\n",
+                encoding="utf-8",
+            )
+            issues = check(root=root)
+        self.assertEqual(issues, [])
+
+    def test_active_default_cannot_hide_behind_a_historical_keyword(self):
+        check = getattr(
+            rules,
+            "check_retired_model_recommendations",
+            lambda **_: ["missing checker"],
+        )
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "chapter.md").write_text(
+                "# Conflicting guidance\n\n"
+                "- GPT-5.5 虽是历史模型，仍作为当前默认候选。\n",
+                encoding="utf-8",
+            )
+            issues = check(root=root)
+        self.assertTrue(any("当前默认候选" in issue for issue in issues), issues)
+
+    def test_repository_has_no_ambiguous_gpt_5_5_active_guidance(self):
+        check = getattr(
+            rules,
+            "check_retired_model_recommendations",
+            lambda **_: ["missing checker"],
+        )
+        self.assertEqual(check(root=ROOT), [])
+
+    def test_verification_date_cannot_predate_a_restored_access_fact(self):
+        check = getattr(
+            rules,
+            "check_verification_chronology",
+            lambda **_: ["missing checker"],
+        )
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "chapter.md").write_text(
+                "# Availability\n\n"
+                "本表按 2026-06-17 官方文档可核验的信息整理。\n\n"
+                "Claude Fable 5 已于 2026-07-01 恢复访问。\n",
+                encoding="utf-8",
+            )
+            issues = check(root=root)
+        self.assertTrue(
+            any("2026-06-17" in issue and "2026-07-01" in issue for issue in issues),
+            issues,
+        )
+
+    def test_verification_date_at_or_after_restoration_is_valid(self):
+        check = getattr(
+            rules,
+            "check_verification_chronology",
+            lambda **_: ["missing checker"],
+        )
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "chapter.md").write_text(
+                "# Availability\n\n"
+                "**核验日期：2026-07-10**\n\n"
+                "Claude Fable 5 已于 2026-07-01 恢复访问。\n",
+                encoding="utf-8",
+            )
+            issues = check(root=root)
+        self.assertEqual(issues, [])
+
+    def test_invalid_chapter_verification_date_is_reported_without_crashing(self):
+        check = getattr(
+            rules,
+            "check_verification_chronology",
+            lambda **_: ["missing checker"],
+        )
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "chapter.md").write_text(
+                "# Availability\n\n"
+                "**核验日期：2026-02-30**\n\n"
+                "Claude Fable 5 已于 2026-07-01 恢复访问。\n",
+                encoding="utf-8",
+            )
+            issues = check(root=root)
+        self.assertTrue(any("invalid verification date" in issue for issue in issues), issues)
+
+    def test_repository_verification_dates_do_not_predate_restoration_facts(self):
+        check = getattr(
+            rules,
+            "check_verification_chronology",
+            lambda **_: ["missing checker"],
+        )
+        self.assertEqual(check(root=ROOT), [])
+
 
 if __name__ == "__main__":
     unittest.main()

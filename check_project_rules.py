@@ -13,6 +13,7 @@ from urllib.parse import unquote, urlparse
 ROOT = Path(__file__).resolve().parent
 SKIP_DIRS = {
     ".agent",
+    ".agents",
     ".git",
     ".mdpress",
     "_book",
@@ -28,6 +29,22 @@ VOLATILE_META_RE = re.compile(
 )
 VOLATILE_STATUS_RE = re.compile(r"<!--\s*volatile-status:\s*(.*?)\s*-->")
 VOLATILE_ATTR_RE = re.compile(r"([a-z_]+)=([^\s]+)")
+RETIRED_GPT_55_RE = re.compile(r"\bGPT(?:-|\s)5\.5\b", re.IGNORECASE)
+EXPLICIT_LEGACY_CONTEXT_RE = re.compile(
+    r"历史|迁移|兼容|旧版|旧型号|存量|此前|上一代|原有|遗留|退役"
+)
+ACTIVE_MODEL_GUIDANCE_RE = re.compile(
+    r"当前(?:默认|前沿|旗舰)|默认(?:候选|模型|使用)|优先(?:评估|选择|使用)|"
+    r"首选|推荐(?:用于|使用|选择)?|升级到|高复杂度任务"
+)
+VERIFICATION_DATE_RES = (
+    re.compile(r"(?:核验日期|验证日期)\s*[：:=]\s*(\d{4}-\d{2}-\d{2})"),
+    re.compile(r"\bverified_at=(\d{4}-\d{2}-\d{2})\b"),
+    re.compile(r"按\s*(\d{4}-\d{2}-\d{2})\s*官方文档"),
+)
+RESTORED_ACCESS_DATE_RE = re.compile(
+    r"(\d{4}-\d{2}-\d{2})[^。\n]{0,40}(?:恢复(?:了)?访问|访问(?:已经|已)?恢复)"
+)
 PRODUCTION_STAGE_RE = re.compile(
     r"<!--\s*production-stage:\s*order=(\d+)\s+id=([^\s]+)\s+"
     r"link=([^\s]+)\s+artifact=([^\s]+)\s*-->"
@@ -301,6 +318,72 @@ def check_volatile_mirrors(root: Path = ROOT) -> list[str]:
     return issues
 
 
+def check_retired_model_recommendations(root: Path = ROOT) -> list[str]:
+    """Allow GPT-5.5 only when the same line explicitly marks legacy context."""
+
+    issues: list[str] = []
+    for path in sorted(root.rglob("*.md")):
+        if any(part in SKIP_DIRS for part in path.relative_to(root).parts):
+            continue
+        text = path.read_text(encoding="utf-8", errors="ignore")
+        for line_no, line in enumerate(text.splitlines(), 1):
+            if not RETIRED_GPT_55_RE.search(line):
+                continue
+            if (
+                EXPLICIT_LEGACY_CONTEXT_RE.search(line)
+                and not ACTIVE_MODEL_GUIDANCE_RE.search(line)
+            ):
+                continue
+            issues.append(
+                f"{path.relative_to(root)}:{line_no}: ambiguous GPT-5.5 active guidance: "
+                f"{line.strip()}"
+            )
+    return issues
+
+
+def check_verification_chronology(root: Path = ROOT) -> list[str]:
+    """Reject a verification label older than a restored-access fact it asserts."""
+
+    issues: list[str] = []
+    for path in sorted(root.rglob("*.md")):
+        if any(part in SKIP_DIRS for part in path.relative_to(root).parts):
+            continue
+        text = path.read_text(encoding="utf-8", errors="ignore")
+        restored_dates: list[date] = []
+        for match in RESTORED_ACCESS_DATE_RE.finditer(text):
+            raw = match.group(1)
+            try:
+                restored_dates.append(date.fromisoformat(raw))
+            except ValueError:
+                line_no = text[: match.start()].count("\n") + 1
+                issues.append(
+                    f"{path.relative_to(root)}:{line_no}: invalid restored-access date {raw}"
+                )
+        if not restored_dates:
+            continue
+        latest_restoration = max(restored_dates)
+        for pattern in VERIFICATION_DATE_RES:
+            for match in pattern.finditer(text):
+                raw = match.group(1)
+                try:
+                    verified = date.fromisoformat(raw)
+                except ValueError:
+                    line_no = text[: match.start()].count("\n") + 1
+                    issues.append(
+                        f"{path.relative_to(root)}:{line_no}: invalid verification date {raw}"
+                    )
+                    continue
+                if verified >= latest_restoration:
+                    continue
+                line_no = text[: match.start()].count("\n") + 1
+                issues.append(
+                    f"{path.relative_to(root)}:{line_no}: verification date "
+                    f"{verified.isoformat()} predates restored-access fact "
+                    f"{latest_restoration.isoformat()}"
+                )
+    return issues
+
+
 def check_production_spine(root: Path = ROOT) -> list[str]:
     """Validate the ordered production path without renumbering the book."""
 
@@ -343,6 +426,8 @@ def main() -> int:
     issues.extend(check_summary_links())
     issues.extend(check_volatile_facts())
     issues.extend(check_volatile_mirrors())
+    issues.extend(check_retired_model_recommendations())
+    issues.extend(check_verification_chronology())
     issues.extend(check_production_spine())
 
     if issues:
