@@ -25,5 +25,5 @@
 - [4.2 分隔符与结构化表达](4.2_delimiters.md)
 - [4.3 角色设定与人格赋予](4.3_role_setting.md)
 - [4.4 迭代优化与测试方法](4.4_iteration.md)
-- [4.5 系统提示词设计（System Prompt）](4.5_system_prompt_design.md)
+- [4.5 系统提示词设计](4.5_system_prompt_design.md)
 - [本章小结](summary.md)

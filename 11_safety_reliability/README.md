@@ -17,7 +17,7 @@
 
 ## 本章内容
 
-- [11.1 提示词注入与防护策略](11.1_prompt_injection.md)
+- [11.1 提示词安全设计](11.1_prompt_injection.md)
   - [11.1.1 提示词注入防护的实战操作指南](11.1_1_practical_defense_guide.md)
 - [11.2 幻觉问题与事实性保障](11.2_hallucination.md)
 - [11.3 偏见识别与公平性考量](11.3_bias_fairness.md)

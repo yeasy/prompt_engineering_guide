@@ -18,7 +18,7 @@
 ## 本章内容
 
 - [14.1 从提示词工程到上下文工程](14.1_context_engineering.md)
-- [14.2 多 Agent 协作与编排](14.2_multi_agent.md)
+- [14.2 多智能体协作与编排](14.2_multi_agent.md)
 - [14.3 提示词工程的职业发展](14.3_career.md)
 - [14.4 行业应用案例与最佳实践](14.4_industry_cases.md)
 - [本章小结](summary.md)
