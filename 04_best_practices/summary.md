@@ -1,6 +1,6 @@
 ## 本章小结
 
-本章介绍了四项核心的提示词设计最佳实践，这些实践源自主流 AI 厂商的官方指南和业界的实战经验。以下是本章的核心要点回顾：
+本章介绍了五项核心的提示词设计最佳实践，这些实践源自主流 AI 厂商的官方指南和业界的实战经验。以下是本章的核心要点回顾：
 
 ### 关键概念
 
@@ -86,12 +86,12 @@
 #### 4.3 角色设定
 
 - [System Prompt Examples](https://platform.openai.com/docs/guides/prompt-engineering#tactic-ask-the-model-to-adopt-a-persona) - OpenAI 角色设定示例
-- [Give Claude a Role](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/give-claude-a-role) - Anthropic 角色设定指南
+- [Give Claude a Role](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices#give-claude-a-role) - Anthropic 角色设定指南
 
 #### 4.4 迭代优化
 
 - [Test Changes Systematically](https://platform.openai.com/docs/guides/prompt-engineering#strategy-test-changes-systematically) - OpenAI 系统化测试策略
-- [Iterate on Prompts](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/iterate-prompts) - Anthropic 提示词迭代指南
+- [Iterate on Prompts](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-tools#prompt-improver) - Anthropic 提示词迭代指南
 
 ### 下一章预告
 

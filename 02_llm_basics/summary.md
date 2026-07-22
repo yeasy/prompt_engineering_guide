@@ -82,12 +82,12 @@ Token 机制      → 简洁高效的表达
 
 - [OpenAI API Reference](https://platform.openai.com/docs/api-reference/chat/create) - OpenAI 参数完整说明
 - [Anthropic API Reference](https://docs.anthropic.com/en/api/messages) - Claude 参数完整说明
-- [The Curious Case of Temperature in LLMs](https://www.lesswrong.com/posts/t5LGHMGQ7Gxq6TbJ4/the-curious-case-of-neural-network-test-time-training) - 温度参数深入解析
+- [The Curious Case of Neural Text Degeneration](https://arxiv.org/abs/1904.09751) - 温度、top-p 等采样策略的经典分析论文
 
 #### 2.4 上下文窗口
 
 - [Lost in the Middle](https://arxiv.org/abs/2307.03172) - 长上下文中位置效应的研究论文
-- [Leave No Context Behind](https://arxiv.org/abs/2404.07143) - Gemini 无限上下文技术论文
+- [Leave No Context Behind](https://arxiv.org/abs/2404.07143) - Google 提出的 Infini-attention 无限上下文技术论文
 - [Anthropic Context Windows](https://docs.anthropic.com/en/docs/build-with-claude/context-windows) - Claude 上下文窗口最佳实践
 
 ### 下一章预告

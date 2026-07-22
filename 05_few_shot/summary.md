@@ -65,8 +65,7 @@
 #### 5.1 基础概念
 
 - [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165) - GPT-3 论文，少样本学习的基础
-- [Rethinking the Role of Demonstrations](https://arxiv.org/abs/2202.12837) - 示例作用的深入研究
-- [What Makes In-Context Learning Work](https://arxiv.org/abs/2202.12083) - 上下文学习机制研究
+- [Rethinking the Role of Demonstrations: What Makes In-Context Learning Work?](https://arxiv.org/abs/2202.12837) - 示例作用与上下文学习机制的深入研究
 
 #### 5.2 示例设计与应用
 
