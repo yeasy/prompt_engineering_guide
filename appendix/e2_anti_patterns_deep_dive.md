@@ -56,7 +56,7 @@
 
 ---
 
-## E.2 十大反模式的深度剖析
+## E.2 八大反模式的深度剖析
 
 ### 反模式1：冗余与过度限定
 
@@ -589,14 +589,16 @@ class AntiPatternDiagnostics:
         return sorted(recommendations, key=lambda x: x["severity"], reverse=True)
 
     def _check_over_prompting(self, prompt: str) -> dict:
-        # 实现检测逻辑
-        pass
+        # 实现检测逻辑；返回值必须含 severity（0 表示未命中）与 suggestion，
+        # 否则 _calculate_health_score / _generate_recommendations 会在 None 上取值
+        return {"severity": 0, "suggestion": ""}
 
     def _check_negative_first(self, prompt: str) -> dict:
         # 实现检测逻辑
-        pass
+        return {"severity": 0, "suggestion": ""}
 
-    # ... 其他检测方法
+    # ... 其他检测方法（_check_god_prompt、_check_rigid_formatting、
+    # _check_no_escape、_check_context_pollution，返回结构同上）
 ```
 
 ---
@@ -680,7 +682,7 @@ class AntiPatternDiagnostics:
 ✗ 冗余强调（"专业的、礼貌的、简洁的、准确的"重复）
 ✗ 过多背景信息（100 行数据库）
 
-诊断得分: 25/100
+诊断得分: 50/100（6 项检测命中 5 项，按 100 - 命中数 × 10 计算）
 ```
 
 #### 修复版本
@@ -724,7 +726,7 @@ class AntiPatternDiagnostics:
 | 冗余度 | 高 | 低 |
 | 清晰度 | 中 | 高 |
 | 一致性 | 低 | 高 |
-| 诊断分数 | 25 | 82 |
+| 诊断分数 | 50 | 100 |
 
 ---
 
