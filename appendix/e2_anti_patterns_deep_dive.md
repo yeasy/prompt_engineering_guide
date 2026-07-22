@@ -142,7 +142,7 @@ bad_prompt = """尊敬的 AI 助手，我今天遇到了一个问题，
 希望你能帮我。请务必、一定、千万记住...写一个 Python 函数..."""
 
 result = detect_over_prompting(bad_prompt)
-print(f"冗余度: {result['score']}/10")
+print(f"冗余度计数: {result['score']}")
 print(f"建议: {result['suggestion']}")
 ```
 
@@ -224,7 +224,7 @@ def test_formatting_compliance(prompt, llm):
 
 # negative_instruction: has_markdown = True (40% 概率)
 
-# positive_instruction: has_markdown = False (5% 概率)
+# positive_instruction: has_markdown = True (5% 概率)
 
 ```
 
@@ -405,7 +405,7 @@ god_prompt = """请阅读这 10 份财报。
 最后将这些汇总成一个带柱状图的 HTML 网页。"""
 
 analysis = analyzer.analyze_prompt(god_prompt)
-print(f"复杂度: {analysis['complexity_score']}/10")
+print(f"复杂度: {analysis['complexity_score']}")
 print(f"建议: {analysis['recommendation']}")
 
 decomposition = analyzer.suggest_decomposition(god_prompt)
