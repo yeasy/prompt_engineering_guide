@@ -81,7 +81,7 @@ class WorkflowSafetyTests(unittest.TestCase):
         for name in EXPECTED:
             self.assertIn("\npermissions: {}\n", self.text(name), name)
         required = (
-            "MDPRESS_SHA256",
+            "checksums.txt",
             "PANDOC_SHA256",
             "sha256sum -c -",
             "npm ci --prefix tools/mermaid --ignore-scripts",
