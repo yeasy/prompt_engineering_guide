@@ -579,6 +579,8 @@ class AntiPatternDiagnostics:
         recommendations = []
 
         for issue_type, issue_data in results.items():
+            if issue_type == "health_score":  # 已在上一行写入，是 float 而非诊断字典
+                continue
             if issue_data.get("severity", 0) > 0:
                 recommendations.append({
                     "issue": issue_type,

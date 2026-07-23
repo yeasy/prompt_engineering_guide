@@ -91,7 +91,7 @@
 #### 4.4 迭代优化
 
 - [Test Changes Systematically](https://platform.openai.com/docs/guides/prompt-engineering#strategy-test-changes-systematically) - OpenAI 系统化测试策略
-- [Iterate on Prompts](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-tools#prompt-improver) - Anthropic 提示词迭代指南
+- [Iterate on Prompts](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices) - Anthropic 提示词迭代指南
 
 ### 下一章预告
 
