@@ -2,6 +2,6 @@
   "name": "prompt-engineering-guide-mermaid-tools",
   "private": true,
   "dependencies": {
-    "@mermaid-js/mermaid-cli": "10.9.1"
+    "@mermaid-js/mermaid-cli": "11.16.0"
   }
 }
