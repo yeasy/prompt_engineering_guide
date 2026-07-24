@@ -193,13 +193,20 @@ class WorkflowSafetyTests(unittest.TestCase):
         self.assertIn("`feature/release-notes`", notes)
         self.assertIn("https://github.com/owner/repo/commit/8279d934", notes)
 
-    def test_dependabot_checks_before_approve_and_merge(self):
+    def test_dependabot_automerge_is_gated_and_does_not_self_approve(self):
+        # The in-workflow "confirm required checks" probe was removed: it read branch
+        # protection, which GITHUB_TOKEN cannot do (403), and its integer test then
+        # fell through inside an `if` condition -- i.e. it failed OPEN. The gate is now
+        # branch protection itself, which requires check-commit-identity AND CI before
+        # auto-merge can complete. What this workflow must still guarantee:
         text = self.text("dependabot-automerge.yml")
-        check = text.index("Confirm required checks are configured")
-        approve = text.index("Approve low-risk Dependabot PR")
-        merge = text.index("Enable auto-merge for low-risk Dependabot PRs")
-        self.assertLess(check, approve)
-        self.assertLess(approve, merge)
+        # 1. it must never try to self-approve -- GitHub Actions is not permitted to
+        #    approve pull requests, so that step could only ever fail the job.
+        self.assertNotIn("pr review --approve", text)
+        # 2. auto-merge must stay restricted to low-risk update types.
+        merge = text.index("gh pr merge --auto")
+        allowlist = text.index("version-update:semver-patch")
+        self.assertLess(allowlist, merge)
 
 
 if __name__ == "__main__":
