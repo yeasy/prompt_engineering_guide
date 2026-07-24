@@ -228,7 +228,7 @@ def main():
         out_tmp = temporary / "reader.html"
         tmp_md.write_text(combined, encoding="utf-8")
         tpl.write_text(TEMPLATE, encoding="utf-8")
-        cmd = ["pandoc", str(tmp_md), "-f", "markdown", "-t", "html5",
+        cmd = ["pandoc", str(tmp_md), "-f", "markdown+lists_without_preceding_blankline", "-t", "html5",
                "--standalone", "--embed-resources", "--mathml",
                "--template", str(tpl), "--metadata", f"title={a.title}", "-o", str(out_tmp)]
         print("  running pandoc ...")
