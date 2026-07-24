@@ -25,4 +25,4 @@ _images_local_backup/
 
 .agent
 .obsidian
-package-lock.json
+/package-lock.json
