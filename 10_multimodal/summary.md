@@ -1,5 +1,9 @@
 ## 本章小结
 
+<!-- volatile-ref: openai-gpt-5.6 -->
+<!-- volatile-ref: anthropic-sonnet-5 -->
+<!-- volatile-ref: google-gemini-models -->
+
 本章系统探讨了涉及视觉和听觉内容的多模态大模型（如 GPT-5.6 系列、Gemini 3.7 Flash / Gemini 3.1 Pro Preview、Claude Opus 5）的提示词技术。相比纯文本，多模态提示工程不仅需要传递文字指令，还需要精准引导模型将视觉特征与文本逻辑锚定和对齐。
 
 ### 关键概念

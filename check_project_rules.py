@@ -67,6 +67,10 @@ REQUIRED_VOLATILE_FACT_IDS = {
 VOLATILE_MIRRORS = {
     "openai-gpt-5.6": {
         "02_llm_basics/2.2_major_models.md": ("GPT-5.6",),
+        "10_multimodal/10.1_multimodal_overview.md": ("GPT-5.6",),
+        "10_multimodal/10.3_audio_video.md": ("GPT-5.6",),
+        "10_multimodal/10.5_multimodal_prompting_advanced.md": ("GPT-5.6",),
+        "10_multimodal/summary.md": ("GPT-5.6",),
         "13_platform_specific/13.1_openai_gpt.md": (
             "gpt-5.6-sol",
             "gpt-5.6-terra",
@@ -79,6 +83,11 @@ VOLATILE_MIRRORS = {
     "anthropic-sonnet-5": {
         "02_llm_basics/2.2_major_models.md": ("Claude Sonnet 5",),
         "06_chain_of_thought/6.5_reasoning_models.md": ("Claude Sonnet 5",),
+        "09_rag/9.4_advanced_rag.md": ("Claude Opus 5",),
+        "10_multimodal/10.1_multimodal_overview.md": ("Claude Opus 5", "Claude Sonnet 5"),
+        "10_multimodal/10.3_audio_video.md": ("Claude Opus 5",),
+        "10_multimodal/10.5_multimodal_prompting_advanced.md": ("Claude Opus 5",),
+        "10_multimodal/summary.md": ("Claude Opus 5",),
         "13_platform_specific/13.2_anthropic_claude.md": ("Claude Sonnet 5",),
         "13_platform_specific/summary.md": ("Claude Sonnet 5",),
     },
@@ -89,6 +98,11 @@ VOLATILE_MIRRORS = {
     },
     "google-gemini-models": {
         "02_llm_basics/2.2_major_models.md": ("Gemini 3.5 Flash", "Gemini 3.1 Pro Preview"),
+        "09_rag/9.4_advanced_rag.md": ("Gemini 3.6 Flash",),
+        "10_multimodal/10.1_multimodal_overview.md": ("Gemini 3.7 Flash", "Gemini 3.1 Pro Preview"),
+        "10_multimodal/10.3_audio_video.md": ("Gemini 3.7 Flash",),
+        "10_multimodal/10.5_multimodal_prompting_advanced.md": ("Gemini 3.7 Flash",),
+        "10_multimodal/summary.md": ("Gemini 3.7 Flash",),
         "13_platform_specific/13.3_google_gemini.md": ("Stable", "Preview"),
         "13_platform_specific/summary.md": ("Stable", "Preview"),
     },
