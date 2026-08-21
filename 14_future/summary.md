@@ -44,7 +44,7 @@
 - [OpenAI Customer Stories](https://openai.com/customer-stories) - OpenAI 客户案例
 - [Anthropic Case Studies](https://claude.com/customers) - Anthropic 客户案例
 - [Google AI Case Studies](https://cloud.google.com/customers) - Google Cloud AI 案例
-- [LangChain Templates](https://python.langchain.com/docs/templates/) - 行业模板参考
+- [LangChain Templates](https://www.langchain.com/templates) - 行业模板参考
 
 ### 结语
 
