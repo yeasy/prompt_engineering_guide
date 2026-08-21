@@ -1,6 +1,6 @@
 # 附录 H：快变事实核验表
 
-<!-- volatile-meta: verified_at=2026-08-05 expires_at=2026-09-04 ttl_days=30 -->
+<!-- volatile-meta: verified_at=2026-08-20 expires_at=2026-09-19 ttl_days=30 -->
 
 本表是模型、API、平台状态与已公布未来切换点的唯一快变事实入口。超过 `expires_at` 后，项目检查会失败；正文与本表冲突时，应先按官方来源更新本表，再同步带 `volatile-ref` 标记的章节。
 
@@ -30,7 +30,13 @@
 
 | 提供方 | 当前维护口径 | 权威入口 | 编辑要求 |
 | --- | --- | --- | --- |
-| Google | Gemini 3.x、实时多模态与 Deep Think 以 Google AI 文档为准。当前模型页将 `gemini-3.6-flash`（最新，1,048,576 输入 / 65,536 输出 token）与 `gemini-3.5-flash`（同样限制）同列为 Stable，将 `gemini-3.1-pro-preview` 标为 Preview；生产默认优先固定 Stable model ID，Preview 只用于接受预览变动的评测。 | [Gemini models](https://ai.google.dev/gemini-api/docs/models), [Gemini API release notes](https://ai.google.dev/gemini-api/docs/changelog) | 同一书内只使用官方命名；不把 `latest` 别名或 Preview 当作固定生产快照，升级前记录精确 ID 并重跑评测。 |
+| Google | Gemini 3.x、实时多模态与 Deep Think 以 Google AI 文档为准。`gemini-3.7-flash` 于 2026-08-13 转 GA，当前模型页把它标为 Stable 且列在最前，描述为最新、最强的 Flash 型号；同页把 `gemini-3.6-flash`（1,048,576 输入 / 65,536 输出 token）改称上一代 Flash、仍为 Stable，`gemini-3.5-flash`（同样限制）与 `gemini-3.5-flash-lite` 也仍为 Stable，`gemini-3.1-pro-preview` 仍为 Preview；生产默认优先固定 Stable model ID，Preview 只用于接受预览变动的评测。 | [Gemini models](https://ai.google.dev/gemini-api/docs/models), [Gemini API release notes](https://ai.google.dev/gemini-api/docs/changelog) | 同一书内只使用官方命名；不把 `latest` 别名或 Preview 当作固定生产快照，升级前记录精确 ID 并重跑评测。 |
+
+<!-- volatile-status: id=anthropic-sonnet-pricing status=current -->
+
+| 提供方 | 当前维护口径 | 权威入口 | 编辑要求 |
+| --- | --- | --- | --- |
+| Anthropic（Sonnet 5 价格） | 发布时按介绍价公布的 $2/$10 每百万 token，已于 2026-08-10 转为标准价；官方同时声明原定 2026-09-01 涨到 $3/$15 的调整**不会发生**。当前价格页对 Sonnet 5 列出输入 $2、输出 $10、缓存读取 $0.20 每百万 token。 | [Claude release notes](https://platform.claude.com/docs/en/release-notes/overview), [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) | 不得再把 $2/$10 写成有截止日的介绍价，也不得把 $3/$15 写成 Sonnet 5 的将来价或当前价。成本示例若沿用旧单价，必须在同处说明它只用于演示相对关系。 |
 
 ## 其他快变事实
 
@@ -41,11 +47,7 @@
 
 ## 已公布的未来切换点
 
-<!-- volatile-status: id=anthropic-sonnet-pricing status=future effective_at=2026-09-01 -->
-
-| 事项 | 尚未生效的官方口径 | 权威入口 | 到期动作 |
-| --- | --- | --- | --- |
-| Claude Sonnet 5 价格 | $2/$10 每百万 token 的介绍价适用至 2026-08-31；2026-09-01 起标准价为 $3/$15。 | [Claude release notes](https://platform.claude.com/docs/en/release-notes/overview) | 成本示例必须同时给出介绍价截止日，9 月复核后才能把标准价写成当前价。 |
+当前没有已公布且尚未生效的切换点。原先登记在此的 Claude Sonnet 5 涨价已被官方取消，事实行已迁入「当前事实」。
 
 ## 维护规则
 
