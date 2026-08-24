@@ -140,7 +140,7 @@ Google 提供的多模态提示词开发与 API 测试平台。
 **[OpenAI Tokenizer](https://platform.openai.com/tokenizer)**
 可视化 Token 分词工具。
 
-**tiktoken (Python 库)**
+**tiktoken（Python 库）**
 ```python
 # 若未安装，先执行：pip install tiktoken
 import tiktoken
@@ -198,8 +198,8 @@ LangChain 官方 Discord，活跃的开发者社区。
 
 **知名人物:**
 - @OpenAI, @AnthropicAI, @GoogleAI
-- @omarsar0 (DAIR.AI 创始人)
-- @lilianweng (前 OpenAI 研究员，Thinking Machines Lab 联合创始人)
+- @omarsar0（DAIR.AI 创始人）
+- @lilianweng（前 OpenAI 研究员，Thinking Machines Lab 联合创始人）
 
 **YouTube 频道:**
 - Andrej Karpathy

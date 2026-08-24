@@ -15,9 +15,9 @@
 
 ### 核心要点
 
-1. **OpenAI GPT 系列 (GPT-5.6 Sol / Terra / Luna，以及兼容期模型)**
+1. **OpenAI GPT 系列（GPT-5.6 Sol / Terra / Luna，以及兼容期模型）**
    - **Markdown 亲和**：对 Markdown 的层级结构理解最佳，极其适合使用带有 `##` 和代码块的结构化提示词。
-   - **JSON Schema 与结构化输出**：拥有最成熟和严格的 Structured Outputs (结构化输出) 机制。
+   - **JSON Schema 与结构化输出**：拥有最成熟和严格的 Structured Outputs（结构化输出）机制。
    - **系统提示词服从度极高**：对 `system` 角色的指令具有最高的服从性，适合放置极其严厉的行为约束。
 
 2. **Anthropic Claude 系列 (Claude Fable 5, Claude Opus 5, Claude Sonnet 5, Claude Haiku 4.5)**
@@ -30,7 +30,7 @@
    - **超长上下文强项**：Gemini 3.6 Flash、Gemini 3.5 Flash 与 Gemini 2.5 Pro / Flash / Flash-Lite 的官方模型页都列出 1,048,576 输入 token；Gemini 3.x 预览或最新别名的限制应以最新模型页为准。
    - **原生多模态混合交织**：非常擅长交错排列的处理，如 `[文本指令] -> [视频帧] -> [表格文本] -> [音频轨]` 的穿插式推理。
 
-4. **开源模型策略 (Llama / Qwen 等)**
+4. **开源模型策略（Llama / Qwen 等）**
    - **精确的模板闭环**：如果不严格采用开发者训练时的 Jinja2 或特定 Token 模板组装会极速引发格式崩盘和严重幻觉。
    - **提纯与去冗余**：小模型（如 7B/8B）在长提示词下更容易“中间迷失”（[Lost in the Middle](../09_rag/9.2_retrieval_strategies.md)）与注意力稀释——真正要处理的文本被淹没在背景叙述里，必须去掉高情商的人工寒暄语，只留最核心直接的动作动词，并把待处理文本放到开头或结尾。
 
