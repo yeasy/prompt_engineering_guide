@@ -73,7 +73,7 @@ Token 机制      → 简洁高效的表达
 #### 2.2 主流模型
 
 - [OpenAI Models](https://developers.openai.com/api/docs/models) - OpenAI 模型官方文档
-- [Anthropic Claude Models](https://platform.claude.com/docs/en/about-claude/models/overview) - Claude 模型官方文档
+- [Anthropic Claude Models](https://platform.claude.com/docs/en/models/overview) - Claude 模型官方文档
 - [Google Gemini Models](https://ai.google.dev/gemini-api/docs/models) - Gemini 模型官方文档
 - [Meta Llama](https://developer.meta.com/ai/docs/overview/) - Llama 开源模型官网
 - [Hugging Face Open LLM Leaderboard](https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard) - 开源模型排行榜
