@@ -1,6 +1,6 @@
 # 附录 H：快变事实核验表
 
-<!-- volatile-meta: verified_at=2026-08-20 expires_at=2026-09-19 ttl_days=30 -->
+<!-- volatile-meta: verified_at=2026-09-04 expires_at=2026-10-04 ttl_days=30 -->
 
 本表是模型、API、平台状态与已公布未来切换点的唯一快变事实入口。超过 `expires_at` 后，项目检查会失败；正文与本表冲突时，应先按官方来源更新本表，再同步带 `volatile-ref` 标记的章节。
 
@@ -24,13 +24,13 @@
 
 | 提供方 | 当前维护口径 | 权威入口 | 编辑要求 |
 | --- | --- | --- | --- |
-| Anthropic | `claude-opus-5` 于 2026-07-24 发布，$5/$25、1M 上下文、128K 最大输出、Adaptive Thinking；官方模型页把它列为“不确定用哪个模型时”的起点，并已把 Opus 4.8/4.7/4.6 与 Sonnet 4.6/4.5、Opus 4.5 收进 Legacy models 折叠区（仍可用，建议迁移），Haiku 4.5 不在其中；`claude-opus-4-1-20250805` 已按官方 model deprecations 于 2026-08-05 退役（Retired），不再属于 Legacy 折叠区，请求会失败。`claude-sonnet-5` 于 2026-06-30 发布，1M 上下文、128K 最大输出，Adaptive Thinking 默认开启。Claude Fable 5 / Mythos 5 于 6 月 9 日发布、6 月 12 日暂停，并于 7 月 1 日恢复访问；Fable 5 为 GA，规格含 1M 上下文、128K 输出、Adaptive Thinking 常开和 $10/$50 价格，Mythos 5 仅限 Project Glasswing 获批客户。 | [Claude release notes](https://platform.claude.com/docs/en/release-notes/overview), [Models overview](https://platform.claude.com/docs/en/models/overview), [Introducing Fable 5 and Mythos 5](https://platform.claude.com/docs/en/models/fable-5/introducing-claude-fable-5-and-claude-mythos-5), [Access statement](https://www.anthropic.com/news/fable-mythos-access), [Model deprecations](https://platform.claude.com/docs/en/about-claude/model-deprecations) | 不再沿用“Fable 5 访问暂停”的冲突期结论；不预测未发布模型，不把 beta 当 GA。“最强/旗舰”须区分 Fable 5（全系）与当前 Opus 档最新型号（现为 Opus 5）；Legacy 折叠区中的型号不得写成最强或推荐，Fable 与 Sonnet 的 thinking、拒绝和可用性行为必须分别处理。 |
+| Anthropic | `claude-opus-5` 于 2026-07-24 发布，$5/$25、1M 上下文、128K 最大输出、Adaptive Thinking；官方模型页把它列为“不确定用哪个模型时”的起点，并已把 Opus 4.8/4.7/4.6 与 Sonnet 4.6/4.5、Opus 4.5 收进 Legacy models 折叠区（仍可用，建议迁移），Haiku 4.5 不在其中；`claude-opus-4-1-20250805` 已按官方 model deprecations 于 2026-08-05 退役（Retired），不再属于 Legacy 折叠区，请求会失败。`claude-sonnet-5` 于 2026-06-30 发布，1M 上下文、128K 最大输出，Adaptive Thinking 默认开启。Claude Fable 5 / Mythos 5 于 6 月 9 日发布、6 月 12 日暂停，并于 7 月 1 日恢复访问；Fable 5 为 GA，规格含 1M 上下文、128K 输出、Adaptive Thinking 常开和 $10/$50 价格，Mythos 5 仅限 Project Glasswing 获批客户。**2026-09-01 Anthropic 发布 Claude Fable 5.1（`claude-fable-5-1`）与 Mythos 5.1，Fable 5 随之被移入 Legacy 折叠区**（该区现含 Fable 5、Opus 4.8/4.7/4.6/4.5 与 Sonnet 4.6/4.5）；Fable 5.1 与 Mythos 5.1 的缓存命中价为基础输入的 2.5%，低于其余型号的 10%。 | [Claude release notes](https://platform.claude.com/docs/en/release-notes/overview), [Models overview](https://platform.claude.com/docs/en/models/overview), [Introducing Fable 5 and Mythos 5](https://platform.claude.com/docs/en/models/fable-5/introducing-claude-fable-5-and-claude-mythos-5), [Access statement](https://www.anthropic.com/news/fable-mythos-access), [Model deprecations](https://platform.claude.com/docs/en/about-claude/model-deprecations) | 不再沿用“Fable 5 访问暂停”的冲突期结论；不预测未发布模型，不把 beta 当 GA。“最强/旗舰”须区分 Fable 系当前型号（**现为 Fable 5.1**）与当前 Opus 档最新型号（现为 Opus 5）；Legacy 折叠区中的型号（**含 Fable 5**）不得写成最强或推荐，Fable 与 Sonnet 的 thinking、拒绝和可用性行为必须分别处理。 |
 
 <!-- volatile-status: id=google-gemini-models status=current -->
 
 | 提供方 | 当前维护口径 | 权威入口 | 编辑要求 |
 | --- | --- | --- | --- |
-| Google | Gemini 3.x、实时多模态与 Deep Think 以 Google AI 文档为准。`gemini-3.7-flash` 于 2026-08-13 转 GA，当前模型页把它标为 Stable 且列在最前，描述为最新、最强的 Flash 型号；同页把 `gemini-3.6-flash`（1,048,576 输入 / 65,536 输出 token）改称上一代 Flash、仍为 Stable，`gemini-3.5-flash`（同样限制）与 `gemini-3.5-flash-lite` 也仍为 Stable，`gemini-3.1-pro-preview` 仍为 Preview；生产默认优先固定 Stable model ID，Preview 只用于接受预览变动的评测。 | [Gemini models](https://ai.google.dev/gemini-api/docs/models), [Gemini API release notes](https://ai.google.dev/gemini-api/docs/changelog) | 同一书内只使用官方命名；不把 `latest` 别名或 Preview 当作固定生产快照，升级前记录精确 ID 并重跑评测。 |
+| Google | Gemini 3.x、实时多模态与 Deep Think 以 Google AI 文档为准。`gemini-3.8-flash` 于 2026-09-02 转正，当前模型页把它标为 **New Stable** 且列在最前，描述为最新、最强的 Flash 型号（1,048,576 输入 / 65,536 输出 token）；`gemini-3.7-flash`（2026-08-13 转 GA）退居其后、仍为 Stable，`gemini-3.6-flash`（1,048,576 输入 / 65,536 输出 token）同为 Stable，`gemini-3.5-flash`（同样限制）与 `gemini-3.5-flash-lite` 也仍为 Stable，`gemini-3.1-pro-preview` 仍为 Preview；生产默认优先固定 Stable model ID，Preview 只用于接受预览变动的评测。 | [Gemini models](https://ai.google.dev/gemini-api/docs/models), [Gemini API release notes](https://ai.google.dev/gemini-api/docs/changelog) | 同一书内只使用官方命名；不把 `latest` 别名或 Preview 当作固定生产快照，升级前记录精确 ID 并重跑评测。 |
 
 <!-- volatile-status: id=anthropic-sonnet-pricing status=current -->
 
