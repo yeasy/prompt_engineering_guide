@@ -76,7 +76,7 @@
 
 - [Mem0 (Memory for AI)](https://github.com/mem0ai/mem0) - 大模型记忆与状态管理框架
 
-#### 7.4 多轮对话管理
+#### 7.5 多轮对话管理
 
 - [Conversation state](https://developers.openai.com/api/docs/guides/conversation-state) - OpenAI 对话状态管理指南
 
