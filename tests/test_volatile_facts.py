@@ -37,18 +37,19 @@ class VolatileFactsContractTests(unittest.TestCase):
 
     def test_repository_volatile_facts_are_current_and_consistent(self):
         check = getattr(rules, "check_volatile_facts", lambda **_: ["missing checker"])
-        # Check the real ledger as of its OWN verified_at, not a hardcoded date.
-        # Pinning it here meant re-verifying the ledger — the one thing the TTL
-        # exists to force — failed with "verified_at is in the future". Every
-        # other as_of in this file targets a synthetic root and is left alone.
+        # Check the real ledger as of TODAY. Reading as_of out of the ledger's
+        # own verified_at made as_of == verified_at, so the TTL window was always
+        # a full 30 days and the expired branch was unreachable — any date, past
+        # or future, passed. date.today() keeps re-verification working (the
+        # reason the hardcoded date was dropped) while letting the ledger actually
+        # go stale. Every other as_of in this file targets a synthetic root and is
+        # left alone.
         stamped = re.search(
             r"verified_at=(\d{4})-(\d{2})-(\d{2})",
             (ROOT / "appendix" / "h_volatile_facts.md").read_text(encoding="utf-8"),
         )
         self.assertIsNotNone(stamped, "ledger must carry verified_at")
-        self.assertEqual(
-            check(root=ROOT, as_of=date(*(int(g) for g in stamped.groups()))), []
-        )
+        self.assertEqual(check(root=ROOT, as_of=date.today()), [])
 
     def test_contract_expires_after_exact_thirty_day_ttl(self):
         check = getattr(rules, "check_volatile_facts", lambda **_: ["missing checker"])
