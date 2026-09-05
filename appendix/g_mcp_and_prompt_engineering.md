@@ -401,7 +401,7 @@ MCP + Prompt Caching的最佳实践：
 1. 缓存基础系统提示词
    - 这部分几乎不变
    - 必须先达到目标模型的最小可缓存长度，否则标了 `cache_control` 也不会真正缓存
-     （Anthropic 当前为 Fable 5 / Mythos 5 / Opus 5 512 tokens，Sonnet 5 / Opus 4.8 / Sonnet 4.6 1,024 tokens，
+     （Anthropic 当前为 Fable 5.1 / Mythos 5.1 / Fable 5 / Mythos 5 / Opus 5 512 tokens，Sonnet 5 / Opus 4.8 / Sonnet 4.6 1,024 tokens，
      Haiku 4.5 4,096 tokens；不足长度时不报错，只是静默不缓存）
    - 缓存命中率可较高（取决于系统提示词稳定性和服务商缓存策略，需以服务商缓存统计为准）
 
