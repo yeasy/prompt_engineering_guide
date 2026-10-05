@@ -5,7 +5,7 @@
 ## A
 
 **自适应思考（Adaptive Thinking）**
-Claude Fable 5 / Mythos 5（常开且不可关闭）、Claude Opus 5（默认开启，关闭时受 `effort` 限制）、Claude Sonnet 5（默认开启）与 Opus 4.8、Opus 4.7、Opus 4.6、Sonnet 4.6 支持的推理模式（`type: "adaptive"`），由模型根据任务复杂度自动决定思考深度。Fable 5 / Mythos 5 已于 2026-07-01 恢复访问，Mythos 5 仍限获批客户；Sonnet 5 与 Opus 4.8 / 4.7 不支持手动 Extended Thinking，Opus 4.6 与 Sonnet 4.6 上的手动 Extended Thinking 已被标为 deprecated。
+Claude Fable 5.1 / Fable 5 / Mythos 5 与 Claude Opus 5.5（常开且不可关闭）、Claude Sonnet 5.5（默认开启，最低档为 `between_tools`）、Claude Opus 5（默认开启，关闭时受 `effort` 限制）、Claude Sonnet 5（默认开启）与 Opus 4.8、Opus 4.7、Opus 4.6、Sonnet 4.6 支持的推理模式（`type: "adaptive"`），由模型根据任务复杂度自动决定思考深度。Fable 5 / Mythos 5 已于 2026-07-01 恢复访问，Mythos 5 仍限获批客户；Sonnet 5 与 Opus 4.8 / 4.7 不支持手动 Extended Thinking，Opus 4.6 与 Sonnet 4.6 上的手动 Extended Thinking 已被标为 deprecated。
 
 **智能体（Agent）**
 能够自主感知环境、做出决策并采取行动的 AI 系统，通常具备规划、执行和反思能力。

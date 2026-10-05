@@ -1,6 +1,6 @@
 # 附录 H：快变事实核验表
 
-<!-- volatile-meta: verified_at=2026-09-04 expires_at=2026-10-04 ttl_days=30 -->
+<!-- volatile-meta: verified_at=2026-10-04 expires_at=2026-11-03 ttl_days=30 -->
 
 本表是模型、API、平台状态与已公布未来切换点的唯一快变事实入口。超过 `expires_at` 后，项目检查会失败；正文与本表冲突时，应先按官方来源更新本表，再同步带 `volatile-ref` 标记的章节。
 
@@ -17,14 +17,14 @@
 
 | 提供方 | 当前维护口径 | 权威入口 | 编辑要求 |
 | --- | --- | --- | --- |
-| OpenAI | 2026-07-09 发布 GPT-5.6 系列：`gpt-5.6-sol` 面向前沿能力，`gpt-5.6-terra` 平衡能力与成本，`gpt-5.6-luna` 面向高吞吐；`gpt-5.6` 别名路由到 Sol。Responses API 支持该系列，并新增 Programmatic Tool Calling、显式 prompt caching、持久化 reasoning，以及 beta 的 multi-agent orchestration。 | [API changelog](https://developers.openai.com/api/docs/changelog), [GPT-5.6 model guidance](https://developers.openai.com/api/docs/guides/latest-model) | 新工作流以 Responses API 为主；multi-agent 必须标 beta。模型别名会隐藏具体路由，生产记录必须保存实际 model snapshot。 |
+| OpenAI | 官方模型目录首推 GPT-6 一代：`gpt-6-astra`（2026-09-03 发布，标为 Default，$10/$50）能力最强，`gpt-6.1-sol`（2026-09-29，$2/$10）兼顾能力与成本，`gpt-6-luna`（2026-09-22，$0.10/$0.50）面向大批量低成本任务，三者上下文均为 1,050,000；GPT-6.1 Sol 也支持 beta 的 multi-agent。上一代 GPT-5.6 系列于 2026-07-09 发布并仍在目录中：`gpt-5.6-sol` 面向前沿能力，`gpt-5.6-terra` 平衡能力与成本，`gpt-5.6-luna` 面向高吞吐；`gpt-5.6` 别名路由到 Sol。Responses API 支持该系列，并新增 Programmatic Tool Calling、显式 prompt caching、持久化 reasoning，以及 beta 的 multi-agent orchestration。 | [Models](https://developers.openai.com/api/docs/models), [API changelog](https://developers.openai.com/api/docs/changelog), [GPT-6 model guidance](https://developers.openai.com/api/docs/guides/latest-model) | 新工作流以 Responses API 为主；multi-agent 必须标 beta。模型别名会隐藏具体路由，生产记录必须保存实际 model snapshot。 |
 
 <!-- volatile-status: id=anthropic-sonnet-5 status=current -->
 <!-- volatile-status: id=anthropic-fable-access status=resolved-conflict previous=conflict resolved_at=2026-07-10 -->
 
 | 提供方 | 当前维护口径 | 权威入口 | 编辑要求 |
 | --- | --- | --- | --- |
-| Anthropic | `claude-opus-5` 于 2026-07-24 发布，$5/$25、1M 上下文、128K 最大输出、Adaptive Thinking；官方模型页把它列为“不确定用哪个模型时”的起点，并已把 Opus 4.8/4.7/4.6 与 Sonnet 4.6/4.5、Opus 4.5 收进 Legacy models 折叠区（仍可用，建议迁移），Haiku 4.5 不在其中；`claude-opus-4-1-20250805` 已按官方 model deprecations 于 2026-08-05 退役（Retired），不再属于 Legacy 折叠区，请求会失败。`claude-sonnet-5` 于 2026-06-30 发布，1M 上下文、128K 最大输出，Adaptive Thinking 默认开启。Claude Fable 5 / Mythos 5 于 6 月 9 日发布、6 月 12 日暂停，并于 7 月 1 日恢复访问；Fable 5 为 GA，规格含 1M 上下文、128K 输出、Adaptive Thinking 常开和 $10/$50 价格，Mythos 5 仅限 Project Glasswing 获批客户。**2026-09-01 Anthropic 发布 Claude Fable 5.1（`claude-fable-5-1`）与 Mythos 5.1，Fable 5 随之被移入 Legacy 折叠区**（该区现含 Fable 5、Opus 4.8/4.7/4.6/4.5 与 Sonnet 4.6/4.5）；Fable 5.1 与 Mythos 5.1 的缓存命中价为基础输入的 2.5%，低于其余型号的 10%。 | [Claude release notes](https://platform.claude.com/docs/en/release-notes/overview), [Models overview](https://platform.claude.com/docs/en/models/overview), [Introducing Fable 5 and Mythos 5](https://platform.claude.com/docs/en/models/fable-5/introducing-claude-fable-5-and-claude-mythos-5), [Access statement](https://www.anthropic.com/news/fable-mythos-access), [Model deprecations](https://platform.claude.com/docs/en/about-claude/model-deprecations) | 不再沿用“Fable 5 访问暂停”的冲突期结论；不预测未发布模型，不把 beta 当 GA。“最强/旗舰”须区分 Fable 系当前型号（**现为 Fable 5.1**）与当前 Opus 档最新型号（现为 Opus 5）；Legacy 折叠区中的型号（**含 Fable 5**）不得写成最强或推荐，Fable 与 Sonnet 的 thinking、拒绝和可用性行为必须分别处理。 |
+| Anthropic | `claude-opus-5-5` 于 2026-09-22 发布，$4/$20、1M 上下文、128K 最大输出、Adaptive Thinking 常开且不可关闭，是官方模型页“不确定用哪个模型时”的起点；`claude-sonnet-5-5` 于 2026-09-28 发布，$2/$10、1M 上下文、128K 最大输出，Adaptive Thinking 默认开启，最低档为 `between_tools`。两者都不支持强制工具调用与 assistant prefill。Legacy models 折叠区现含 Fable 5、Opus 5、Sonnet 5、Opus 4.8/4.7/4.6/4.5 与 Sonnet 4.6（仍可用，建议迁移），Haiku 4.5 不在其中；Sonnet 4.5 已于 2026-09-30 宣布弃用、2026-11-30 退役。`claude-opus-5` 于 2026-07-24 发布，$5/$25、1M 上下文、128K 最大输出、Adaptive Thinking；`claude-opus-4-1-20250805` 已按官方 model deprecations 于 2026-08-05 退役（Retired），不再属于 Legacy 折叠区，请求会失败。`claude-sonnet-5` 于 2026-06-30 发布，1M 上下文、128K 最大输出，Adaptive Thinking 默认开启。Claude Fable 5 / Mythos 5 于 6 月 9 日发布、6 月 12 日暂停，并于 7 月 1 日恢复访问；Fable 5 为 GA，规格含 1M 上下文、128K 输出、Adaptive Thinking 常开和 $10/$50 价格，Mythos 5 仅限 Project Glasswing 获批客户。**2026-09-01 Anthropic 发布 Claude Fable 5.1（`claude-fable-5-1`）与 Mythos 5.1，Fable 5 随之被移入 Legacy 折叠区**；Fable 5.1 与 Mythos 5.1 的缓存命中价为基础输入的 2.5%，低于其余型号的 10%。 | [Claude release notes](https://platform.claude.com/docs/en/release-notes/overview), [Models overview](https://platform.claude.com/docs/en/models/overview), [Introducing Fable 5 and Mythos 5](https://platform.claude.com/docs/en/models/fable-5/introducing-claude-fable-5-and-claude-mythos-5), [Access statement](https://www.anthropic.com/news/fable-mythos-access), [Model deprecations](https://platform.claude.com/docs/en/about-claude/model-deprecations) | 不再沿用“Fable 5 访问暂停”的冲突期结论；不预测未发布模型，不把 beta 当 GA。“最强/旗舰”须区分 Fable 系当前型号（**现为 Fable 5.1**）与当前 Opus 档最新型号（现为 Opus 5.5）；Legacy 折叠区中的型号（**含 Fable 5**）不得写成最强或推荐，Fable 与 Sonnet 的 thinking、拒绝和可用性行为必须分别处理。 |
 
 <!-- volatile-status: id=google-gemini-models status=current -->
 
@@ -36,7 +36,7 @@
 
 | 提供方 | 当前维护口径 | 权威入口 | 编辑要求 |
 | --- | --- | --- | --- |
-| Anthropic（Sonnet 5 价格） | 发布时按介绍价公布的 $2/$10 每百万 token，已于 2026-08-10 转为标准价；官方同时声明原定 2026-09-01 涨到 $3/$15 的调整**不会发生**。当前价格页对 Sonnet 5 列出输入 $2、输出 $10、缓存读取 $0.20 每百万 token。 | [Claude release notes](https://platform.claude.com/docs/en/release-notes/overview), [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) | 不得再把 $2/$10 写成有截止日的介绍价，也不得把 $3/$15 写成 Sonnet 5 的将来价或当前价。成本示例若沿用旧单价，必须在同处说明它只用于演示相对关系。 |
+| Anthropic（Sonnet 5 价格） | 发布时按介绍价公布的 $2/$10 每百万 token，已于 2026-08-10 转为标准价；官方同时声明原定 2026-09-01 涨到 $3/$15 的调整**不会发生**。当前价格页对 Sonnet 5 列出输入 $2、输出 $10、缓存读取 $0.20 每百万 token；2026-09-28 发布的 Sonnet 5.5 与它同价。 | [Claude release notes](https://platform.claude.com/docs/en/release-notes/overview), [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) | 不得再把 $2/$10 写成有截止日的介绍价，也不得把 $3/$15 写成 Sonnet 5 的将来价或当前价。成本示例若沿用旧单价，必须在同处说明它只用于演示相对关系。 |
 
 ## 其他快变事实
 
