@@ -73,6 +73,7 @@ VOLATILE_MIRRORS = {
         "10_multimodal/summary.md": ("GPT-5.6", "GPT-6"),
         "13_platform_specific/13.1_openai_gpt.md": (
             "gpt-6-astra",
+            "gpt-6.1-terra",
             "gpt-5.6-sol",
             "gpt-5.6-terra",
             "gpt-5.6-luna",
@@ -101,7 +102,7 @@ VOLATILE_MIRRORS = {
         "02_llm_basics/2.2_major_models.md": ("Gemini 3.5 Flash", "Gemini 3.1 Pro Preview"),
         "09_rag/9.4_advanced_rag.md": ("Gemini 3.6 Flash",),
         "10_multimodal/10.1_multimodal_overview.md": ("Gemini 3.8 Flash", "Gemini 3.1 Pro Preview"),
-        "10_multimodal/10.3_audio_video.md": ("Gemini 3.7 Flash",),
+        "10_multimodal/10.3_audio_video.md": ("Gemini 3.8 Flash",),
         "10_multimodal/10.5_multimodal_prompting_advanced.md": ("Gemini 3.8 Flash",),
         "10_multimodal/summary.md": ("Gemini 3.8 Flash",),
         "13_platform_specific/13.3_google_gemini.md": ("Stable", "Preview"),
