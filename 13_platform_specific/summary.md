@@ -25,8 +25,8 @@
    - **长文本寻觅者**：Fable 5.2、Opus 5.5、Sonnet 5.5 以及 Fable 5.1、Fable 5、Sonnet 5、Opus 4.8 等 Legacy 型号支持 1M 上下文；Fable 5 已于 2026-07-01 恢复访问。在极长文本中仍要明确任务、证据边界和截断策略，成本评估需按目标模型的官方价格页和 token counting 结果测算。
    - **预填充兼容性收窄**：早期 Claude（Sonnet 4.5 / Sonnet 4 / 3.5 及更早）可用预填充技巧（提供大括号 `{` 作为 Assistant Response 开头）控制 JSON 输出，但 Claude Fable 5.2、Fable 5.1、Fable 5、Mythos 5、Mythos Preview、Opus 5.5、Opus 5、Opus 4.8、Opus 4.7、Opus 4.6、Sonnet 5.5、Sonnet 5、Sonnet 4.6 已停止支持 prefill 并返回 400。新项目请优先评估 Structured Outputs、System Prompt 或 `output_config.format`（详见 13.2 节）。
 
-3. **Google Gemini 系列 (Gemini 4 Argon / Gemini 3.8 Flash / Gemini 3.6 Flash / Gemini 3.1 Pro Preview)**
-   - **稳定与预览要分开**：Google 模型页把 `Gemini 4 Argon` 列为旗舰，将 `Gemini 3.8 Flash`（最新 Flash）与 `Gemini 3.6 Flash` 标为 Stable，将 `Gemini 3.1 Pro Preview` 标为 Preview，`Gemini 3.7 Flash` 与 `Gemini 3.5 Flash` 已弃用；生产默认优先使用稳定型号，预览型号更适合前沿验证和能力评估。
+3. **Google Gemini 系列 (Gemini 4 Carbon / Gemini 4 Argon / Gemini 4 Hydrogen / Gemini 3.8 Flash / Gemini 3.6 Flash / Gemini 3.1 Pro Preview)**
+   - **稳定与预览要分开**：Google 模型页的 Gemini 4 一代为 `Gemini 4 Carbon`（能力最强）、`Gemini 4 Argon` 与 `Gemini 4 Hydrogen`，将上一代 `Gemini 3.8 Flash` 与 `Gemini 3.6 Flash` 标为 Stable，将 `Gemini 3.1 Pro Preview` 标为 Preview，`Gemini 3.7 Flash` 与 `Gemini 3.5 Flash` 已弃用；生产默认优先使用稳定型号，预览型号更适合前沿验证和能力评估。
    - **超长上下文强项**：Gemini 3.6 Flash、Gemini 3.5 Flash 与 Gemini 2.5 Pro / Flash / Flash-Lite 的官方模型页都列出 1,048,576 输入 token；Gemini 3.x 预览或最新别名的限制应以最新模型页为准。
    - **原生多模态混合交织**：非常擅长交错排列的处理，如 `[文本指令] -> [视频帧] -> [表格文本] -> [音频轨]` 的穿插式推理。
 
