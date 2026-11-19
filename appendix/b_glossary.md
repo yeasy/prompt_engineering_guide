@@ -216,7 +216,7 @@ Claude 等模型的深度推理功能，允许模型在回答前进行更深入�
 Mixture of Experts，一种模型架构，通过路由机制动态激活部分参数，实现大规模模型的高效推理。
 
 **Structured Outputs（结构化输出）**
-OpenAI 等平台提供的功能，确保模型输出严格符合指定的 JSON Schema，无需后处理验证。
+OpenAI 等平台提供的功能，确保模型输出严格符合指定的 JSON Schema；服务边界仍应保留 Schema 校验与失败降级路径。
 
 ---
 
