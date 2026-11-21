@@ -59,7 +59,7 @@
   * [7.3 上下文传递与状态管理](07_prompt_chaining/7.3_context_passing.md)
   * [7.4 实战案例：构建多步骤工作流](07_prompt_chaining/7.4_case_study.md)
   * [7.5 多轮对话管理](07_prompt_chaining/7.5_multi_turn_dialogue.md)
-    * [7.5.1 对话历史管理的深度指南](07_prompt_chaining/7.5_1_dialogue_best_practices.md)
+    * [7.5.4 对话历史管理的深度指南](07_prompt_chaining/7.5_1_dialogue_best_practices.md)
   * [7.6 本章实战练习](07_prompt_chaining/7.6_practice.md)
   * [本章小结](07_prompt_chaining/summary.md)
 
@@ -92,7 +92,7 @@
 
 * [第十一章 安全性与可靠性](11_safety_reliability/README.md)
   * [11.1 提示词安全设计](11_safety_reliability/11.1_prompt_injection.md)
-    * [11.1.1 提示词注入防护的实战操作指南](11_safety_reliability/11.1_1_practical_defense_guide.md)
+    * [11.1.5 提示词注入防护的实战操作指南](11_safety_reliability/11.1_1_practical_defense_guide.md)
   * [11.2 幻觉问题与事实性保障](11_safety_reliability/11.2_hallucination.md)
   * [11.3 偏见识别与公平性考量](11_safety_reliability/11.3_bias_fairness.md)
   * [11.4 企业级安全架构设计](11_safety_reliability/11.4_enterprise_security.md)
@@ -106,7 +106,7 @@
   * [12.1 自动化提示词生成技术](12_automated_pe/12.1_auto_generation.md)
   * [12.2 提示词优化与调优工具](12_automated_pe/12.2_optimization_tools.md)
   * [12.3 评估体系与质量度量](12_automated_pe/12.3_evaluation.md)
-    * [12.3.1 评估工具与平台详解](12_automated_pe/12.3_1_evaluation_tools.md)
+    * [12.3.8 评估工具与平台详解](12_automated_pe/12.3_1_evaluation_tools.md)
   * [12.4 PromptOps：提示词运维实践](12_automated_pe/12.4_promptops.md)
   * [12.5 PromptOps 成本管理框架：从 Token 经济学到企业级优化](12_automated_pe/12.5_promptops_cost_management.md)
   * [12.6 本章实战练习](12_automated_pe/12.6_practice.md)

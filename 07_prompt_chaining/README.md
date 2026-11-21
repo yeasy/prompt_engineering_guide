@@ -26,6 +26,6 @@
 - [7.3 上下文传递与状态管理](7.3_context_passing.md)
 - [7.4 实战案例：构建多步骤工作流](7.4_case_study.md)
 - [7.5 多轮对话管理](7.5_multi_turn_dialogue.md)
-  - [7.5.1 对话历史管理的深度指南](7.5_1_dialogue_best_practices.md)
+  - [7.5.4 对话历史管理的深度指南](7.5_1_dialogue_best_practices.md)
 - [7.6 本章实战练习](7.6_practice.md)
 - [本章小结](summary.md)

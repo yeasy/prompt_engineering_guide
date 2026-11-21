@@ -20,7 +20,7 @@
 - [12.1 自动化提示词生成技术](12.1_auto_generation.md)
 - [12.2 提示词优化与调优工具](12.2_optimization_tools.md)
 - [12.3 评估体系与质量度量](12.3_evaluation.md)
-  - [12.3.1 评估工具与平台详解](12.3_1_evaluation_tools.md)
+  - [12.3.8 评估工具与平台详解](12.3_1_evaluation_tools.md)
 - [12.4 PromptOps：提示词运维实践](12.4_promptops.md)
 - [12.5 PromptOps 成本管理框架：从 Token 经济学到企业级优化](12.5_promptops_cost_management.md)
 - [12.6 本章实战练习](12.6_practice.md)
