@@ -5,7 +5,7 @@
 <!-- volatile-ref: anthropic-fable-access -->
 <!-- volatile-ref: google-gemini-models -->
 
-虽然提示词工程的基本原则（清晰、具体、提供示例等）在所有模型中通用，但各大主流模型因其后训练策略（RLHF 机制、数据集差异、安全对齐强度）的不同，在提示词的细微偏好上存在显著差异。本章深入剖析了 OpenAI GPT、Anthropic Claude、Google Gemini 以及典型开源模型的脾气秉性，并提供了平台针对性的优化策略。
+提示词工程的基本原则（清晰、具体、提供示例等）对所有模型通用，但各主流模型的后训练策略（RLHF 机制、数据集差异、安全对齐强度）不同，在提示词的细微偏好上存在显著差异。本章分析了 OpenAI GPT、Anthropic Claude、Google Gemini 以及典型开源模型的提示词偏好，并给出各平台的优化策略。
 
 ### 关键概念
 
@@ -21,8 +21,8 @@
    - **系统提示词服从度极高**：对 `system` 角色的指令具有最高的服从性，适合放置极其严厉的行为约束。
 
 2. **Anthropic Claude 系列 (Claude Fable 5.2, Claude Opus 5.5, Claude Sonnet 5.5, Claude Haiku 5.5)**
-   - **XML 标签狂热者**：官方极度推荐使用 `<document>` 等 XML 标签来区分数据源和划定指令范围。
-   - **长文本寻觅者**：Fable 5.2、Opus 5.5、Sonnet 5.5 以及 Fable 5.1、Fable 5、Sonnet 5、Opus 4.8 等 Legacy 型号支持 1M 上下文；Fable 5 已于 2026-07-01 恢复访问。在极长文本中仍要明确任务、证据边界和截断策略，成本评估需按目标模型的官方价格页和 token counting 结果测算。
+   - **XML 标签偏好**：官方强烈推荐用 `<document>` 等 XML 标签区分数据源、划定指令范围。
+   - **长上下文支持**：Fable 5.2、Opus 5.5、Sonnet 5.5 以及 Fable 5.1、Fable 5、Sonnet 5、Opus 4.8 等 Legacy 型号支持 1M 上下文；Fable 5 已于 2026-07-01 恢复访问。在极长文本中仍要明确任务、证据边界和截断策略，成本评估需按目标模型的官方价格页和 token counting 结果测算。
    - **预填充兼容性收窄**：早期 Claude（Sonnet 4.5 / Sonnet 4 / 3.5 及更早）可用预填充技巧（提供大括号 `{` 作为 Assistant Response 开头）控制 JSON 输出，但 Claude Fable 5.2、Fable 5.1、Fable 5、Mythos 5、Mythos Preview、Opus 5.5、Opus 5、Opus 4.8、Opus 4.7、Opus 4.6、Sonnet 5.5、Sonnet 5、Sonnet 4.6、Haiku 5.5 已停止支持 prefill 并返回 400。新项目请优先评估 Structured Outputs、System Prompt 或 `output_config.format`（详见 13.2 节）。
 
 3. **Google Gemini 系列 (Gemini 4 Carbon / Gemini 4 Argon / Gemini 4 Hydrogen / Gemini 3.8 Flash / Gemini 3.6 Flash / Gemini 3.1 Pro Preview)**
@@ -31,15 +31,15 @@
    - **原生多模态混合交织**：非常擅长交错排列的处理，如 `[文本指令] -> [视频帧] -> [表格文本] -> [音频轨]` 的穿插式推理。
 
 4. **开源模型策略（Llama / Qwen 等）**
-   - **精确的模板闭环**：如果不严格采用开发者训练时的 Jinja2 或特定 Token 模板组装会极速引发格式崩盘和严重幻觉。
-   - **提纯与去冗余**：小模型（如 7B/8B）在长提示词下更容易“中间迷失”（[Lost in the Middle](../09_rag/9.2_retrieval_strategies.md)）与注意力稀释——真正要处理的文本被淹没在背景叙述里，必须去掉高情商的人工寒暄语，只留最核心直接的动作动词，并把待处理文本放到开头或结尾。
+   - **精确的模板闭环**：不严格按开发者训练时的 Jinja2 或特定 Token 模板组装输入，会导致输出格式错乱和严重幻觉。
+   - **提纯与去冗余**：小模型（如 7B/8B）在长提示词下更容易“中间迷失”（[Lost in the Middle](../09_rag/9.2_retrieval_strategies.md)）与注意力稀释，待处理的文本会被淹没在背景叙述里。因此必须去掉客套寒暄，只保留最核心、直接的动作动词，并把待处理文本放在开头或结尾。
 
 ### 实践检查清单
 
 - [ ] 是否在切换底层模型后，重新评测甚至重写了基于前一个模型调优的超长系统提示词？
 - [ ] 在调用 Claude API 时，是否将其长参考资料用 XML 切实包裹并在 User prompt 中进行了引用？
 - [ ] 如果需要在应用中无缝兼容多个大厂模型，是否在架构侧准备了可以统一抹平并动态切换语言方言（如 LangChain PromptTemplate）的中间件？
-- [ ] 测试开源模型时，是否确保应用的代码注入能够完美匹配官方所公布的对话模板（Chat Template）？
+- [ ] 测试开源模型时，是否确保应用代码拼装的输入完全匹配官方公布的对话模板（Chat Template）？
 
 ### 延伸阅读
 
@@ -63,7 +63,7 @@
 
 ### 下一章预告
 
-经过对各大平台特性的细致拆解，我们的提示词工程体系已趋于完备。最后一章[第十四章](../14_future/README.md)，我们将跳出眼前的技术细节，探讨未来一两年内提示词工程将走向何方（基于 Agent 系统的 Context Engineering 将逐渐替代单点 Prompt Engineering），并讨论在这个快速变迁的赛道上工程师的职业发展路径。
+最后一章[第十四章](../14_future/README.md)跳出具体技术细节，探讨未来一两年内提示词工程的走向（基于 Agent 系统的 Context Engineering 将逐渐替代单点 Prompt Engineering），以及工程师在这一快速变化领域中的职业发展路径。
 
 ---
 

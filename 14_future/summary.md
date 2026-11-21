@@ -12,8 +12,8 @@
 ### 关键洞察
 
 - 提示词工程正在向更系统化的方向演进
-- 持续学习和适应能力至关重要
-- 结合领域知识才能创造真正价值
+- 持续学习和适应能力十分重要
+- 结合领域知识才能创造实际价值
 
 ### 延伸阅读
 
@@ -30,7 +30,7 @@
 - [LangGraph Documentation](https://langchain-ai.github.io/langgraph/) - LangGraph 官方文档
 - [CrewAI Documentation](https://docs.crewai.com/) - CrewAI 使用指南
 - [AutoGen](https://microsoft.github.io/autogen/) - Microsoft AutoGen 框架
-- [A2A Protocol](https://a2a-protocol.org/latest/) - 智能体-to-智能体 协议
+- [A2A Protocol](https://a2a-protocol.org/latest/) - Agent-to-Agent（A2A）协议
 
 #### 14.3 职业发展
 
@@ -48,7 +48,7 @@
 
 ### 结语
 
-提示词工程是一个快速发展的领域。本书提供的知识和方法是坚实的基础，但真正的精通需要持续的实践和学习。希望本书能够帮助读者在 AI 时代掌握这一关键技能，创造更多价值。
+提示词工程是一个快速发展的领域。本书提供的知识和方法是坚实的基础，精通则需要持续的实践和学习。希望本书能够帮助读者在 AI 时代掌握这一关键技能，创造更多价值。
 
 ---
 
