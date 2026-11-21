@@ -62,7 +62,7 @@ mindmap
 | **[Tree-of-Thought](../06_chain_of_thought/6.4_tree_of_thought.md)** | 探索多条推理路径 | 创意问题、规划任务 | “列出 3 种可能的方案” |
 | **Decomposition** | 将大问题拆分为子问题 | 复杂工作流、多步骤任务 | “首先...然后...最后...” |
 
-这些策略的共同点是：**将隐式的思考过程显式化**。研究表明，在大模型（>50B 参数）上，思维链可将推理准确率提升 20-50%。详见[第 6](../06_chain_of_thought/README.md)、[7 章](../07_prompt_chaining/README.md)。
+这些策略的共同点是：**将隐式的思考过程显式化**。研究表明，思维链主要在约 100B 参数以上的大模型上带来收益，提升幅度因任务而异；例如在 [Wei et al. 2022](https://arxiv.org/abs/2201.11903) 的实验中，PaLM 540B 在 GSM8K 上的准确率从 17.9% 提升到 56.9%。详见[第 6](../06_chain_of_thought/README.md)、[7 章](../07_prompt_chaining/README.md)。
 
 ### D.3.3 外部能力增强
 
