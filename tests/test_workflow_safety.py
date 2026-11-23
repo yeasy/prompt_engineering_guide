@@ -110,8 +110,9 @@ class WorkflowSafetyTests(unittest.TestCase):
         self.assertTrue(lock_path.is_file(), "Mermaid lockfile is missing")
         package = json.loads(package_path.read_text(encoding="utf-8"))
         lock = json.loads(lock_path.read_text(encoding="utf-8"))
-        self.assertEqual(package["dependencies"]["@mermaid-js/mermaid-cli"], "11.16.0")
-        self.assertEqual(lock["packages"][""]["dependencies"]["@mermaid-js/mermaid-cli"], "11.16.0")
+        pinned = package["dependencies"]["@mermaid-js/mermaid-cli"]
+        self.assertRegex(pinned, r"^\d+\.\d+\.\d+$", "mermaid-cli must be pinned to an exact version")
+        self.assertEqual(lock["packages"][""]["dependencies"]["@mermaid-js/mermaid-cli"], pinned)
 
     def run_preview(self, scenario: str):
         text = self.text("preview-pdf.yml")
