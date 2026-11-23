@@ -1,18 +1,12 @@
-<div align="center">
-
 # 大模型提示词工程指南
 
-[![GitHub stars](https://img.shields.io/github/stars/yeasy/prompt_engineering_guide?style=social)](https://github.com/yeasy/prompt_engineering_guide)
-[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-[![Release](https://img.shields.io/github/release/yeasy/prompt_engineering_guide.svg)](https://github.com/yeasy/prompt_engineering_guide/releases)
-[![Online Reading](https://img.shields.io/badge/在线阅读-GitBook-brightgreen)](https://yeasy.gitbook.io/prompt_engineering_guide)
-[![PDF](https://img.shields.io/badge/PDF-下载-orange)](https://github.com/yeasy/prompt_engineering_guide/releases/latest)
+从写出第一条结构化提示词，到构建可评测、可维护的 AI 应用。
 
-> **与人工智能对话的艺术**
+**[在 GitBook 阅读第一章 · 提示词工程概述](https://yeasy.gitbook.io/prompt_engineering_guide/di-yi-bu-fen-ji-chu-pian/01_introduction)**
 
-<img src="_images/cover.jpg" width="300" alt="大模型提示词工程指南封面">
+[全书目录（GitHub）](https://github.com/yeasy/prompt_engineering_guide/blob/main/SUMMARY.md) · [正式 PDF（发布页）](https://github.com/yeasy/prompt_engineering_guide/releases/latest)
 
-</div>
+<img src="_images/cover.jpg" width="210" alt="大模型提示词工程指南封面">
 
 ## 关于本书
 
@@ -22,168 +16,70 @@
 
 本书系统介绍提示词工程的核心概念、技术原理、实用技巧和高级策略，内容从基础的提示词结构设计，到高级的思维链推理、多模态提示、智能体（Agent）系统构建，再到企业级的提示词运维最佳实践，引导读者逐步掌握这门技能。
 
----
+## 从哪里开始
 
-## 目标读者
+- **先写一条结构化提示词** · 参照[提示词的核心组成要素](https://yeasy.gitbook.io/prompt_engineering_guide/di-yi-bu-fen-ji-chu-pian/03_prompt_structure/3.1_core_elements)，把“总结这份会议纪要”改成一条提取待办事项的提示词。指定输出“事项、负责人、截止日期”三列表格，缺失的信息填“未注明”。用同一份纪要运行两版提示词，检查有无遗漏或编造。
+- **系统学习提示词工程** · 从[第一章](https://yeasy.gitbook.io/prompt_engineering_guide/di-yi-bu-fen-ji-chu-pian/01_introduction)开始，读完第 1–4 章掌握模型基础、提示词结构和迭代方法，再按下方的全书结构继续阅读。
+- **把提示词用到生产系统** · 从[附录 I · 生产落地脊柱](appendix/i_production_spine.md)开始，先明确输入、输出和失败处理，再建立评测用例。根据任务需要，按附录的验收标准逐步扩展到上下文、确定性工作流、单智能体和多智能体。
 
-本书适合以下读者群体：
+<details>
 
-- **AI 应用开发者**：希望在产品中集成大语言模型，需要掌握高效的提示词设计方法
-- **产品经理与设计师**：需要理解如何通过提示词工程优化 AI 产品的用户体验
-- **内容创作者与知识工作者**：希望利用 AI 工具提升写作、研究和创作效率
-- **数据科学家与机器学习工程师**：希望深入理解提示词技术的原理及其在模型调优中的应用
-- **企业决策者**：需要了解提示词工程在组织 AI 战略中的地位和价值
-- **AI 爱好者与学习者**：对人工智能技术感兴趣，希望系统性学习提示词技能
+<summary>按方向选读</summary>
 
-无论技术背景如何，只要具备基本的计算机使用能力和对 AI 的好奇心，都能从本书中获益。
+- **AI 初学者** · 读第 1–5 章，练习提示词结构、指令设计和少样本示例。
+- **开发与数据实践** · 读第 1–3 章和第 6–10 章，学习推理策略、任务分解、工具调用、检索增强和多模态提示。需要测试和评估时可查阅[第 12 章](https://yeasy.gitbook.io/prompt_engineering_guide/di-si-bu-fen-jin-jie-yu-zhan-wang/12_automated_pe)。
+- **内容创作与知识工作** · 先读第 1–3 章，再读[第 10 章](https://yeasy.gitbook.io/prompt_engineering_guide/di-san-bu-fen-gao-ji-ying-yong-pian/10_multimodal)的多模态提示和[第 14 章](https://yeasy.gitbook.io/prompt_engineering_guide/di-si-bu-fen-jin-jie-yu-zhan-wang/14_future)的行业案例。
+- **产品与企业应用** · 先读第 1–3 章，再从[第 11 章](https://yeasy.gitbook.io/prompt_engineering_guide/di-san-bu-fen-gao-ji-ying-yong-pian/11_safety_reliability)读到第 13 章，了解安全治理、提示词运维和跨平台适配。
 
----
+</details>
 
-## 阅读收获
+## 全书结构
 
-通过阅读本书，读者将能够：
+- **基础篇（第 1–4 章）** · 了解大语言模型如何处理提示词，练习设计指令、组织上下文、约束输出和迭代测试。从[第一章 · 提示词工程概述](https://yeasy.gitbook.io/prompt_engineering_guide/di-yi-bu-fen-ji-chu-pian/01_introduction)开始。
+- **核心技术篇（第 5–7 章）** · 学习少样本提示、思维链与推理模型、任务分解和提示词链。从[第五章 · 少样本学习与示例驱动](https://yeasy.gitbook.io/prompt_engineering_guide/di-er-bu-fen-he-xin-ji-shu-pian/05_few_shot)开始。
+- **高级应用篇（第 8–11 章）** · 将提示词用于工具调用、智能体、检索增强生成和多模态任务，处理安全与可靠性问题。从[第八章 · ReAct 与工具使用](https://yeasy.gitbook.io/prompt_engineering_guide/di-san-bu-fen-gao-ji-ying-yong-pian/08_react_tools)开始。
+- **进阶与展望（第 12–14 章）** · 学习自动化优化、评估、提示词运维与跨平台适配，了解上下文工程和行业案例。从[第十二章 · 自动化提示词工程](https://yeasy.gitbook.io/prompt_engineering_guide/di-si-bu-fen-jin-jie-yu-zhan-wang/12_automated_pe)开始。
 
-### 理论基础
+各章末尾设有小结。附录收录[常用提示词模板](https://yeasy.gitbook.io/prompt_engineering_guide/fu-lu/a_templates)、技术决策树、排错指南和[资源、工具与参考文献](appendix/c_resources.md)。
 
-- 理解大语言模型的工作原理及其与提示词的交互机制
-- 掌握提示词工程的核心概念、术语和理论框架
-- 了解不同 AI 模型的特性及相应的提示词策略
+## 延伸阅读
 
-### 实践技能
+- [《零基础学 AI》](https://yeasy.gitbook.io/ai_beginner_guide/) · 了解 AI 基本概念和日常用法，适合作为前置阅读。
+- [《大模型上下文工程权威指南》](https://yeasy.gitbook.io/context_engineering_guide/) · 学习如何为模型组织检索结果、历史信息和其他任务上下文。
+- [《大模型安全权威指南》](https://yeasy.gitbook.io/ai_security_guide/) · 深入学习提示词注入防御与安全设计。
 
-- 设计清晰、高效、可复用的提示词模板
-- 运用少样本学习、思维链、ReAct 等高级提示技术
-- 处理多模态输入（文本、图像、音频、视频）的提示词设计
-- 构建复杂的提示词链和智能体工作流
+<details>
 
-### 高级应用
+<summary>更多系列图书</summary>
 
-- 实现检索增强生成系统的提示词优化
-- 设计安全可靠的企业级提示词架构
-- 建立提示词测试、评估和持续优化的工作流程
-- 掌握自动化提示词生成与优化技术
+- [《Claude 技术指南》](https://yeasy.gitbook.io/claude_guide/) · 在 Claude 平台上实践提示词技术。
+- [《智能体 AI 权威指南》](https://yeasy.gitbook.io/agentic_ai_guide/) · 学习智能体系统设计与协作。
+- [《OpenClaw 从入门到精通》](https://yeasy.gitbook.io/openclaw_guide/) · 在开源智能体框架中实践。
+- [《大模型原理与架构》](https://yeasy.gitbook.io/llm_internals/) · 深入理解大语言模型的训练、架构与推理。
+- [《智能体 Harness 工程指南》](https://yeasy.gitbook.io/harness_engineering_guide/) · 学习智能体运行环境与输出治理。
 
-### 行业洞察
+</details>
 
-- 了解提示词工程在各行业的应用案例和最佳实践
-- 把握提示词工程的最新发展趋势和未来方向
-- 理解从“提示词工程”到“上下文工程”的范式演进
+## 反馈与贡献
 
----
+欢迎在 [GitHub Issues](https://github.com/yeasy/prompt_engineering_guide/issues) 报告勘误或提出建议，也可以[提交 Pull Request](https://github.com/yeasy/prompt_engineering_guide/pulls)，补充实践案例和可复用模板。
 
-## 本书特色
+<details>
 
-1. **体系完整**：从零基础到高级应用，构建完整的知识体系
-2. **内容权威**：整合 OpenAI、Anthropic、Google 等官方指南及最新研究成果
-3. **实践导向**：大量真实案例和可运行的代码示例
-4. **与时俱进**：涵盖最新的技术趋势和最佳实践
-5. **深入浅出**：复杂概念通过图解和类比使其易于理解
+<summary>本地开发与预览</summary>
 
----
-
-## 如何使用本书
-
-本书按照“从入门到精通”的逻辑组织，建议读者按顺序阅读：
-
-- **第一部分**（第 1-4 章）介绍基础知识，适合所有读者
-- **第二部分**（第 5-7 章）深入核心技术，适合希望提升技能的实践者
-- **第三部分**（第 8-11 章）探讨高级应用，适合有一定基础的开发者和专业人员
-- **第四部分**（第 12-14 章）展望前沿趋势和行业实践，适合所有读者拓展视野
-
-每章末尾设有“本章小结”，帮助读者巩固关键知识点。
-
-面向生产落地时，不要直接从提示词跳到多智能体。请按[生产落地脊柱](appendix/i_production_spine.md)依次完成提示词合同、评测、上下文、确定性工作流、单智能体和多智能体六道验收门。
-
----
-
-## 五分钟快速上手
-
-写出第一个高质量提示词，只需这 3 个步骤：
-
-1. **理解提示词基础（ch1-2）**：掌握提示词的核心要素（角色、背景、任务、约束），理解好提示词为何产生好输出（2 分钟）
-2. **动手写出结构化提示词（ch3）**：按照模板编写你的第一个专业级提示词，包含系统提示、用户需求、输出格式（2 分钟）
-3. **对比优化效果（ch3 案例）**：比较同一需求下“差提示词”vs“好提示词”的输出差异，体会提示词优化的价值（1 分钟）
-
-完成这 3 步，即可掌握提示词工程的核心方法。
-
-## 学习路线图
-
-```mermaid
-graph LR
-    A["<b>提示词入门区</b><br/>第1-3章<br/>基础与结构化"] -->|快速提升| B["<b>AI 初学者</b><br/>第1-5章<br/>基础技能与应用"]
-    A -->|深入开发| C["<b>开发者</b><br/>第1-3,6-10章<br/>高级技巧与系统设计"]
-    A -->|内容创作| D["<b>内容创作者</b><br/>第1-3,10,14章<br/>创意应用与行业实践"]
-    A -->|企业部署| E["<b>企业应用者</b><br/>第1-3,11-13章<br/>组织管理与最佳实践"]
-    B -->|进阶深造| C
-    C -->|创意实践| D
-    D -->|组织推广| E
-
-    style A fill:#f3e5f5
-    style B fill:#e1bee7
-    style C fill:#ce93d8
-    style D fill:#ba68c8
-    style E fill:#ab47bc
-```
-
-### 学习角色对比
-
-| 角色 | 推荐章节 | 学习重点 | 预期成果 |
-|------|---------|---------|---------|
-| **AI 初学者** | 第 1-5 章 | 基础概念、提示词结构、基础技巧、常见陷阱 | 掌握提示词的基本规律和写法 |
-| **开发者** | 第 1-3→6-10 章 | 高级技巧、链式提示、RAG、智能体集成、测试评估 | 构建生产级提示词系统 |
-| **内容创作者** | 第 1-3 章 → 第 10 章 → 第 14 章 | 创意写作、多模态提示、行业应用案例 | 运用 AI 提升创作效率和质量 |
-| **企业应用者** | 第 1-3 章 → 第 11-13 章 | 企业级安全、PromptOps、跨平台策略与治理框架 | 在组织内推行提示词工程最佳实践 |
-
----
-
-## 阅读方式
-
-**在线阅读**：[GitBook 在线版](https://yeasy.gitbook.io/prompt_engineering_guide/)
-
-## 下载离线版本
-
-本书提供 PDF 版本供离线阅读，可前往 [GitHub Releases](https://github.com/yeasy/prompt_engineering_guide/releases/latest) 页面下载最新版本。
-
-如需获取默认分支自动更新的预览版，可直接下载 [prompt_engineering_guide.pdf](https://github.com/yeasy/prompt_engineering_guide/releases/download/preview-pdf/prompt_engineering_guide.pdf)。该文件会随主线更新覆盖，不代表正式发布版本。
-
-**本地阅读**（先安装 [mdPress](https://github.com/yeasy/mdpress)）：
+安装 [mdPress](https://github.com/yeasy/mdpress) 后，在仓库根目录启动本地预览，再打开 `http://localhost:9000`。
 
 ```bash
-brew tap yeasy/tap && brew install mdpress
+brew tap yeasy/tap
+brew install --cask mdpress
 mdpress serve
 ```
 
-启动本地服务器后，访问 [本地阅读地址](http://localhost:9000)
+[默认分支 PDF 预览版](https://github.com/yeasy/prompt_engineering_guide/releases/download/preview-pdf/prompt_engineering_guide.pdf)随主线更新，正式版本以发布页为准。
 
----
-
-## 推荐阅读
-
-本书是 AI 技术丛书的一部分。以下书籍与本书形成自然衔接：
-
-| 书名 | 与本书的关系 |
-|------|------------|
-| [《零基础学 AI》](https://yeasy.gitbook.io/ai_beginner_guide) | AI 零基础入门，适合作为前置阅读 |
-| [《大模型上下文工程权威指南》](https://yeasy.gitbook.io/context_engineering_guide) | 本书的自然进阶：从提示词工程到上下文工程 |
-| [《Claude 技术指南》](https://yeasy.gitbook.io/claude_guide) | 在 Claude 平台上深入实践提示词技术 |
-| [《智能体 AI 权威指南》](https://yeasy.gitbook.io/agentic_ai_guide) | 将提示词技术应用于智能体系统设计 |
-| [《大模型安全权威指南》](https://yeasy.gitbook.io/ai_security_guide) | 提示词注入防御与安全提示词设计 |
-| [《OpenClaw 入门到精通》](https://yeasy.gitbook.io/openclaw_guide) | 在开源智能体框架中实践提示词工程 |
-| [《大模型原理与架构》](https://yeasy.gitbook.io/llm_internals) | 深入理解大语言模型底层逻辑与架构 |
-| [《智能体 Harness 工程指南》](https://yeasy.gitbook.io/harness_engineering_guide) | 在 Harness 系统中实践提示词工程与输出治理 |
-
-> 💡 **推荐路径**：零基础学 AI → **提示词工程（本书）** → 上下文工程 → 智能体 AI / Claude 技术指南 → 大模型安全
-
----
-
-## 贡献与反馈
-
-欢迎提交 [Issue](https://github.com/yeasy/prompt_engineering_guide/issues) 或 [PR](https://github.com/yeasy/prompt_engineering_guide/pulls)，尤其欢迎：错别字修正、失效链接修复、实践案例补充与可复用模板。
+</details>
 
 ## 许可证
 
 本书采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 授权。
-
----
-
-*从[第 1 章](01_introduction/README.md)开始，学习与 AI 高效对话的方法。*
