@@ -66,6 +66,8 @@
 3. **步骤控制**：可要求“用 3-5 个步骤”避免过于冗长
 4. **答案提取**：确保能从推理输出中准确提取答案
 
+配套练习：在书稿仓库根目录运行 `python3 examples/03_chain_of_thought.py`。阅读鸡兔同笼示例，自己列出两个方程，并用头数和腿数检查答案。[示例源码](https://github.com/yeasy/prompt_engineering_guide/blob/main/examples/03_chain_of_thought.py)使用本地模拟响应，无需 API 密钥。
+
 ### 延伸阅读
 
 #### 6.1 思维链基础

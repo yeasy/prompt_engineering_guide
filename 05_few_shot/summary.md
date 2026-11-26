@@ -60,6 +60,8 @@
 - [ ] 示例是否从简单到复杂排列？
 - [ ] Token 消耗是否在可接受范围？
 
+配套练习：在书稿仓库根目录运行 `python3 examples/02_few_shot_learning.py`。查看情感分类示例，标出示例中的标签和待分类的最后一条输入。[示例源码](https://github.com/yeasy/prompt_engineering_guide/blob/main/examples/02_few_shot_learning.py)使用本地模拟响应，无需 API 密钥。
+
 ### 延伸阅读
 
 #### 5.1 基础概念

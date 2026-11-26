@@ -38,6 +38,8 @@
 - [ ] 测试过“故意不提供相关资料”时，模型是否能诚实拒绝回答？
 - [ ] 是否指导模型在答案中加入文档索引标号以便追溯？
 
+配套练习：在书稿仓库根目录运行 `python3 examples/05_rag_retrieval.py`。在公司政策问答示例中，分别找出提供给模型的资料和用户问题，检查资料是否足以支持答案。[示例源码](https://github.com/yeasy/prompt_engineering_guide/blob/main/examples/05_rag_retrieval.py)使用本地模拟响应，无需 API 密钥。
+
 ### 延伸阅读
 
 #### 9.1 RAG 原理与架构

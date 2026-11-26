@@ -93,6 +93,8 @@
 - [ ] 是否考虑了边界情况的处理？
 - [ ] 提示词长度是否在合理范围内？
 
+配套练习：在书稿仓库根目录运行 `python3 examples/01_basic_prompting.py`。对照直接提问、限定输出格式和补充背景的写法，找出每次新增的约束。[示例源码](https://github.com/yeasy/prompt_engineering_guide/blob/main/examples/01_basic_prompting.py)使用本地模拟响应，无需 API 密钥。
+
 ### 延伸阅读
 
 #### 3.1 核心要素

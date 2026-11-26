@@ -61,6 +61,8 @@
 - [ ] 是否有必要的错误处理？
 - [ ] 是否有质量检查机制？
 
+配套练习：在书稿仓库根目录运行 `python3 examples/04_prompt_chaining.py`。沿写作流程追踪提纲、初稿和编辑三个步骤，找出每一步如何使用上一步的输出。[示例源码](https://github.com/yeasy/prompt_engineering_guide/blob/main/examples/04_prompt_chaining.py)使用本地模拟响应，无需 API 密钥。
+
 ### 延伸阅读
 
 #### 7.1 任务分解
